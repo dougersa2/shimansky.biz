@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	version="2.0" xml:lang="ru-RU">
+<channel>
+	<title>Английский без регистрации - Статьи</title>
+	<link>http://shimansky.biz/</link>
+	<description>английский язык: статьи, пособия, словари, глоссарии, диалоги, упражнения, рефераты, тесты</description>
+	<image>
+		<url>http://shimansky.biz/apple-touch-icon-114x114.png</url>
+		<title>Английский без регистрации - Статьи</title>
+		<link>http://shimansky.biz/</link>
+		<width>114</width>
+		<height>114</height>
+	</image>
+	<lastBuildDate>Mon, 20 Jan 2014 21:04:21 +0400</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>daily</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>Английский без регистрации</generator>
+<itunes:subtitle>английский язык: статьи, пособия, словари, глоссарии, диалоги, упражнения, рефераты, тесты</itunes:subtitle>
+<itunes:author>Английский без регистрации</itunes:author>
+<itunes:summary>английский язык: статьи, пособия, словари, глоссарии, диалоги, упражнения, рефераты, тесты</itunes:summary>
+<itunes:owner>
+	<itunes:name>Английский без регистрации - Статьи</itunes:name>
+	<itunes:email>englishextra@mail.ru</itunes:email>
+</itunes:owner>
+<itunes:image href="http://shimansky.biz/iTunesArtwork.jpg" />
+<itunes:category text="Education" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://shimansky.biz/feeds/pages.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" />
+	<media:thumbnail url="http://shimansky.biz/apple-touch-icon-1400x1400.jpg" />
+	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Education</media:category>
+	<itunes:explicit>no</itunes:explicit>
+	<item><title>Английский без регистрации</title><description>Английский без регистрации</description><link>http://shimansky.biz/</link><guid isPermaLink="false">122182143899b867dfdd03df310c52e3</guid></item>
+<item><title>Отзывы и пожелания</title><description>Отзывы и пожелания</description><link>http://shimansky.biz/pages/comments.html</link><guid isPermaLink="false">33f58a102dab2232f281c722bdca9804</guid></item>
+<item><title>Авторские права на контент, код и интерфейс</title><description>Авторские права на контент, код и интерфейс</description><link>http://shimansky.biz/pages/credits.html</link><guid isPermaLink="false">961d930c80aa12e7586309966346a607</guid></item>
+<item><title>Содержание</title><description>Содержание</description><link>http://shimansky.biz/pages/</link><guid isPermaLink="false">c052ab86c1994a4051e135328d336666</guid></item>
+<item><title>Политика конфиденциальности</title><description>Политика конфиденциальности</description><link>http://shimansky.biz/pages/policy.html</link><guid isPermaLink="false">68ccc623eb3c6879a782ce5597c584de</guid></item>
+<item><title>Пользовательское соглашение</title><description>Пользовательское соглашение</description><link>http://shimansky.biz/pages/rules.html</link><guid isPermaLink="false">ea319ee131dc552e846d8c4e422f5df5</guid></item>
+<item><title>Статьи &#8211; Правила чтения в английском языке</title><description>Правила чтения в английском языке</description><link>http://shimansky.biz/pages/articles/articles_reading_rules_utf.html</link><guid isPermaLink="false">8b8f8a5ba5eda2daa1b0eb0b60ea28ee</guid></item>
+<item><title>Грамматика &#8211; Употребление all / the whole / the entire</title><description>Употребление all / the whole / the entire</description><link>http://shimansky.biz/pages/grammar/grammar_all_whole_entire.html</link><guid isPermaLink="false">cf17b074497e9d31d07f708a9bd8ddd8</guid></item>
+<item><title>Грамматика &#8211; Порядок определений</title><description>Порядок определений</description><link>http://shimansky.biz/pages/grammar/grammar_attributes_order.html</link><guid isPermaLink="false">026b01b869a73ce3717bb9ccb30852a6</guid></item>
+<item><title>Грамматика &#8211; Употребление can / could / be able to</title><description>Употребление can / could / be able to</description><link>http://shimansky.biz/pages/grammar/grammar_can_could_be_able_to.html</link><guid isPermaLink="false">9aca5928c51a8b7baaa0b156d0d13a83</guid></item>
+<item><title>Грамматика &#8211; С большой или с маленькой</title><description>С большой или с маленькой</description><link>http://shimansky.biz/pages/grammar/grammar_capital_letters.html</link><guid isPermaLink="false">94860e07e2a5ea8cc64430256382236c</guid></item>
+<item><title>Грамматика &#8211; Согласование времен</title><description>Согласование времен</description><link>http://shimansky.biz/pages/grammar/grammar_conditionals.html</link><guid isPermaLink="false">0ca78d5f656cda8813bcec49516d5918</guid></item>
+<item><title>Грамматика &#8211; Степени сравнения</title><description>Степени сравнения</description><link>http://shimansky.biz/pages/grammar/grammar_degrees_of_comparison.html</link><guid isPermaLink="false">28c84b055eefe3408834c56c2c28e68f</guid></item>
+<item><title>Грамматика &#8211; Grammar Girl&#8217;s Quick and Dirty Grammar at a Glance</title><description>Grammar Girl&#8217;s Quick and Dirty Grammar at a Glance</description><link>http://shimansky.biz/pages/grammar/grammar_grammar_girl_s_quick_and_dirty_grammar_at_a_glance.html</link><guid isPermaLink="false">84f4f69ba84b0b2301e666651747c454</guid></item>
+<item><title>Грамматика &#8211; Употребление may / might / be allowed to</title><description>Употребление may / might / be allowed to</description><link>http://shimansky.biz/pages/grammar/grammar_may_might_be_allowed_to.html</link><guid isPermaLink="false">946eca7edab347b17e0638d164e79f66</guid></item>
+<item><title>Грамматика &#8211; Модальные глаголы</title><description>Модальные глаголы</description><link>http://shimansky.biz/pages/grammar/grammar_modal_verbs.html</link><guid isPermaLink="false">8862bb49a3a6eec41b3594d8c04c238f</guid></item>
+<item><title>Грамматика &#8211; Употребление or / nor / neither</title><description>Употребление or / nor / neither</description><link>http://shimansky.biz/pages/grammar/grammar_or_nor_neither.html</link><guid isPermaLink="false">26bec4ccb226db6b64ba0e49b7223833</guid></item>
+<item><title>Грамматика &#8211; Косвенная речь</title><description>Косвенная речь</description><link>http://shimansky.biz/pages/grammar/grammar_reported_speech.html</link><guid isPermaLink="false">75be6fae3d476578cc1d1f0272933235</guid></item>
+<item><title>Грамматика &#8211; Числа по&#8211;английски</title><description>Числа по&#8211;английски</description><link>http://shimansky.biz/pages/grammar/grammar_saying_numbers.html</link><guid isPermaLink="false">b60fa9325de191d47478ec009fc7d036</guid></item>
+<item><title>Грамматика &#8211; Употребление too / enough и so / such</title><description>Употребление too / enough и so / such</description><link>http://shimansky.biz/pages/grammar/grammar_too_enough_so_such.html</link><guid isPermaLink="false">f83e471f31b277a8351ff399a77e36f6</guid></item>
+<item><title>Грамматика &#8211; Перевод причастий и деепричастий</title><description>Перевод причастий и деепричастий</description><link>http://shimansky.biz/pages/grammar/grammar_translating_participles.html</link><guid isPermaLink="false">aa1acd95f5ddc1ede51d53ffe4f226b3</guid></item>
+<item><title>Грамматика &#8211; Употребление артиклей a / an и the</title><description>Употребление артиклей a / an и the</description><link>http://shimansky.biz/pages/grammar/grammar_usage_of_articles_a_the.html</link><guid isPermaLink="false">ab8504a4521d3b7aa0177c853b880018</guid></item>
+<item><title>Грамматика &#8211; Употребление времен</title><description>Употребление времен</description><link>http://shimansky.biz/pages/grammar/grammar_usage_of_tenses.html</link><guid isPermaLink="false">bc0591b97caa3dbd922ee6b96efc9898</guid></item>
+<item><title>Грамматика &#8211; Порядок слов в предложении</title><description>Порядок слов в предложении</description><link>http://shimansky.biz/pages/grammar/grammar_word_order.html</link><guid isPermaLink="false">2d6ce61b73bdbf90c63b4171cbedbc56</guid></item>
+<item><title>Еще! &#8211; Неправильные глаголы: Скачать заставку, таблицу и озвучку</title><description>Неправильные глаголы</description><link>http://shimansky.biz/pages/more/more_irregular_verbs.html</link><guid isPermaLink="false">bc220bc77d71098e1fcf2992abb42a8e</guid></item>
+<item><title>Еще! &#8211; Бесплатный английский в сети</title><description>Бесплатный английский в сети</description><link>http://shimansky.biz/pages/more/more_newsletter_can_get_english_for_free.html</link><guid isPermaLink="false">5c259351dec66d5af3ce2b8f5b0eef96</guid></item>
+<item><title>Еще! &#8211; Пишем резюме на английском</title><description>Пишем резюме на английском</description><link>http://shimansky.biz/pages/more/more_resume_writing.html</link><guid isPermaLink="false">26cdc5348993000f492cecb55b3a6781</guid></item>
+<item><title>Еще! &#8211; Подсказки по грамматике английского</title><description>Подсказки по грамматике английского</description><link>http://shimansky.biz/pages/more/more_rough_and_ready_grammar_tips.html</link><guid isPermaLink="false">bfe1b46e8904547cbf6936da2f3f94e7</guid></item>
+<item><title>Тесты &#8211; Официальный демонстрационный вариант ЕГЭ 2013 по английскому языку с ответами</title><description>Официальный демонстрационный вариант ЕГЭ 2013 по английскому языку с ответами</description><link>http://shimansky.biz/pages/more/tests_ege_english_test_sample_2013.html</link><guid isPermaLink="false">d23bf4b0ad90460aa10bb5eff1a17f11</guid></item>
+<item><title>Тесты &#8211; Advanced Grammar in Use Second Edition Level Test с ответами</title><description>Advanced Grammar in Use Second Edition Level Test с ответами</description><link>http://shimansky.biz/pages/tests/tests_advanced_grammar_in_use_level_test.html</link><guid isPermaLink="false">64dd58dde90b24c257573b7b27e1725d</guid></item>
+<item><title>Тесты &#8211; Официальный демонстрационный вариант ЕГЭ 2014 по английскому языку с ответами</title><description>Официальный демонстрационный вариант ЕГЭ 2014 по английскому языку с ответами</description><link>http://shimansky.biz/pages/tests/tests_ege_english_test_sample.html</link><guid isPermaLink="false">308ea9fd62765bb1fd7e3aa2b5907830</guid></item>
+<item><title>Тесты &#8211; Официальный демонстрационный вариант ЕГЭ 2013 по английскому языку с ответами</title><description>Официальный демонстрационный вариант ЕГЭ 2013 по английскому языку с ответами</description><link>http://shimansky.biz/pages/tests/tests_ege_english_test_sample_2013.html</link><guid isPermaLink="false">9b4d11096500eab2ffa78441e0a52e1d</guid></item>
+<item><title>Тесты &#8211; XIV Всероссийская олимпиада школьников по английскому языку (2013 г.)</title><description>XIV Всероссийская олимпиада школьников по английскому языку (2013 г.)</description><link>http://shimansky.biz/pages/tests/tests_english_allrussian_olympiad_regional_stage_2013.html</link><guid isPermaLink="false">b62416927592216c7233b83bc41e1406</guid></item>
+<item><title>Тесты &#8211; English Grammar in Use Third Edition Level Test с ответами</title><description>English Grammar in Use Third Edition Level Test с ответами</description><link>http://shimansky.biz/pages/tests/tests_english_grammar_in_use_level_test.html</link><guid isPermaLink="false">36426135f71e7e8d95fdea75336ea9df</guid></item>
+<item><title>Тесты &#8211; Essential Grammar in Use Level Test с ответами</title><description>Essential Grammar in Use Level Test с ответами</description><link>http://shimansky.biz/pages/tests/tests_essential_grammar_in_use_level_test.html</link><guid isPermaLink="false">676d79c19a3fdc08a33ffa1e2a1a3bd0</guid></item>
+<item><title>Тесты &#8211; Примеры выполнения заданий &#171;Письмо&#187; C1 и C2 ГИА&#8211;9 АЯ и ЕГЭ&#8211;11 АЯ</title><description>Примеры выполнения заданий &#171;Письмо&#187; C1 и C2 ГИА&#8211;9 АЯ и ЕГЭ&#8211;11 АЯ</description><link>http://shimansky.biz/pages/tests/tests_gia_ege_letter_sample.html</link><guid isPermaLink="false">5213592b9f89cee0c11e568c3be5a547</guid></item>
+<item><title>Тесты &#8211; Официальный демонстрационный вариант ГИА&#8211;9 АЯ 2014 по английскому языку с ответами</title><description>Официальный демонстрационный вариант ГИА&#8211;9 АЯ 2014 по английскому языку с ответами</description><link>http://shimansky.biz/pages/tests/tests_gia_english_test_sample.html</link><guid isPermaLink="false">7adae4c4cb8bdeac504d4e25f3b5dc0d</guid></item>
+<item><title>Тесты &#8211; Тесты по грамматике английского языка</title><description>Тесты по грамматике английского языка</description><link>http://shimansky.biz/pages/tests/tests_grammar_tests_with_answers.html</link><guid isPermaLink="false">3dc439f4d7c3f3e6dd3eebf880d88d33</guid></item>
+<item><title>Тесты &#8211; Тест по английскому языку online с ответами</title><description>Тест по английскому языку online с ответами</description><link>http://shimansky.biz/pages/tests/tests_languagelink_online_test.html</link><guid isPermaLink="false">11bc241671a992b838ee4b6773e5d404</guid></item>
+<item><title>Тесты &#8211; Интернет&#8211;тестирование в формате ЕГЭ&#8211;11 АЯ 2013 с ответами</title><description>Интернет&#8211;тестирование в формате ЕГЭ&#8211;11 АЯ 2013 с ответами</description><link>http://shimansky.biz/pages/tests/tests_macmillan_ege_english_test_sample_2013.html</link><guid isPermaLink="false">f6e2b8610622c89b2e254fdcf921d44a</guid></item>
+<item><title>Тесты &#8211; Интернет&#8211;тестирование в формате ГИА&#8211;9 АЯ 2013 с ответами</title><description>Интернет&#8211;тестирование в формате ГИА&#8211;9 АЯ 2013 с ответами</description><link>http://shimansky.biz/pages/tests/tests_macmillan_gia_english_test_sample_2013.html</link><guid isPermaLink="false">0bab0406d4bc4e7fb122a368761269b9</guid></item>
+<item><title>Тесты &#8211; Macmillan Practice Tests for the Russian State Exam. Издание второе. Test 20</title><description>Macmillan Practice Tests for the Russian State Exam. Издание второе. Test 20</description><link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_2nd_test_20.html</link><guid isPermaLink="false">e0790d5c37d9bfcc0e6f2f5d2060d7d7</guid></item>
+<item><title>Тесты &#8211; Ответы к Macmillan Practice Tests (1&#8211;е изд., Клековкина)</title><description>Ответы к Macmillan Practice Tests (1&#8211;е изд., Клековкина)</description><link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys.html</link><guid isPermaLink="false">8b07577fc7e86a6ab8bee717738fdb66</guid></item>
+<item><title>Тесты &#8211; Ответы к Macmillan Practice Tests (2&#8211;е изд., Вербицкая)</title><description>Ответы к Macmillan Practice Tests (2&#8211;е изд., Вербицкая)</description><link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys_2nd.html</link><guid isPermaLink="false">7e6f3d984a9d36351a78176c5eecb083</guid></item>
+<item><title>Тесты &#8211; Тексты для аудирования к Macmillan Practice Tests (2&#8211;е изд., Вербицкая)</title><description>Тексты для аудирования к Macmillan Practice Tests (2&#8211;е изд., Вербицкая)</description><link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_transcripts_2nd.html</link><guid isPermaLink="false">86b7883c589e49f70b6d6688a7071392</guid></item>
+<item><title>Еще! &#8211; Тематический словарь в картинках</title><description>Тематический словарь в картинках</description><link>http://shimansky.biz/pages/visual_dictionary_online/</link><guid isPermaLink="false">f2bf470efb46eebf2250db3934e12500</guid></item>
+
+	<media:credit role="author">Английский без регистрации</media:credit>
+	<media:rating>nonadult</media:rating>
+	<media:description type="plain">английский язык: статьи, пособия, словари, глоссарии, диалоги, упражнения, рефераты, тесты</media:description>
+	</channel>
+	</rss>

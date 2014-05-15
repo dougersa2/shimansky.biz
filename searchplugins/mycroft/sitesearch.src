@@ -1,0 +1,32 @@
+# Author: Serguei Shimansky serguei@shimansky.biz
+
+<SEARCH
+	version = "7.1"
+	name="Shimansky.biz Site"
+	description="Shimansky.biz Site"
+	method="GET"
+	action="http://shimansky.biz/search/"
+	searchForm="http://shimansky.biz/search/"
+	queryCharset="UTF-8"
+>
+
+<input name="q" user>
+<input name="presentation" value="light">
+<input name="form_source" value="Sherlock">
+
+<interpret
+	browserResultType="result"
+	resultListStart="<!-- shimanskybiz_site::results_block::start -->"
+	resultListEnd="<!-- shimanskybiz_site::results_block::end -->"
+	resultItemStart="<!-- shimanskybiz_site::results_item::start -->"
+	resultItemEnd="<!-- shimanskybiz_site::results_item::end -->"
+	charset="UTF-8"
+>
+</search>
+
+<browser
+	alsomatch="http://shimansky.biz/search/"
+	update="http://shimansky.biz/searchplugins/mycroft/sitesearch.src"
+	updateIcon="http://shimansky.biz/searchplugins/mycroft/sitesearch.gif"
+	updateCheckDays="1"
+>
