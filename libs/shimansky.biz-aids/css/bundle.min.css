@@ -376,8 +376,8 @@ html > body > .ui-pnotify {
 	height: 50px;
 	display: none;
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 10px;
+	right: 10px;
 	overflow: hidden;
 	text-decoration: none;
 	text-indent: 100%;
@@ -426,9 +426,9 @@ body {
 	 * position: relative;
 	 */
 	font-size: 100%;
-	font-family: Liberation Sans, PT Sans, sans-serif;
+	font-family: PT Sans, sans-serif;
 	font-weight: normal;
-	line-height: 1.5;
+	line-height: 1.500;
 	color: #2D2F2C;
 	background: #FFF;
 	backgound-size: 100% 100%;
@@ -465,6 +465,10 @@ p:first-child {
 p:last-child {
 	margin-bottom: 0;
 }
+strong,
+.bolder {
+	font-weight: bolder;
+}
 *,*:after,
 *::before {
 	-webkit-box-sizing: border-box;
@@ -483,11 +487,22 @@ p:last-child {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 } */
+table.respond {
+	width: auto;
+}
+pre.prettyprint {
+	background: #404445 !important;
+	border: 0px solid transparent !important;
+}
 /*!
- * custom
+ * rest of the contents
  */
+.container {
+	padding: 1.500rem 16px;
+	margin: 0 auto;
+}
 .col h1 {
-	font-family: Liberation Sans, PT Sans, sans-serif;
+	font-family: PT Sans, sans-serif;
 	font-size: 2.063rem;
 	font-weight: normal;
 	letter-spacing: 0.250rem;
@@ -497,14 +512,28 @@ p:last-child {
 	margin-top: 0 !important;
 }
 .col h2 {
-	font-family: Liberation Serif, PT Serif, serif;
+	font-family: PT Serif, serif;
 	font-size: 1.625rem;
 	font-weight: normal;
-	font-style: italic;
+	font-style: normal;
 	text-indent: 0.063rem;
 	color: #414340;
 }
 .col h3 {
+	font-size: 1.375rem;
+	font-style: normal;
+}
+.col h4 {
+	font-size: 1.250rem;
+	font-style: italic;
+	text-decoration: none;
+}
+.col h5 {
+	font-size: 1.188rem;
+	font-style: normal;
+}
+.col h6 {
+	font-size: 1.125rem;
 	font-style: normal;
 }
 .col pre {
@@ -535,23 +564,36 @@ p:last-child {
 }
 .col table tr {
 	background: #ECECEC;
+	background-color: transparent;
 }
 .col table tr:nth-of-type(odd) {
 	background: #ECECEC;
+	background-color: transparent;
 }
 .col table th {
-	font-size: 0.938rem;
-	line-height: 1.125;
+	font-size: 1rem;
+	line-height: 1.200;
 	font-weight: normal;
-	font-style: italic;
+	/* font-style: italic; */
 	background-color: #E2E2E2;
+	background-color: transparent;
 }
 .col table caption {
 	font-size: 1.063rem;
 	line-height: 1.250;
 }
+.col table td,
+.col table th {
+	padding: .313rem 1rem .313rem 0;
+}
+.col table td {
+	border-bottom: 1px solid #414340;
+}
+.col table th {
+	border-bottom: 3px solid #555754;
+}
 .col form {
-	font-family: Liberation Sans, PT Sans, sans-serif;
+	font-family: PT Sans, sans-serif;
 }
 .col select {
 	width: 17rem;
@@ -606,10 +648,10 @@ p:last-child {
 	background: #ECECEC;
 }
 .col .sans {
-	font-family: Liberation Sans, PT Sans, sans-serif;
+	font-family: PT Sans, sans-serif;
 }
 .col .serif {
-	font-family: Liberation Serif, PT Serif, serif;
+	font-family: PT Serif, serif;
 }
 .col .normal {
 	font-weight: 400;
@@ -667,10 +709,9 @@ p:last-child {
 .leftnav_holder {
 	display: none;
 }
-.container {
-	padding: 1.500rem 16px;
-	margin: 0 auto;
-}
+/*!
+ * overrides to webks-responsive-table
+ */
 .webks-responsive-table dl dt,
 .webks-responsive-table dl dd {
 	font-size: 0.875rem;
@@ -696,22 +737,28 @@ p:last-child {
 .webks-responsive-table dl dt:nth-of-type(even) {
 	background: #ECECEC;
 }
+/*!
+ * overrides to sidr
+ */
 .sidr {
 	font-size: 0.813rem;
-	background-color: #414340;
+	background-color: #4C4C4C;
 }
 .sidr ul li {
 	font-family: Open Sans, sans-serif;
 	line-height: 3.000;
-	border-bottom: 1px solid #4B4D4A;
+	border-bottom: 1px solid #565656;
 }
 .sidr ul li:hover,
 .sidr ul li:active,
 .sidr ul li:focus,
 .sidr ul li.active,
 .sidr ul li.sidr-class-active {
-	background-color: #4B4D4A;
+	background-color: #565656;
 }
+/*!
+ * overrides to pnotify
+ */
 .ui-pnotify-title {
 	font-weight: bolder;
 }
@@ -721,11 +768,23 @@ p:last-child {
 	font-size: 1rem;
 	line-height: 1.500;
 }
+/*!
+ * overrides to circularG
+ */
+.circularG {
+	background-color: #E2E2E2;
+}
+/*!
+ * overrides to toTop
+ */
 #toTop {
 	position: fixed;
 	bottom: 0;
 	right: 0;
 }
+/*!
+ * rest of content
+ */
 #page {
 	display: none;
 	background: transparent url(../img/bg.svg) top left repeat;

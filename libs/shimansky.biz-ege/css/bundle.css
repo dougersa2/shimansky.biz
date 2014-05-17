@@ -51,6 +51,67 @@
 	background: #5D5D5D;
 }
 /*!
+ * jquery.sidr.dark.fixed.min.css
+ */
+.sidr {
+	display: none;
+	position: absolute;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 999999;
+	width: 280px;
+	overflow-x: none;
+	overflow-y: auto;
+	font-family: inherit;
+	font-size: 15px;
+	color: #FFF;
+	background-color: #4C4C4C;
+}
+.sidr .sidr-inner {
+	padding: 0 0 15px;
+}
+.sidr.left {
+	left: -280px;
+	right: auto;
+}
+.sidr.right {
+	left: auto;
+	right: -280px;
+}
+.sidr ul {
+	display: block;
+	margin: 0 0 15px;
+	padding: 0;
+}
+.sidr ul li {
+	display: block;
+	margin: 0;
+	line-height: 48px;
+	border-bottom: 1px solid #565656;
+	text-align: left;
+}
+.sidr ul li:hover,
+.sidr ul li:active,
+.sidr ul li:focus,
+.sidr ul li.active,
+.sidr ul li.sidr-class-active {
+	background-color: #565656;
+}
+.sidr ul li:last-child {
+	border-bottom-color: transparent;
+}
+.sidr ul li a,
+.sidr ul li span {
+	padding: 0 15px;
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+.sidr ul li ul {
+	margin: 0;
+}
+/*!
  * jquery.pnotify.fixed.default.css
  * http://pastebin.com/Hve9QVhz
  * Document : jquery.pnotify.default.css
@@ -153,45 +214,6 @@ html > body > .ui-pnotify {
 }
 .ui-pnotify-error div.ui-pnotify-container {
 	background: none #FF5535;
-}
-/*!
- * jquery-ui-1.10.3.custom.min.css
- * pastebin.com/MjV40vJw
- */
-.ui-autocomplete {
-	font-family: inherit;
-	color: #EEEEEF;
-	background: none #515151;
-	border: 1px solid transparent;
-	z-index: 9999999;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-}
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus {
-	background: none #5B5B5B;
-	background-size: 24px 12px;
-	border: 1px solid transparent;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-	padding: 0;
-	margin: 0;
-}
-.ui-menu-item,
-.ui-menu-item .ui-corner-all {
-	font-size: 16px;
-	font-weight: 400 !important;
-	color: inherit;
-	outline: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.ui-widget-shadow {
-	-webkit-border-radius: 0;
-	border-radius: 0;
 }
 /*!
  * cssload.net/#sthash.zjPWF4Wm.dpuf
@@ -358,8 +380,8 @@ html > body > .ui-pnotify {
 	height: 50px;
 	display: none;
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 10px;
+	right: 10px;
 	overflow: hidden;
 	text-decoration: none;
 	text-indent: 100%;
@@ -407,7 +429,7 @@ body {
 	font-size: 16px;
 	font-family: Open Sans, sans-serif;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.500;
 	color: #3A3A3C;
 	background: #EDEFF5;
 	backgound-size: 100% 100%;
@@ -447,7 +469,7 @@ p:last-child {
 }
 strong,
 .bolder {
-	font-weight: 600;
+	font-weight: bolder;
 }
 *,*:after,
 *::before {
@@ -457,16 +479,26 @@ strong,
 }
 ::selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 ::-moz-selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 /* * {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 } */
+table.respond {
+	width: auto;
+}
+pre.prettyprint {
+	background: #404445 !important;
+	border: 0px solid transparent !important;
+}
+/*!
+ * rest of the contents
+ */
 table.respond {
 	width: auto;
 }
@@ -614,17 +646,6 @@ pre.prettyprint {
 /*!
  * custom fixes
  */
-.col select {
-	width: 280px;
-}
-@media (min-width: 1px) and (max-width: 320px) {
-	.col select {
-		width: 100%;
-	}
-}
-.sf_articlesreadingrulesutf_stat_holder {
-	visibility: hidden;
-}
 .col .mejs-container {
 	display: inline-block;
 	margin-top: 24px;
@@ -655,6 +676,9 @@ pre.prettyprint {
 	color: inherit;
 	background-color: #F7DCB8;
 	clear: both;
+}
+.col select {
+	width: 272px;
 }
 .col a,
 .notice a {
@@ -746,6 +770,7 @@ pre.prettyprint {
  margin-bottom: 0;
 } */
 .topbanner {
+	display: none;
 	height: 464px;
 	width: 1020px;
 	background: transparent url(../img/topbanner.png) center center no-repeat;
@@ -793,13 +818,67 @@ pre.prettyprint {
 	text-align: center;
 	margin: 24px auto 18px auto;
 }
-.col ul + .vk_like_holder,
-.col p + .vk_like_holder {
-	margin-top: 0;
-}
 .leftnav_holder {
 	display: none;
 }
+/*!
+ * overrides to webks-responsive-table
+ */
+.webks-responsive-table dl dt {
+	font-weight: 400;
+	color: inherit;
+	background: #E2E2E2;
+}
+.webks-responsive-table dl dd:nth-of-type(odd) {
+	background: #ECECEC;
+}
+.webks-responsive-table dl dt:nth-of-type(even) {
+	background: #ECECEC;
+}
+/*!
+ * overrides to sidr
+ */
+.sidr {
+	background-color: #4C4C4C;
+}
+.sidr ul li {
+	font-family: Open Sans, sans-serif;
+	border-bottom: 1px solid #565656;
+}
+.sidr ul li:hover,
+.sidr ul li:active,
+.sidr ul li:focus,
+.sidr ul li.active,
+.sidr ul li.sidr-class-active {
+	background-color: #565656;
+}
+/*!
+ * overrides to pnotify
+ */
+.ui-pnotify-title {
+	font-weight: bolder;
+}
+.ui-pnotify-title,
+.ui-pnotify-text {
+	font-family: Open Sans, sans-serif;
+}
+/*!
+ * overrides to circularG
+ */
+.circularG {
+	background-color: #FFF;
+}
+/*!
+ * overrides to toTop
+ */
+#toTop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+/*!
+ * rest of content
+ */
 #page {
 	display: none;
 	/* background: transparent url(../img/bg.svg) top left repeat;
@@ -890,6 +969,9 @@ pre.prettyprint {
 	.egeabout6 {
 		display: none;
 	}
+	.col select {
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 319px) {
 	.main-content .article .content {
@@ -906,5 +988,8 @@ pre.prettyprint {
 	.egeabout5,
 	.egeabout6 {
 		display: none;
+	}
+	.col select {
+		width: 100%;
 	}
 }

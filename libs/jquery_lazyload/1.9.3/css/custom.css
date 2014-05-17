@@ -23,7 +23,7 @@ body {
 	font-size: 16px;
 	font-family: Open Sans, sans-serif;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.500;
 	color: #3A3A3C;
 	background: #EDEFF5;
 	backgound-size: 100% 100%;
@@ -63,7 +63,7 @@ p:last-child {
 }
 strong,
 .bolder {
-	font-weight: 600;
+	font-weight: bolder;
 }
 *,*:after,
 *::before {
@@ -73,11 +73,11 @@ strong,
 }
 ::selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 ::-moz-selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 /* * {
 	-webkit-font-smoothing: antialiased;
@@ -733,8 +733,8 @@ html > body > .ui-pnotify {
 	height: 50px;
 	display: none;
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 10px;
+	right: 10px;
 	overflow: hidden;
 	text-decoration: none;
 	text-indent: 100%;

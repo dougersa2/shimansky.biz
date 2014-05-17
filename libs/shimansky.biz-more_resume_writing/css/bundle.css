@@ -105,7 +105,8 @@
 .sidr ul li:last-child {
 	border-bottom-color: transparent;
 }
-.sidr ul li a, .sidr ul li span {
+.sidr ul li a,
+.sidr ul li span {
 	padding: 0 15px;
 	display: block;
 	text-decoration: none;
@@ -217,43 +218,6 @@ html > body > .ui-pnotify {
 }
 .ui-pnotify-error div.ui-pnotify-container {
 	background: none #FF5535;
-}
-/*!
- * ui.totop.min.css
- */
-#toTop {
-	width: 50px;
-	height: 50px;
-	display: none;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	overflow: hidden;
-	text-decoration: none;
-	text-indent: 100%;
-	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
-	background-size: 50px 50px;
-	-webkit-transform: translate3d(0,0,0);
-	border: none;
-	outline: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.no-svg #toTop {
-	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
-	background-size: 50px 50px;
-}
-#toTopHover {
-	width: 50px;
-	height: 50px;
-	float: left;
-	display: block;
-	overflow: hidden;
-	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
-	background-size: 50px 50px;
-	-webkit-transform: translate3d(0,0,0);
-}
-#toTop:hover {
-	opacity: 0.5 !important;
 }
 /*!
  * cssload.net/#sthash.zjPWF4Wm.dpuf
@@ -412,6 +376,48 @@ html > body > .ui-pnotify {
 	}
 }
 /*!
+ * ui.totop.min.css
+ * pastebin.com/9F7UKvTz
+ */
+#toTop {
+	width: 50px;
+	height: 50px;
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	overflow: hidden;
+	text-decoration: none;
+	text-indent: 100%;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
+	background-size: 50px 50px;
+	-webkit-transform: translate3d(0,0,0);
+	border: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.no-svg #toTop {
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
+	background-size: 50px 50px;
+}
+#toTopHover {
+	width: 50px;
+	height: 50px;
+	float: left;
+	display: block;
+	overflow: hidden;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
+	background-size: 50px 50px;
+	-webkit-transform: translate3d(0,0,0);
+}
+.no-svg #toTopHover {
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
+	background-size: 50px 50px;
+}
+#toTop:hover {
+	opacity: 0.5 !important;
+}
+/*!
  * custom
  */
 html {
@@ -427,7 +433,7 @@ body {
 	font-size: 16px;
 	font-family: Open Sans, sans-serif;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.500;
 	color: #3A3A3C;
 	background: #CACECF;
 	backgound-size: 100% 100%;
@@ -467,7 +473,7 @@ p:last-child {
 }
 strong,
 .bolder {
-	font-weight: 600;
+	font-weight: bolder;
 }
 *,*:after,
 *::before {
@@ -477,11 +483,11 @@ strong,
 }
 ::selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 ::-moz-selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 /* * {
 	-webkit-font-smoothing: antialiased;
@@ -494,10 +500,14 @@ pre.prettyprint {
 	background: #404445 !important;
 	border: 0px solid transparent !important;
 }
-/* * {
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-} */
+/*!
+ * rest of the contents
+ */
+.container {
+	background-color: transparent;
+	max-width: 940px;
+	margin: 0 auto;
+}
 #sequence {
 	min-height: 440px;
 	min-width: 600px;
@@ -851,12 +861,6 @@ pre.prettyprint {
 	height: 235px;
 	background-size: 235px 235px;
 }
-.container {
-	background-color: transparent;
-	max-width: 940px;
-	margin: 0 auto;
-	;
-}
 .topbanner {
 	height: 9px;
 	background: transparent url(../../shimansky.biz-branding/banners/tb-FEC4B1-480x60.svg) top left repeat-x;
@@ -867,41 +871,6 @@ pre.prettyprint {
 	background: transparent url(../../shimansky.biz-branding/banners/tb-FEC4B1-480x60.png) top left repeat-x;
 	background-size: 480px 60px;
 }
-/* .topnavbar {
-	width: 52px;
-	height: 40px;
-	position: absolute;
-	top: 23px;
-	left: 14px;
-	background: inherit;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 10px;
-}
-.topnavbar a.leftnavbtn {
-	display: inline-block;
-	width: 32px;
-	height: 20px;
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	font-size: 0;
-	line-height: 0;
-	color: #FFF;
-	cursor: pointer;
-	z-index: 1000;
-}
-.topnavbar a.leftnavbtn:before {
-	width: 32px;
-	height: 20px;
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-top: 12px double #FFF;
-	border-bottom: 4px solid #FFF;
-} */
 .topnavbar {
 	display: inline-block;
 	width: 64px;
@@ -989,13 +958,67 @@ pre.prettyprint {
 	text-align: center;
 	margin: 24px auto 18px auto;
 }
-.col ul + .vk_like_holder,
-.col p + .vk_like_holder {
-	margin-top: 0;
-}
 .leftnav_holder {
 	display: none;
 }
+/*!
+ * overrides to webks-responsive-table
+ */
+.webks-responsive-table dl dt {
+	font-weight: 400;
+	color: inherit;
+	background: #E2E2E2;
+}
+.webks-responsive-table dl dd:nth-of-type(odd) {
+	background: #ECECEC;
+}
+.webks-responsive-table dl dt:nth-of-type(even) {
+	background: #ECECEC;
+}
+/*!
+ * overrides to sidr
+ */
+.sidr {
+	background-color: #4C4C4C;
+}
+.sidr ul li {
+	font-family: Open Sans, sans-serif;
+	border-bottom: 1px solid #565656;
+}
+.sidr ul li:hover,
+.sidr ul li:active,
+.sidr ul li:focus,
+.sidr ul li.active,
+.sidr ul li.sidr-class-active {
+	background-color: #565656;
+}
+/*!
+ * overrides to pnotify
+ */
+.ui-pnotify-title {
+	font-weight: bolder;
+}
+.ui-pnotify-title,
+.ui-pnotify-text {
+	font-family: Open Sans, sans-serif;
+}
+/*!
+ * overrides to circularG
+ */
+.circularG {
+	background-color: #FFF;
+}
+/*!
+ * overrides to toTop
+ */
+#toTop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+/*!
+ * rest of content
+ */
 #page {
 	display: none;
 }

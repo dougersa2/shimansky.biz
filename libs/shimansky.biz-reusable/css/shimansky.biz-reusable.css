@@ -9,7 +9,7 @@ body {
 	font-size: 16px;
 	font-family: Open Sans, sans-serif;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.500;
 	color: #3A3A3C;
 	background: #9AD3CE;
 	backgound-size: 100% 100%;
@@ -47,8 +47,9 @@ p:first-child {
 p:last-child {
 	margin-bottom: 0;
 }
-strong, .bolder {
-	font-weight: 600;
+strong,
+.bolder {
+	font-weight: bolder;
 }
 *,*:after,
 *::before {
@@ -58,11 +59,11 @@ strong, .bolder {
 }
 ::selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 ::-moz-selection {
 	color: #FFF;
-	background: #6AAADB;
+	background: #67737C;
 }
 /* * {
 	-webkit-font-smoothing: antialiased;
@@ -92,6 +93,42 @@ pre.prettyprint {
 .no-svg .topbanner {
 	background: transparent url(../img/topbanner.png) top left repeat-x;
 	background-size: 560px 60px;
+}
+.topnavbar {
+	width: 52px;
+	height: 40px;
+	position: absolute;
+	top: 9px;
+	left: 0;
+	background: #49AFC1;
+	padding: 10px;
+}
+.topnavbar a.leftnavbtn {
+	display: inline-block;
+	width: 32px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 0;
+	line-height: 0;
+	color: inherit;
+	cursor: pointer;
+	z-index: 1000;
+}
+.topnavbar a.leftnavbtn:before {
+	width: 32px;
+	height: 20px;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-top-width: 12px;
+	border-bottom-width: 4px;
+	border-top-style: double;
+	border-bottom-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
 }
 .topnavbar {
 	width: 52px;
@@ -608,8 +645,8 @@ ol.linenums {
 	height: 50px;
 	display: none;
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 10px;
+	right: 10px;
 	overflow: hidden;
 	text-decoration: none;
 	text-indent: 100%;
