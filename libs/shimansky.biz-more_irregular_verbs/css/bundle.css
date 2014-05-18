@@ -492,7 +492,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .container {
 	text-align: center;
@@ -614,22 +614,6 @@ pre.prettyprint {
 	color: #C25764;
 	background-color: #FFF;
 }
-.col h1 {
-	font-weight: 300;
-	margin: 0 !important;
-}
-.col h2 {
-	font-weight: 600;
-	margin: 1rem 0 0 0 !important;
-}
-.col a {
-	color: inherit;
-}
-.col a:hover,
-.col a:active,
-.col a:focus {
-	color: inherit;
-}
 .col .references p {
 	font-size: 0.813rem;
 	font-style: italic;
@@ -645,8 +629,24 @@ pre.prettyprint {
 .vk_like_holder {
 	width: 100%;
 }
-.leftnav_holder {
-	display: none;
+/*!
+ * fixes to 16pixels
+ */
+.col h1 {
+	font-weight: 300;
+	margin: 0 !important;
+}
+.col h2 {
+	font-weight: 600;
+	margin: 1rem 0 0 0 !important;
+}
+.col a {
+	color: inherit;
+}
+.col a:hover,
+.col a:active,
+.col a:focus {
+	color: inherit;
 }
 /*!
  * overrides to webks-responsive-table
@@ -665,6 +665,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

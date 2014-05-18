@@ -488,7 +488,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .container {
 	max-width: 1140px;
@@ -595,9 +595,6 @@ pre.prettyprint {
 	color: #F57698;
 	border-bottom: 2px dashed #F57698;
 }
-.textcenter {
-	text-align: center;
-}
 .sf_roughandreadygrammartips_stat_holder {
 	visibility: hidden;
 	width: 300px;
@@ -631,8 +628,11 @@ pre.prettyprint {
 	padding: 0;
 	margin: 60px auto 0 auto;
 }
-.leftnav_holder {
-	display: none;
+/*!
+ * fixes to 16pixels
+ */
+.textcenter {
+	text-align: center;
 }
 /*!
  * overrides to webks-responsive-table
@@ -651,6 +651,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

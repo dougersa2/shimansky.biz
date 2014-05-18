@@ -501,7 +501,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .container {
 	background-color: #FFF;
@@ -597,32 +597,25 @@ pre.prettyprint {
 	padding: 0 0 24px 0;
 	padding: 0;
 }
-.sidr {
-	background-color: #3A3A3C;
-}
-.sidr ul li {
-	font-family: Open Sans, sans-serif;
-	border-bottom: 1px solid #444446;
-}
-.sidr ul li:hover,
-.sidr ul li:active,
-.sidr ul li:focus,
-.sidr ul li.active,
-.sidr ul li.sidr-class-active {
-	background-color: #444446;
-}
-.ui-pnotify-title {
-	font-weight: bolder;
-}
-.ui-pnotify-title,
-.ui-pnotify-text {
-	font-family: Open Sans, sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-}
 .sf_articlesreadingrulesutf_stat_holder {
 	visibility: hidden;
 }
+.ccbynd {
+	display: inline-block;
+	width: 120px;
+	height: 42px;
+	background: transparent url(../../cc/img/by-nd-120x42.svg) left top no-repeat;
+	background-size: 120px 42px;
+	-webkit-transform: translate3d(0,0,0);
+	cursor: pointer;
+}
+.no-svg .ccbynd {
+	background: transparent url(../../cc/img/by-nd-120x42.png) left top no-repeat;
+	background-size: 120px 42px;
+}
+/*!
+ * fixes to 16pixels
+ */
 .col .mejs-container {
 	display: inline-block;
 	margin-top: 24px;
@@ -630,9 +623,6 @@ pre.prettyprint {
 .col h1 {
 	font-weight: 300;
 	margin: 16px 0 0 0 !important;
-}
-.col select {
-	max-width: 272px;
 }
 .col h2 + h3.abc {
 	margin-top: 13px;
@@ -658,21 +648,11 @@ pre.prettyprint {
 .col select {
 	width: 272px;
 }
-.ccbynd {
-	display: inline-block;
-	width: 120px;
-	height: 42px;
-	background: transparent url(../../cc/img/by-nd-120x42.svg) left top no-repeat;
-	background-size: 120px 42px;
-	-webkit-transform: translate3d(0,0,0);
-	cursor: pointer;
+.col input[type^=submit] {
+	min-width: 112px;
 }
-.no-svg .ccbynd {
-	background: transparent url(../../cc/img/by-nd-120x42.png) left top no-repeat;
-	background-size: 120px 42px;
-}
-.leftnav_holder {
-	display: none;
+.col input[type^=text] {
+	min-width: 152px;
 }
 /*!
  * overrides to webks-responsive-table
@@ -691,6 +671,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

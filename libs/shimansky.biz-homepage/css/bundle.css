@@ -492,7 +492,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .background {
 	display: inline-block;
@@ -812,9 +812,6 @@ pre.prettyprint {
 	background: transparent url(../img/topbanner.png) top left repeat-x;
 	background-size: 480px 60px;
 }
-.leftnav_holder {
-	display: none;
-}
 .topnavbar a.leftnavbtn {
 	font-size: 0;
 	background: center center no-repeat transparent;
@@ -989,6 +986,44 @@ pre.prettyprint {
 	margin: 24px auto 18px auto;
 }
 /*!
+ * overrides to jquery-ui-1.10.4.custom.min.css
+ */
+.ui-autocomplete {
+	font-family: inherit;
+	color: #EEEEEF;
+	background: none #515151;
+	border: 1px solid transparent;
+	z-index: 9999999;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	background: none #5B5B5B;
+	background-size: 24px 12px;
+	border: 1px solid transparent;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+}
+.ui-menu-item,
+.ui-menu-item .ui-corner-all {
+	font-size: 16px;
+	font-weight: 400 !important;
+	color: inherit;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.ui-widget-shadow {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+/*!
  * overrides to webks-responsive-table
  */
 .webks-responsive-table dl dt {
@@ -1005,6 +1040,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

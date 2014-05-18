@@ -501,7 +501,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .container {
 	background-color: transparent;
@@ -937,6 +937,20 @@ pre.prettyprint {
 	color: inherit;
 	background: #FFF;
 }
+/*!
+ * vk_like
+ */
+.vk_like_holder {
+	width: 100%;
+	text-align: center;
+	margin: 24px auto 18px auto;
+}
+/*!
+ * fixes to 16pixels
+ */
+.textcenter {
+	text-align: center;
+}
 .col table {
 	margin: 0 !important;
 }
@@ -949,17 +963,6 @@ pre.prettyprint {
 .col table th {
 	color: #FFF;
 	background-color: #EA5455;
-}
-/*!
- * vk_like
- */
-.vk_like_holder {
-	width: 100%;
-	text-align: center;
-	margin: 24px auto 18px auto;
-}
-.leftnav_holder {
-	display: none;
 }
 /*!
  * overrides to webks-responsive-table
@@ -978,6 +981,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

@@ -98,7 +98,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 #sequence {
 	min-height: 440px;
@@ -953,9 +953,6 @@ html > body > .ui-pnotify {
 	100% {
 		transform: scale(.3);
 	}
-}
-.leftnav_holder {
-	display: none;
 }
 #page {
 	display: none;

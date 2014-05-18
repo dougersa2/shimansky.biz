@@ -2,6 +2,9 @@
  * jquery.sidr.dark.fixed.min.css
  * pastebin.com/64mwNvxL
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	display: none;
 	position: absolute;
@@ -58,7 +61,4 @@
 }
 .sidr ul li ul {
 	margin: 0;
-}
-#leftnav{
-	display: none;
 }

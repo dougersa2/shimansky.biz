@@ -488,7 +488,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .container {
 	background-color: transparent;
@@ -674,19 +674,6 @@ pre.prettyprint {
 .superbox-desc {
 	display: none;
 }
-.textcenter {
-	text-align: center;
-}
-/* .footer {
-	font-size: 13px;
-	line-height: 19px;
-	text-align: center;
-	color: inherit;
-	padding: 24px;
-}
-.footer p:first-child {
-	margin-top: 0;
-} */
 /*!
  * vk_like
  */
@@ -695,8 +682,11 @@ pre.prettyprint {
 	text-align: center;
 	margin: 24px auto 18px auto;
 }
-.leftnav_holder {
-	display: none;
+/*!
+ * fixes to 16pixels
+ */
+.textcenter {
+	text-align: center;
 }
 /*!
  * overrides to webks-responsive-table
@@ -715,6 +705,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

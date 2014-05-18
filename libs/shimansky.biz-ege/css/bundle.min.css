@@ -497,7 +497,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 table.respond {
 	width: auto;
@@ -507,7 +507,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .clear {
 	content: "\0020";
@@ -643,58 +643,17 @@ pre.prettyprint {
 	text-decoration: none;
 	color: inherit;
 }
-/*!
- * custom fixes
- */
-.col .mejs-container {
-	display: inline-block;
-	margin-top: 24px;
+.notice {
+	background: #B8D0EB;
+	padding: 24px;
 }
-.col h1 {
-	font-weight: 300;
-}
-.col select {
-	max-width: 272px;
-}
-.col h2 + h3.abc {
-	margin-top: 13px;
-}
-.col h4 + h3.abc {
-	margin-top: 12px;
-}
-.col h3.abc {
-	display: inline-block!important;
-	padding: 5px 7px;
-}
-.col span.h3_inline {
-	display: inline-block!important;
-}
-.col h3.abc,
-.col span.h3_inline {
-	font-weight: 600;
-	font-style: normal;
-	color: inherit;
-	background-color: #F7DCB8;
-	clear: both;
-}
-.col select {
-	width: 272px;
-}
-.col a,
 .notice a {
 	color: #0071BA;
 }
-.col a:hover,
-.col a:active,
-.col a:focus,
 .notice a:hover,
 .notice a:active,
 .notice a:focus {
 	color: #ED1D24;
-}
-.notice {
-	background: #B8D0EB;
-	padding: 24px;
 }
 .notice h2 {
 	font-size: 24px;
@@ -818,8 +777,53 @@ pre.prettyprint {
 	text-align: center;
 	margin: 24px auto 18px auto;
 }
-.leftnav_holder {
-	display: none;
+/*!
+ * fixes to 16pixels
+ */
+.col .mejs-container {
+	display: inline-block;
+	margin-top: 24px;
+}
+.col h1 {
+	font-weight: 300;
+}
+.col h2 + h3.abc {
+	margin-top: 13px;
+}
+.col h4 + h3.abc {
+	margin-top: 12px;
+}
+.col h3.abc {
+	display: inline-block!important;
+	padding: 5px 7px;
+}
+.col span.h3_inline {
+	display: inline-block!important;
+}
+.col h3.abc,
+.col span.h3_inline {
+	font-weight: 600;
+	font-style: normal;
+	color: inherit;
+	background-color: #F7DCB8;
+	clear: both;
+}
+.col select {
+	width: 272px;
+}
+.col input[type^=submit] {
+	min-width: 112px;
+}
+.col input[type^=text] {
+	min-width: 152px;
+}
+.col a {
+	color: #0071BA;
+}
+.col a:hover,
+.col a:active,
+.col a:focus {
+	color: #ED1D24;
 }
 /*!
  * overrides to webks-responsive-table
@@ -838,6 +842,9 @@ pre.prettyprint {
 /*!
  * overrides to sidr
  */
+.leftnav_holder {
+	display: none;
+}
 .sidr {
 	background-color: #4C4C4C;
 }

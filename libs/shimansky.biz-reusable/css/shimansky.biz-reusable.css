@@ -77,7 +77,7 @@ pre.prettyprint {
 	border: 0px solid transparent !important;
 }
 /*!
- * rest of the contents
+ * rest of content
  */
 .container {
 	background-color: #FFF;
@@ -832,9 +832,6 @@ ol.linenums {
 	100% {
 		transform: scale(.3);
 	}
-}
-.leftnav_holder {
-	display: none;
 }
 #page {
 	display: none;
