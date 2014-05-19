@@ -647,8 +647,11 @@ pre.prettyprint {
 }
 .col select {
 	width: 272px;
+	font-family: sans-serif;
 }
-.col input[type^=submit] {
+.col input[type^=button],
+.col input[type^=submit],
+.col input[type^=reset] {
 	min-width: 112px;
 }
 .col input[type^=text] {
@@ -724,9 +727,6 @@ pre.prettyprint {
 .no-svg #page {
 	background: transparent url(../img/bg.png) top left repeat;
 	background-size: 417px 417px;
-}
-#searchfield {
-	width: 9em;
 }
 /*!
  * media queries

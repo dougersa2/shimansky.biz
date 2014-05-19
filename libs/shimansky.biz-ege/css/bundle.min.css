@@ -810,8 +810,11 @@ pre.prettyprint {
 }
 .col select {
 	width: 272px;
+	font-family: sans-serif;
 }
-.col input[type^=submit] {
+.col input[type^=button],
+.col input[type^=submit],
+.col input[type^=reset] {
 	min-width: 112px;
 }
 .col input[type^=text] {
@@ -888,17 +891,10 @@ pre.prettyprint {
  */
 #page {
 	display: none;
-	/* background: transparent url(../img/bg.svg) top left repeat;
-	background-size: 840px 850px;
-	-webkit-transform: translate3d(0,0,0);	*/;
 }
-.no-svg #page {
-	/* background: transparent url(../img/bg.png) top left repeat;
-	background-size: 840px 850px; */;
-}
-#searchfield {
-	width: 9em;
-}
+/*!
+ * media queries
+ */
 @media only screen and (max-width: 959px) {
 	.footer .zerogrid {
 		width: 100%;

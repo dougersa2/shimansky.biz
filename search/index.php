@@ -408,7 +408,7 @@ $SQLITE_CACHE = null;
 						<li><a href="https://vimeo.com/user20994901" class="vimeo-50x50"></a></li>
 						<li><a href="https://twitter.com/shimanskybiz" class="twitter-50x50"></a></li>
 						<li><a href="http://englishextra.github.io/" class="github-50x50"></a></li>
-						<li><a href="http://englishextra.lealta.ru/epishev2_instagram.html" class="instagram-50x50"></a></li>
+						<li><a href="http://serguei.shimansky.biz/epishev2_instagram.html" class="instagram-50x50"></a></li>
 					</ul>
 					<div class="tab-content">
 						<ul class="sidebar-group tab-pane active" id="tabelements">
@@ -428,12 +428,12 @@ $SQLITE_CACHE = null;
 							<li><a href="/pages/tests/tests_gia_english_test_sample.html">ГИА-9&#160;АЯ</a></li>
 							<li><a href="/pages/tests/tests_ege_english_test_sample.html">ЕГЭ-11&#160;АЯ</a></li>
 							<li><a href="/pages/comments.html">Отзывы</a></li>
-				<li><a href="/pages/about.html">О&#160;сайте</a></li>
+							<li><a href="/pages/about.html">О&#160;сайте</a></li>
 						</ul>
 					</div>
 				</div>
 				<div id="content-wrapper">
-					<div class="main-header headerA77A94" role="heading">
+					<div class="main-header header59636D" role="heading">
 						<h3>
 							<span id="show-menu" class="bt-menu-trigger-holder"><a href="#" class="bt-menu-trigger" title="Меню"></a></span>
 							Поиск
@@ -568,7 +568,7 @@ $SQLITE_CACHE = null;
 					},{charset:"utf-8"},5E3);
 					(function(){var a=document.getElementById("page"),b=document.getElementById("circularG");b&&(b.style.display="none");a&&(a.style.display="block")})();
 				},{charset:"utf-8"},5E3);
-				(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(15);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
+				(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(100);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
 				addEvent(window,"load",function(a){a&&a.focus()}(document.getElementById("search_text")||""),!1);
 			};
 			addEvent(window,"load",function(){deferredJS()},!1);

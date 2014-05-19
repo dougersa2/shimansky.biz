@@ -672,6 +672,18 @@ html.mm-opened,html.mm-opened body {
 	font-size: 13px;
 	line-height: 19px;
 }
+.col select {
+	width: 272px;
+	font-family: sans-serif;
+}
+.col input[type^=button],
+.col input[type^=submit],
+.col input[type^=reset] {
+	min-width: 112px;
+}
+.col input[type^=text] {
+	min-width: 152px;
+}
 .col .DarkSlateGray {
 	color: inherit;
 }

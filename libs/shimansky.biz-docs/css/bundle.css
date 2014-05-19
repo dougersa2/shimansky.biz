@@ -637,6 +637,7 @@ pre.prettyprint {
 }
 .col select {
 	width: 17rem;
+	font-family: sans-serif;
 	/**
 	 * to work on android use
 	 * position: relative;
@@ -657,7 +658,9 @@ pre.prettyprint {
 	background: #ECECEC;
 	border: 1px solid #ECECEC;
 }
-.col input[type^=submit] {
+.col input[type^=button],
+.col input[type^=submit],
+.col input[type^=reset] {
 	min-width: 7rem;
 	background: #414340;
 	border: 1px solid #414340;
