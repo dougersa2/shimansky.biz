@@ -666,9 +666,15 @@ pre.prettyprint {
 	border: 1px solid #414340;
 	cursor: pointer;
 }
+.col input[type^=button]:hover,
+.col input[type^=button]:active,
+.col input[type^=button]:focus,
 .col input[type^=submit]:hover,
 .col input[type^=submit]:active,
-.col input[type^=submit]:focus {
+.col input[type^=submit]:focus,
+.col input[type^=reset]:hover,
+.col input[type^=reset]:active,
+.col input[type^=reset]:focus {
 	background: #555754;
 	border: 1px solid #555754;
 }
