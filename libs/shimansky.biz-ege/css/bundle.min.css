@@ -782,6 +782,7 @@ pre.prettyprint {
  */
 .col .mejs-container {
 	display: inline-block;
+	width: 260px !important;
 	margin-top: 24px;
 }
 .col h1 {
