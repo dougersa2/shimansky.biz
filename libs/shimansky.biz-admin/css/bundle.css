@@ -682,7 +682,7 @@ html.mm-opened,html.mm-opened body {
 	min-width: 112px;
 }
 .col input[type^=text] {
-	min-width: 152px;
+	width: 152px;
 }
 .col .DarkSlateGray {
 	color: inherit;

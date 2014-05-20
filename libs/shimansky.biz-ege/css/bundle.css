@@ -785,7 +785,39 @@ pre.prettyprint {
 	margin-top: 24px;
 }
 .col h1 {
-	font-weight: 300;
+	font-family: Open Sans, sans-serif;
+	font-size: 33px;
+	font-weight: 400;
+	letter-spacing: 4px;
+	text-indent: 1px;
+	text-transform: uppercase;
+	color: #555754;
+	margin: 16px 0 0 0 !important;
+}
+.col h2 {
+	font-family: Open Sans, serif;
+	font-size: 26px;
+	font-weight: normal;
+	font-style: normal;
+	text-indent: 1px;
+	color: #414340;
+}
+.col h3 {
+	font-size: 22px;
+	font-style: normal;
+}
+.col h4 {
+	font-size: 20px;
+	font-style: italic;
+	text-decoration: none;
+}
+.col h5 {
+	font-size: 19px;
+	font-style: normal;
+}
+.col h6 {
+	font-size: 18px;
+	font-style: normal;
 }
 .col h2 + h3.abc {
 	margin-top: 13px;
@@ -818,7 +850,7 @@ pre.prettyprint {
 	min-width: 112px;
 }
 .col input[type^=text] {
-	min-width: 152px;
+	width: 152px;
 }
 .col a {
 	color: #0071BA;
