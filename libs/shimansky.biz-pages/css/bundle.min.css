@@ -684,6 +684,7 @@ pre.prettyprint {
 }
 .col select {
 	width: 272px;
+	position: relative;
 	font-family: sans-serif;
 }
 .col input[type^=button],
