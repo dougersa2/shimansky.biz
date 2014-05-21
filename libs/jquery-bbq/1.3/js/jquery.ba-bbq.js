@@ -6,7 +6,6 @@
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
  */
-
 // Script: jQuery BBQ: Back Button & Query Library
 //
 // *Version: 1.3pre, Last updated: 8/26/2010*
@@ -84,7 +83,6 @@
 //         supports the native window.onhashchange event, a slightly more
 //         robust test needed to be added.
 // 1.0   - (10/2/2009) Initial release
-
 (function($,window){
   '$:nomunge'; // Used by YUI compressor.
   
@@ -984,7 +982,6 @@
   });
   
 })(jQuery,this);
-
 /*!
  * jQuery hashchange event - v1.3 - 7/21/2010
  * http://benalman.com/projects/jquery-hashchange-plugin/
@@ -993,7 +990,6 @@
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
  */
-
 // Script: jQuery hashchange event
 //
 // *Version: 1.3, Last updated: 7/21/2010*
@@ -1071,7 +1067,6 @@
 //         who want just the basic event & back button support, without all the
 //         extra awesomeness that BBQ provides. This plugin will be included as
 //         part of jQuery BBQ, but also be available separately.
-
 (function($,window,undefined){
   '$:nomunge'; // Used by YUI compressor.
   

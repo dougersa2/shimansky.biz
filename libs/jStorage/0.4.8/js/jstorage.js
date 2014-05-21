@@ -33,15 +33,12 @@
  * 
  * For more information, please refer to <http://unlicense.org/>
  */
-
  (function(){
     var
         /* jStorage version */
         JSTORAGE_VERSION = "0.4.8",
-
         /* detect a dollar object or create one if not found */
         $ = window.jQuery || window.$ || (window.$ = {}),
-
         /* check for a JSON handling support */
         JSON = {
             parse:
@@ -54,46 +51,33 @@
                 window.JSON && (window.JSON.stringify || window.JSON.encode) ||
                 $.toJSON
         };
-
     // Break if no JSON support was found
     if(!("parse" in JSON) || !("stringify" in JSON)){
         throw new Error("No JSON support found, include //cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js to page");
     }
-
     var
         /* This is the object, that holds the cached values */
         _storage = {__jstorage_meta:{CRC32:{}}},
-
         /* Actual browser storage (localStorage or globalStorage["domain"]) */
         _storage_service = {jStorage:"{}"},
-
         /* DOM element for older IE versions, holds userData behavior */
         _storage_elm = null,
-
         /* How much space does the storage take */
         _storage_size = 0,
-
         /* which backend is currently used */
         _backend = false,
-
         /* onchange observers */
         _observers = {},
-
         /* timeout to wait after onchange event */
         _observer_timeout = false,
-
         /* last update time */
         _observer_update = 0,
-
         /* pubsub observers */
         _pubsub_observers = {},
-
         /* skip published items older than current timestamp */
         _pubsub_last = +new Date(),
-
         /* Next check for TTL */
         _ttl_timeout,
-
         /**
          * XML encoding and decoding as XML nodes can't be JSON'ized
          * XML nodes are encoded and decoded if the node is the value to be saved
@@ -103,7 +87,6 @@
          *   $.jStorage.set("key", {xml: xmlNode}); // NOT OK
          */
         _XMLService = {
-
             /**
              * Validates a XML node to be XML
              * based on jQuery.isXML function
@@ -112,7 +95,6 @@
                 var documentElement = (elm ? elm.ownerDocument || elm : 0).documentElement;
                 return documentElement ? documentElement.nodeName !== "HTML" : false;
             },
-
             /**
              * Encodes a XML node to string
              * based on http://www.mercurytide.co.uk/news/article/issues-when-working-ajax/
@@ -130,7 +112,6 @@
                 }
                 return false;
             },
-
             /**
              * Decodes a XML node from string
              * loosely based on http://outwestmedia.com/jquery-plugins/xmldom/
@@ -151,10 +132,7 @@
                 return this.isXML(resultXML)?resultXML:false;
             }
         };
-
-
     ////////////////////////// PRIVATE METHODS ////////////////////////
-
     /**
      * Initialization function. Detects if the browser supports DOM Storage
      * or userData behavior and behaves accordingly.
@@ -172,7 +150,6 @@
                 // QUOTA_EXCEEDED_ERRROR DOM Exception 22.
             }
         }
-
         if(localStorageReallyWorks){
             try {
                 if(window.localStorage) {
@@ -201,13 +178,10 @@
         else {
             _storage_elm = document.createElement("link");
             if(_storage_elm.addBehavior){
-
                 /* Use a DOM element to act as userData storage */
                 _storage_elm.style.behavior = "url(#default#userData)";
-
                 /* userData element needs to be inserted into the DOM! */
                 document.getElementsByTagName("head")[0].appendChild(_storage_elm);
-
                 try{
                     _storage_elm.load("jStorage");
                 }catch(E){
@@ -216,16 +190,13 @@
                     _storage_elm.save("jStorage");
                     _storage_elm.load("jStorage");
                 }
-
                 var data = "{}";
                 try{
                     data = _storage_elm.getAttribute("jStorage");
                 }catch(E5){}
-
                 try{
                     _observer_update = _storage_elm.getAttribute("jStorage_update");
                 }catch(E6){}
-
                 _storage_service.jStorage = data;
                 _backend = "userDataBehavior";
             }else{
@@ -233,19 +204,14 @@
                 return;
             }
         }
-
         // Load data from storage
         _load_storage();
-
         // remove dead keys
         _handleTTL();
-
         // start listening for changes
         _setupObserver();
-
         // initialize publish-subscribe service
         _handlePubSub();
-
         // handle cached navigation
         if("addEventListener" in window){
             window.addEventListener("pageshow", function(event){
@@ -255,35 +221,26 @@
             }, false);
         }
     }
-
     /**
      * Reload data from storage when needed
      */
     function _reloadData(){
         var data = "{}";
-
         if(_backend == "userDataBehavior"){
             _storage_elm.load("jStorage");
-
             try{
                 data = _storage_elm.getAttribute("jStorage");
             }catch(E5){}
-
             try{
                 _observer_update = _storage_elm.getAttribute("jStorage_update");
             }catch(E6){}
-
             _storage_service.jStorage = data;
         }
-
         _load_storage();
-
         // remove dead keys
         _handleTTL();
-
         _handlePubSub();
     }
-
     /**
      * Sets up a storage change observer
      */
@@ -298,7 +255,6 @@
             setInterval(_storageObserver, 1000);
         }
     }
-
     /**
      * Fired on any kind of data change, needs to check if anything has
      * really been changed
@@ -308,7 +264,6 @@
         // cumulate change notifications with timeout
         clearTimeout(_observer_timeout);
         _observer_timeout = setTimeout(function(){
-
             if(_backend == "localStorage" || _backend == "globalStorage"){
                 updateTime = _storage_service.jStorage_update;
             }else if(_backend == "userDataBehavior"){
@@ -317,29 +272,23 @@
                     updateTime = _storage_elm.getAttribute("jStorage_update");
                 }catch(E5){}
             }
-
             if(updateTime && updateTime != _observer_update){
                 _observer_update = updateTime;
                 _checkUpdatedKeys();
             }
-
         }, 25);
     }
-
     /**
      * Reloads the data and checks if any keys are changed
      */
     function _checkUpdatedKeys(){
         var oldCrc32List = JSON.parse(JSON.stringify(_storage.__jstorage_meta.CRC32)),
             newCrc32List;
-
         _reloadData();
         newCrc32List = JSON.parse(JSON.stringify(_storage.__jstorage_meta.CRC32));
-
         var key,
             updated = [],
             removed = [];
-
         for(key in oldCrc32List){
             if(oldCrc32List.hasOwnProperty(key)){
                 if(!newCrc32List[key]){
@@ -351,7 +300,6 @@
                 }
             }
         }
-
         for(key in newCrc32List){
             if(newCrc32List.hasOwnProperty(key)){
                 if(!oldCrc32List[key]){
@@ -359,11 +307,9 @@
                 }
             }
         }
-
         _fireObservers(updated, "updated");
         _fireObservers(removed, "deleted");
     }
-
     /**
      * Fires observers for updated keys
      *
@@ -394,13 +340,11 @@
             }
         }
     }
-
     /**
      * Publishes key change to listeners
      */
     function _publishChange(){
         var updateTime = (+new Date()).toString();
-
         if(_backend == "localStorage" || _backend == "globalStorage"){
             try {
                 _storage_service.jStorage_update = updateTime;
@@ -412,10 +356,8 @@
             _storage_elm.setAttribute("jStorage_update", updateTime);
             _storage_elm.save("jStorage");
         }
-
         _storageObserver();
     }
-
     /**
      * Loads the data from the storage based on the supported mechanism
      */
@@ -429,7 +371,6 @@
             _storage_service.jStorage = "{}";
         }
         _storage_size = _storage_service.jStorage?String(_storage_service.jStorage).length:0;
-
         if(!_storage.__jstorage_meta){
             _storage.__jstorage_meta = {};
         }
@@ -437,7 +378,6 @@
             _storage.__jstorage_meta.CRC32 = {};
         }
     }
-
     /**
      * This functions provides the "save" mechanism to store the jStorage object
      */
@@ -453,7 +393,6 @@
             _storage_size = _storage_service.jStorage?String(_storage_service.jStorage).length:0;
         }catch(E7){/* probably cache is full, nothing is saved this way*/}
     }
-
     /**
      * Function checks if a key is set and is string or numberic
      *
@@ -468,23 +407,18 @@
         }
         return true;
     }
-
     /**
      * Removes expired keys
      */
     function _handleTTL(){
         var curtime, i, TTL, CRC32, nextExpire = Infinity, changed = false, deleted = [];
-
         clearTimeout(_ttl_timeout);
-
         if(!_storage.__jstorage_meta || typeof _storage.__jstorage_meta.TTL != "object"){
             // nothing to do here
             return;
         }
-
         curtime = +new Date();
         TTL = _storage.__jstorage_meta.TTL;
-
         CRC32 = _storage.__jstorage_meta.CRC32;
         for(i in TTL){
             if(TTL.hasOwnProperty(i)){
@@ -499,12 +433,10 @@
                 }
             }
         }
-
         // set next check
         if(nextExpire != Infinity){
             _ttl_timeout = setTimeout(_handleTTL, nextExpire - curtime);
         }
-
         // save changes
         if(changed){
             _save();
@@ -512,7 +444,6 @@
             _fireObservers(deleted, "deleted");
         }
     }
-
     /**
      * Checks if there's any events on hold to be fired to listeners
      */
@@ -523,7 +454,6 @@
         }
         var pubelm,
             _pubsubCurrent = _pubsub_last;
-
         for(i=len=_storage.__jstorage_meta.PubSub.length-1; i>=0; i--){
             pubelm = _storage.__jstorage_meta.PubSub[i];
             if(pubelm[0] > _pubsub_last){
@@ -531,10 +461,8 @@
                 _fireSubscribers(pubelm[1], pubelm[2]);
             }
         }
-
         _pubsub_last = _pubsubCurrent;
     }
-
     /**
      * Fires all subscriber listeners for a pubsub channel
      *
@@ -551,7 +479,6 @@
             }
         }
     }
-
     /**
      * Remove old events from the publish stream (at least 2sec old)
      */
@@ -559,9 +486,7 @@
         if(!_storage.__jstorage_meta.PubSub){
             return;
         }
-
         var retire = +new Date() - 2000;
-
         for(var i=0, len = _storage.__jstorage_meta.PubSub.length; i<len; i++){
             if(_storage.__jstorage_meta.PubSub[i][0] <= retire){
                 // deleteCount is needed for IE6
@@ -569,13 +494,10 @@
                 break;
             }
         }
-
         if(!_storage.__jstorage_meta.PubSub.length){
             delete _storage.__jstorage_meta.PubSub;
         }
-
     }
-
     /**
      * Publish payload to a channel
      *
@@ -589,14 +511,10 @@
         if(!_storage.__jstorage_meta.PubSub){
             _storage.__jstorage_meta.PubSub = [];
         }
-
         _storage.__jstorage_meta.PubSub.unshift([+new Date, channel, payload]);
-
         _save();
         _publishChange();
     }
-
-
     /**
      * JS Implementation of MurmurHash2
      *
@@ -611,51 +529,40 @@
      * @param {number} seed Positive integer only
      * @return {number} 32-bit positive integer hash
      */
-
     function murmurhash2_32_gc(str, seed) {
         var
             l = str.length,
             h = seed ^ l,
             i = 0,
             k;
-
         while (l >= 4) {
             k =
                 ((str.charCodeAt(i) & 0xff)) |
                 ((str.charCodeAt(++i) & 0xff) << 8) |
                 ((str.charCodeAt(++i) & 0xff) << 16) |
                 ((str.charCodeAt(++i) & 0xff) << 24);
-
             k = (((k & 0xffff) * 0x5bd1e995) + ((((k >>> 16) * 0x5bd1e995) & 0xffff) << 16));
             k ^= k >>> 24;
             k = (((k & 0xffff) * 0x5bd1e995) + ((((k >>> 16) * 0x5bd1e995) & 0xffff) << 16));
-
             h = (((h & 0xffff) * 0x5bd1e995) + ((((h >>> 16) * 0x5bd1e995) & 0xffff) << 16)) ^ k;
-
             l -= 4;
             ++i;
         }
-
         switch (l) {
             case 3: h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
             case 2: h ^= (str.charCodeAt(i + 1) & 0xff) << 8;
             case 1: h ^= (str.charCodeAt(i) & 0xff);
                 h = (((h & 0xffff) * 0x5bd1e995) + ((((h >>> 16) * 0x5bd1e995) & 0xffff) << 16));
         }
-
         h ^= h >>> 13;
         h = (((h & 0xffff) * 0x5bd1e995) + ((((h >>> 16) * 0x5bd1e995) & 0xffff) << 16));
         h ^= h >>> 15;
-
         return h >>> 0;
     }
-
     ////////////////////////// PUBLIC INTERFACE /////////////////////////
-
     $.jStorage = {
         /* Version number */
         version: JSTORAGE_VERSION,
-
         /**
          * Sets a key's value.
          *
@@ -669,15 +576,12 @@
          */
         set: function(key, value, options){
             _checkKey(key);
-
             options = options || {};
-
             // undefined values are deleted automatically
             if(typeof value == "undefined"){
                 this.deleteKey(key);
                 return value;
             }
-
             if(_XMLService.isXML(value)){
                 value = {_is_xml:true,xml:_XMLService.encode(value)};
             }else if(typeof value == "function"){
@@ -686,17 +590,12 @@
                 // clone the object before saving to _storage tree
                 value = JSON.parse(JSON.stringify(value));
             }
-
             _storage[key] = value;
-
             _storage.__jstorage_meta.CRC32[key] = "2." + murmurhash2_32_gc(JSON.stringify(value), 0x9747b28c);
-
             this.setTTL(key, options.TTL || 0); // also handles saving and _publishChange
-
             _fireObservers(key, "updated");
             return value;
         },
-
         /**
          * Looks up a key in cache
          *
@@ -715,7 +614,6 @@
             }
             return typeof(def) == "undefined" ? null : def;
         },
-
         /**
          * Deletes a key from cache.
          *
@@ -731,9 +629,7 @@
                   key in _storage.__jstorage_meta.TTL){
                     delete _storage.__jstorage_meta.TTL[key];
                 }
-
                 delete _storage.__jstorage_meta.CRC32[key];
-
                 _save();
                 _publishChange();
                 _fireObservers(key, "deleted");
@@ -741,7 +637,6 @@
             }
             return false;
         },
-
         /**
          * Sets a TTL for a key, or remove it if ttl value is 0 or below
          *
@@ -754,28 +649,22 @@
             _checkKey(key);
             ttl = Number(ttl) || 0;
             if(key in _storage){
-
                 if(!_storage.__jstorage_meta.TTL){
                     _storage.__jstorage_meta.TTL = {};
                 }
-
                 // Set TTL value for the key
                 if(ttl>0){
                     _storage.__jstorage_meta.TTL[key] = curtime + ttl;
                 }else{
                     delete _storage.__jstorage_meta.TTL[key];
                 }
-
                 _save();
-
                 _handleTTL();
-
                 _publishChange();
                 return true;
             }
             return false;
         },
-
         /**
          * Gets remaining TTL (in milliseconds) for a key or 0 when no TTL has been set
          *
@@ -791,7 +680,6 @@
             }
             return 0;
         },
-
         /**
          * Deletes everything in cache.
          *
@@ -804,7 +692,6 @@
             _fireObservers(null, "flushed");
             return true;
         },
-
         /**
          * Returns a read-only copy of _storage
          *
@@ -815,7 +702,6 @@
             F.prototype = _storage;
             return new F();
         },
-
         /**
          * Returns an index of all used keys as an array
          * ["key1", "key2",.."keyN"]
@@ -831,7 +717,6 @@
             }
             return index;
         },
-
         /**
          * How much space in bytes does the storage take?
          *
@@ -841,7 +726,6 @@
         storageSize: function(){
             return _storage_size;
         },
-
         /**
          * Which backend is currently in use?
          *
@@ -850,7 +734,6 @@
         currentBackend: function(){
             return _backend;
         },
-
         /**
          * Test if storage is available
          *
@@ -859,7 +742,6 @@
         storageAvailable: function(){
             return !!_backend;
         },
-
         /**
          * Register change listeners
          *
@@ -873,7 +755,6 @@
             }
             _observers[key].push(callback);
         },
-
         /**
          * Remove change listeners
          *
@@ -882,23 +763,19 @@
          */
         stopListening: function(key, callback){
             _checkKey(key);
-
             if(!_observers[key]){
                 return;
             }
-
             if(!callback){
                 delete _observers[key];
                 return;
             }
-
             for(var i = _observers[key].length - 1; i>=0; i--){
                 if(_observers[key][i] == callback){
                     _observers[key].splice(i,1);
                 }
             }
         },
-
         /**
          * Subscribe to a Publish/Subscribe event stream
          *
@@ -915,7 +792,6 @@
             }
             _pubsub_observers[channel].push(callback);
         },
-
         /**
          * Publish data to an event stream
          *
@@ -927,17 +803,14 @@
             if(!channel){
                 throw new TypeError("Channel not defined");
             }
-
             _publish(channel, payload);
         },
-
         /**
          * Reloads the data from browser storage
          */
         reInit: function(){
             _reloadData();
         },
-
         /**
          * Removes reference from global objects and saves it as jStorage
          *
@@ -945,16 +818,12 @@
          */
          noConflict: function( saveInGlobal ) {
             delete window.$.jStorage
-
             if ( saveInGlobal ) {
                 window.jStorage = this;
             }
-
             return this;
          }
     };
-
     // Initialize jStorage
     _init();
-
 })();

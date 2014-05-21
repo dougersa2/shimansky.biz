@@ -27,7 +27,6 @@
    *  -- Custom configuration example 4 (Make ALL tables responsive - regardless
    * of screensize): -- $('table').responsiveTable({ dynamic: false });
    */
-
   /**
    * jQuery "webks Responsive Table" plugin transforms less mobile compliant
    * default HTML Tables into a flexible responsive format. Furthermore it
@@ -57,7 +56,6 @@
       $(this).responsiveTableInit(options);
     });
   };
-
   /**
    * Initializes the responsive tables. Expects to be executed on DOM table
    * elements only. These are being transformed into responsive tables like
@@ -134,27 +132,22 @@
        */
       responsiveColumnValueElement : '<dd></dd>'
     }, options);
-
     return this.each(function() {
       // $this = The table (each).
       var $this = $(this);
-
       // Ensure that the element this is being executed on a table!
       $this._responsiveTableCheckElement(false);
-
       if ($this.data('webks-responsive-table-processed')) {
         // Only update if already processed.
         $this.responsiveTableUpdate();
         return true;
       }
-
       // General
       var result = $('<div></div>');
       result.addClass('webks-responsive-table');
       if (settings.preserveClasses) {
         result.addClass($this.attr('class'));
       }
-
       // Head
       // Iterate head - extract titles
       var titles = new Array();
@@ -162,7 +155,6 @@
         var title = $(this).html();
         titles[i] = title;
       });
-
       // Body
       // Iterate body
       $this.find(settings.bodyRowSelector).each(function(i, e) {
@@ -195,10 +187,8 @@
         });
         result.append(row);
       });
-
       // Display responsive version after table.
       $this.after(result);
-
       // Further + what shell we do with the processed table now?
       if (settings.dynamic) {
         if (settings.showSwitch) {
@@ -206,7 +196,6 @@
           switchBtn.html(settings.switchTitle);
           switchBtn.addClass('switchBtn btn');
           switchBtn.attr('href', '#');
-
           $('div.webks-responsive-table a.switchBtn').live('click',
               function(e) {
                 $this.responsiveTableShowTable();
@@ -215,19 +204,15 @@
               });
           result.prepend(switchBtn);
         }
-
         // Connect result to table
         $this.data('webks-responsive-table', result);
         $this.data('webks-responsive-table-processed', true);
-
         // Connect table to result.
         result.data('table', $this);
         result.data('settings', settings);
         $this.data('webks-responsive-table-processed', true);
-
         // Hide table. We might need it again!
         $this.hide();
-
         // Run check to display right display version (table or responsive)
         $this.responsiveTableUpdate();
       } else {
@@ -247,10 +232,8 @@
     return this.each(function() {
       // $this = The table (each).
       var $this = $(this);
-
       // Ensure that the element this is being executed on must be a table!
       $this._responsiveTableCheckElement(true);
-
       var responsiveTable = $this.data('webks-responsive-table');
       if (responsiveTable != undefined) {
         var settings = responsiveTable.data('settings');
@@ -282,7 +265,6 @@
       var $this = $(this);
       // Ensure that the element this is being executed on must be a table!
       $this._responsiveTableCheckElement(true);
-
       var responsiveTable = $this.data('webks-responsive-table');
       if (responsiveTable.length > 0) {
         $this.show();
@@ -290,7 +272,6 @@
       }
     });
   };
-
   /**
    * Displays the responsive style and hides the default table layout.
    * 
@@ -303,7 +284,6 @@
       var $this = $(this);
       // Ensure that the element this is being executed on must be a table!
       $this._responsiveTableCheckElement();
-
       var responsiveTable = $this.data('webks-responsive-table');
       if (responsiveTable.length > 0) {
         $this.hide();
@@ -311,7 +291,6 @@
       }
     });
   };
-
   /**
    * Checks the general preconditions for elements that this Plugin is being
    * executed on.

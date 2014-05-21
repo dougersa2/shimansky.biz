@@ -53,7 +53,6 @@ addEvent(window, "blur", function () {
  *
  *
  */
-
 /*!
  *
  *
@@ -802,7 +801,6 @@ yepnope.injectJs("/libs/sidr/shimansky.biz/js/jquery.sidr.min.js", function () {
 		}
 	})
 })(document.getElementById("sf_articlesreadingrulesutf_stat") || "", "https://sourceforge.net/projects/articles-reading-rules-utf/files/stats/json?start_date=2014-01-30&end_date=" + sbizFnGetYyyymmdd());
-
 /*!
  *
  *
@@ -824,7 +822,6 @@ var deferredJS = function () {
  *
  *
  */
-
 /*!
  *
  *
@@ -855,7 +852,6 @@ document.getElementById("vk_like") && !/localhost/.test(self.location.host) && y
  *
  *
  */
-
 /*!
  *
  *
@@ -1312,7 +1308,6 @@ yepnope([{
 							},
 							open : function () {},
 							close : function () {}
-
 						})
 					}
 					(document, "search_text", "search_form", "/libs/jquery-ui-1.10.3.custom.autocomplete/shimansky.biz/autocomplete/");
@@ -1355,7 +1350,6 @@ yepnope([{
  *
  *
  */
-
  /*!
  *
  *
@@ -1766,17 +1760,14 @@ yepnope.injectJs("//cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.11/skrollr.min.js
 	b && (b.style.display = "none");
 	a && (a.style.display = "block")
 })();
-
 /*!
  *
  *
  */
-
  /*!
  *
  *
  */
-
  /*!
  *
  *

@@ -2,21 +2,17 @@
 * http://potomak.github.com/jquery-instagram
 * Copyright (c) 2013 Giovanni Cappellotto; Licensed MIT */
 (function($) {
-
   function composeRequest(options) {
     var url = 'https://api.instagram.com/v1';
     var data = {};
-
     if (options.accessToken == null && options.clientId == null) {
       throw 'You must provide an access token or a client id';
     }
-
     data = $.extend(data, {
       access_token: options.accessToken,
       client_id: options.clientId,
       count: options.count
     });
-
     if (options.url != null) {
       url = options.url;
     }
@@ -44,12 +40,10 @@
     
     return {url: url, data: data};
   }
-
   $.fn.instagram = function(options) {
     var that = this;
     options = $.extend({}, $.fn.instagram.defaults, options);
     var request = composeRequest(options);
-
     $.ajax({
       dataType: "jsonp",
       url: request.url,
@@ -58,12 +52,10 @@
         that.trigger('didLoadInstagram', response);
       }
     });
-
     this.trigger('willLoadInstagram', options);
     
     return this;
   };
-
   $.fn.instagram.defaults = {
     accessToken: null,
     clientId: null,
@@ -74,5 +66,4 @@
     location: null,
     search: null
   };
-
 }(jQuery));

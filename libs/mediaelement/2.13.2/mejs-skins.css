@@ -1,12 +1,10 @@
 /* TED player */
 .mejs-container.mejs-ted {
-
 }
 .mejs-ted .mejs-controls {
 	background: #eee;
 	height: 65px;
 }
-
 .mejs-ted .mejs-button,
 .mejs-ted .mejs-time {
 	position: absolute;
@@ -60,7 +58,6 @@
 .mejs-ted .mejs-controls .mejs-pause button {
 	background-position: 0 -23px;
 }
-
 .mejs-ted .mejs-controls .mejs-fullscreen-button {
 	top: 34px;
 	right: 9px;
@@ -120,11 +117,9 @@
 	background: url(controls-ted.png) repeat-y -48px -66px;
 	height: 50px;
 }
-
 .mejs-ted .mejs-controls .mejs-volume-button .mejs-volume-handle {
 	display: none;
 }
-
 .mejs-ted .mejs-controls .mejs-time span {
 	color: #333;
 }
@@ -140,7 +135,6 @@
 	color: #333;
 }
 .mejs-ted .mejs-controls .mejs-duration-container {
-
 	position: absolute;
 	top: 32px;
 	right: 65px;
@@ -151,7 +145,6 @@
 	border-radius: 3px;
 	color: #333;
 }
-
 .mejs-ted .mejs-controls .mejs-time button{
 	color: #333;
 }
@@ -159,17 +152,13 @@
 	display: none;
 }
 /* END: TED player */
-
-
 /* WMP player */
 .mejs-container.mejs-wmp {
-
 }
 .mejs-wmp .mejs-controls {
 	background: transparent url(controls-wmp-bg.png) center 16px no-repeat;
 	height: 65px;
 }
-
 .mejs-wmp .mejs-button,
 .mejs-wmp .mejs-time {
 	position: absolute;
@@ -226,7 +215,6 @@
 .mejs-wmp .mejs-controls .mejs-pause button {
 	background-position: 0 -40px;
 }
-
 .mejs-wmp .mejs-controls .mejs-currenttime-container {
 	position: absolute;
 	top: 25px;
@@ -239,8 +227,6 @@
 	left: 50%;
 	margin-left: -58px;
 }
-
-
 .mejs-wmp .mejs-controls .mejs-volume-button {
 	top: 32px;
 	right: 50%;
@@ -265,7 +251,6 @@
 .mejs-wmp .mejs-controls .mejs-volume-button .mejs-volume-slider {
 	background: rgba(102,102,102,0.6);
 }
-
 .mejs-wmp .mejs-controls .mejs-fullscreen-button {
 	top: 32px;
 	right: 50%;
@@ -284,6 +269,3 @@
 	display: none;
 }
 /* END: WMP player */
-
-
-

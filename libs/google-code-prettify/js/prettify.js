@@ -11,8 +11,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-
 /**
  * @fileoverview
  * some functions for browser-side pretty printing of code contained in html.
@@ -51,17 +49,14 @@
  * </blockquote>
  * @requires console
  */
-
 // JSLint declarations
 /*global console, document, navigator, setTimeout, window, define */
-
 /**
  * Split {@code prettyPrint} into multiple timeouts so as not to interfere with
  * UI events.
  * If set to {@code false}, {@code prettyPrint()} is synchronous.
  */
 window['PR_SHOULD_USE_CONTINUATION'] = true;
-
 /**
  * Find all the {@code <pre>} and {@code <code>} tags in the DOM with
  * {@code class=prettyprint} and prettify them.
@@ -77,8 +72,6 @@ var prettyPrintOne;
  * @return {string} code as html, but prettier
  */
 var prettyPrint;
-
-
 (function () {
   var win = window;
   // Keyword lists for various languages.
@@ -128,7 +121,6 @@ var prettyPrint;
       CPP_KEYWORDS, CSHARP_KEYWORDS, JSCRIPT_KEYWORDS, PERL_KEYWORDS +
       PYTHON_KEYWORDS, RUBY_KEYWORDS, SH_KEYWORDS];
   var C_TYPES = /^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\d*)\b/;
-
   // token style names.  correspond to css classes
   /**
    * token style for a string literal
@@ -165,7 +157,6 @@ var prettyPrint;
    * @const
    */
   var PR_PLAIN = 'pln';
-
   /**
    * token style for an sgml tag.
    * @const
@@ -191,16 +182,12 @@ var prettyPrint;
    * @const
    */
   var PR_ATTRIB_VALUE = 'atv';
-
   /**
    * A class that indicates a section of markup that is not code, e.g. to allow
    * embedding of line numbers within code listings.
    * @const
    */
   var PR_NOCODE = 'nocode';
-
-
-
 /**
  * A set of tokens that can precede a regular expression literal in
  * javascript
@@ -221,14 +208,11 @@ var prettyPrint;
  * @const
  */
 var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[+\\-]=|->|\\/=?|::?|<<?=?|>>?>?=?|,|;|\\?|@|\\[|~|{|\\^\\^?=?|\\|\\|?=?|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\\s*';
-
 // CAVEAT: this does not properly handle the case where a regular
 // expression immediately follows another since a regular expression may
 // have flags for case-sensitivity and the like.  Having regexp tokens
 // adjacent is not valid in any language I'm aware of, so I'm punting.
 // TODO: maybe style special characters inside a regexp as punctuation.
-
-
   /**
    * Given a group of {@link RegExp}s, returns a {@code RegExp} that globally
    * matches the union of the sets of strings matched by the input RegExp.
@@ -469,8 +453,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
   
     return new RegExp(rewritten.join('|'), ignoreCase ? 'gi' : 'g');
   }
-
-
   /**
    * Split markup into a string of source code and an array mapping ranges in
    * that string to the text nodes in which they appear.
@@ -563,8 +545,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       spans: spans
     };
   }
-
-
   /**
    * Apply the given language handler to sourceCode and add the resulting
    * decorations to out.
@@ -580,9 +560,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
     langHandler(job);
     out.push.apply(out, job.decorations);
   }
-
   var notWs = /\S/;
-
   /**
    * Given an element, if it contains only one child element and any text nodes
    * it contains contain only space characters, return the sole child element.
@@ -606,7 +584,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
     }
     return wrapper === element ? undefined : wrapper;
   }
-
   /** Given triples of [style, pattern, context] returns a lexing function,
     * The lexing function interprets the patterns to find token boundaries and
     * returns a decoration list of the form
@@ -678,9 +655,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       allRegexs.push(/[\0-\uffff]/);
       tokenizer = combinePrefixPatterns(allRegexs);
     })();
-
     var nPatterns = fallthroughStylePatterns.length;
-
     /**
      * Lexes job.sourceCode and produces an output array job.decorations of
      * style classes preceded by the position at which they start in
@@ -703,12 +678,10 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       var pos = 0;  // index into sourceCode
       var tokens = sourceCode.match(tokenizer) || [];
       var styleCache = {};
-
       for (var ti = 0, nTokens = tokens.length; ti < nTokens; ++ti) {
         var token = tokens[ti];
         var style = styleCache[token];
         var match = void 0;
-
         var isEmbedded;
         if (typeof style === 'string') {
           isEmbedded = false;
@@ -726,24 +699,19 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
                 break;
               }
             }
-
             if (!match) {  // make sure that we make progress
               style = PR_PLAIN;
             }
           }
-
           isEmbedded = style.length >= 5 && 'lang-' === style.substring(0, 5);
           if (isEmbedded && !(match && typeof match[1] === 'string')) {
             isEmbedded = false;
             style = PR_SOURCE;
           }
-
           if (!isEmbedded) { styleCache[token] = style; }
         }
-
         var tokenStart = pos;
         pos += token.length;
-
         if (!isEmbedded) {
           decorations.push(basePos + tokenStart, style);
         } else {  // Treat group 1 as an embedded block of source code.
@@ -780,7 +748,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
     };
     return decorate;
   }
-
   /** returns a function that produces a list of decorations from source text.
     *
     * This code treats ", ', and ` as string delimiters, and \ as a string
@@ -868,12 +835,10 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
            new RegExp('^' + REGEXP_PRECEDER_PATTERN + '(' + REGEX_LITERAL + ')')
            ]);
     }
-
     var types = options['types'];
     if (types) {
       fallthroughStylePatterns.push([PR_TYPE, types]);
     }
-
     var keywords = ("" + options['keywords']).replace(/^ | $/g, '');
     if (keywords.length) {
       fallthroughStylePatterns.push(
@@ -881,12 +846,9 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
            new RegExp('^(?:' + keywords.replace(/[\s,]+/g, '|') + ')\\b'),
            null]);
     }
-
     shortcutStylePatterns.push([PR_PLAIN,       /^\s+/, null, ' \r\n\t\xA0']);
-
     var punctuation =
       // The Bash man page says
-
       // A word is a sequence of characters considered as a single
       // unit by GRUB. Words are separated by metacharacters,
       // which are the following plus space, tab, and newline: { }
@@ -895,7 +857,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       
       // A word beginning with # causes that word and all remaining
       // characters on that line to be ignored.
-
       // which means that only a '#' after /(?:^|[{}|&$;<>\s])/ starts a
       // comment but empirically
       // $ echo {#}
@@ -904,15 +865,12 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       // $#
       // $ echo }#
       // }#
-
       // so /(?:^|[|&;<>\s])/ is more appropriate.
-
       // http://gcc.gnu.org/onlinedocs/gcc-2.95.3/cpp_1.html#SEC3
       // suggests that this definition is compatible with a
       // default mode that tries to use a single token definition
       // to recognize both bash/python style comments and C
       // preprocessor directives.
-
       // This definition of punctuation does not include # in the list of
       // follow-on exclusions, so # will not be broken before if preceeded
       // by a punctuation character.  We could try to exclude # after
@@ -921,7 +879,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       // when hc is truthy to include # in the run of punctuation characters
       // only when not followint [|&;<>].
       /^.[^\s\w\.$@\'\"\`\/\\]*/;
-
     fallthroughStylePatterns.push(
         // TODO(mikesamuel): recognize non-latin letters and numerals in idents
         [PR_LITERAL,     /^@[a-z_$][a-z_$@0-9]*/i, null],
@@ -943,10 +900,8 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
         // Don't treat escaped quotes in bash as starting strings.  See issue 144.
         [PR_PLAIN,       /^\\[\s\S]?/, null],
         [PR_PUNCTUATION, punctuation, null]);
-
     return createSimpleLexer(shortcutStylePatterns, fallthroughStylePatterns);
   }
-
   var decorateSource = sourceDecorator({
         'keywords': ALL_KEYWORDS,
         'hashComments': true,
@@ -954,7 +909,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
         'multiLineStrings': true,
         'regexLiterals': true
       });
-
   /**
    * Given a DOM subtree, wraps it in a list, and puts each line into its own
    * list item.
@@ -1093,7 +1047,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
   
     node.appendChild(ol);
   }
-
   /**
    * Breaks {@code job.sourceCode} around style boundaries in
    * {@code job.decorations} and modifies {@code job.sourceNode} in place.
@@ -1216,8 +1169,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       }
     }
   }
-
-
   /** Maps language-specific file extensions to handlers. */
   var langHandlerRegistry = {};
   /** Register a language handler for the given file extensions.
@@ -1355,10 +1306,8 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
         }), ['coffee']);
   registerLangHandler(
       createSimpleLexer([], [[PR_STRING, /^[\s\S]+/]]), ['regex']);
-
   function applyDecorator(job) {
     var opt_langExtension = job.langExtension;
-
     try {
       // Extract tags, and convert the source code to plain text.
       var sourceAndSpans = extractSourceSpans(job.sourceNode, job.pre);
@@ -1367,10 +1316,8 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       job.sourceCode = source;
       job.spans = sourceAndSpans.spans;
       job.basePos = 0;
-
       // Apply the appropriate language handler
       langHandlerForExtension(opt_langExtension, source)(job);
-
       // Integrate the decorations and tags back into the source code,
       // modifying the sourceNode in place.
       recombineTagsAndDecorations(job);
@@ -1380,7 +1327,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       }
     }
   }
-
   /**
    * @param sourceCodeHtml {string} The HTML to pretty print.
    * @param opt_langExtension {string} The language name to use.
@@ -1397,7 +1343,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
     if (opt_numberLines) {
       numberLines(container, opt_numberLines, true);
     }
-
     var job = {
       langExtension: opt_langExtension,
       numberLines: opt_numberLines,
@@ -1407,7 +1352,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
     applyDecorator(job);
     return container.innerHTML;
   }
-
   function prettyPrint(opt_whenDone) {
     function byTagName(tn) { return document.getElementsByTagName(tn); }
     // fetch a list of nodes to rewrite
@@ -1419,24 +1363,20 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
       }
     }
     codeSegments = null;
-
     var clock = Date;
     if (!clock['now']) {
       clock = { 'now': function () { return +(new Date); } };
     }
-
     // The loop is broken into a series of continuations to make sure that we
     // don't make the browser unresponsive when rewriting a large page.
     var k = 0;
     var prettyPrintingJob;
-
     var langExtensionRe = /\blang(?:uage)?-([\w.]+)(?!\S)/;
     var prettyPrintRe = /\bprettyprint\b/;
     var prettyPrintedRe = /\bprettyprinted\b/;
     var preformattedTagNameRe = /pre|xmp/i;
     var codeRe = /^code$/i;
     var preCodeXmpRe = /^(?:pre|code|xmp)$/i;
-
     function doWork() {
       var endTime = (win['PR_SHOULD_USE_CONTINUATION'] ?
                      clock['now']() + 250 /* ms */ :
@@ -1449,7 +1389,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
             // This allows recalling pretty print to just prettyprint elements
             // that have been added to the page since last call.
             && !prettyPrintedRe.test(className)) {
-
           // make sure this is not nested in an already prettified element
           var nested = false;
           for (var p = cs.parentNode; p; p = p.parentNode) {
@@ -1464,7 +1403,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
             // Mark done.  If we fail to prettyprint for whatever reason,
             // we shouldn't try again.
             cs.className += ' prettyprinted';
-
             // If the classes includes a language extensions, use it.
             // Language extensions can be specified like
             //     <pre class="prettyprint lang-cpp">
@@ -1480,9 +1418,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
                 && codeRe.test(wrapper.tagName)) {
               langExtension = wrapper.className.match(langExtensionRe);
             }
-
             if (langExtension) { langExtension = langExtension[1]; }
-
             var preformatted;
             if (preformattedTagNameRe.test(cs.tagName)) {
               preformatted = 1;
@@ -1499,7 +1435,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
               preformatted = whitespace
                   && 'pre' === whitespace.substring(0, 3);
             }
-
             // Look for a class like linenums or linenums:<n> where <n> is the
             // 1-indexed number of the first line.
             var lineNums = cs.className.match(/\blinenums\b(?::(\d+))?/);
@@ -1507,7 +1442,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
                 ? lineNums[1] && lineNums[1].length ? +lineNums[1] : true
                 : false;
             if (lineNums) { numberLines(cs, lineNums, preformatted); }
-
             // do the pretty printing
             prettyPrintingJob = {
               langExtension: langExtension,
@@ -1526,10 +1460,8 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
         opt_whenDone();
       }
     }
-
     doWork();
   }
-
   /**
    * Contains functions for creating and registering new language handlers.
    * @type {Object}
@@ -1554,7 +1486,6 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
         'prettyPrintOne': win['prettyPrintOne'] = prettyPrintOne,
         'prettyPrint': win['prettyPrint'] = prettyPrint
       };
-
   // Make PR available via the Asynchronous Module Definition (AMD) API.
   // Per https://github.com/amdjs/amdjs-api/wiki/AMD:
   // The Asynchronous Module Definition (AMD) API specifies a

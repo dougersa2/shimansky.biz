@@ -6,32 +6,24 @@
 (function( jQuery, window, undefined ) {
 // See http://bugs.jquery.com/ticket/13335
 // "use strict";
-
-
 var warnedAbout = {};
-
 // List of warnings already given; public read only
 jQuery.migrateWarnings = [];
-
 // Set to true to prevent console output; migrateWarnings still maintained
 // jQuery.migrateMute = false;
-
 // Show a message on the console so devs know we're active
 if ( !jQuery.migrateMute && window.console && window.console.log ) {
 	window.console.log("JQMIGRATE: Logging is active");
 }
-
 // Set to false to disable traces that appear with warnings
 if ( jQuery.migrateTrace === undefined ) {
 	jQuery.migrateTrace = true;
 }
-
 // Forget any warnings we've already given; public
 jQuery.migrateReset = function() {
 	warnedAbout = {};
 	jQuery.migrateWarnings.length = 0;
 };
-
 function migrateWarn( msg) {
 	var console = window.console;
 	if ( !warnedAbout[ msg ] ) {
@@ -45,7 +37,6 @@ function migrateWarn( msg) {
 		}
 	}
 }
-
 function migrateWarnProp( obj, prop, value, msg ) {
 	if ( Object.defineProperty ) {
 		// On ES5 browsers (non-oldIE), warn if the code tries to get prop;
@@ -68,18 +59,14 @@ function migrateWarnProp( obj, prop, value, msg ) {
 			// IE8 is a dope about Object.defineProperty, can't warn there
 		}
 	}
-
 	// Non-ES5 (or broken) browser; just set the property
 	jQuery._definePropertyBroken = true;
 	obj[ prop ] = value;
 }
-
 if ( document.compatMode === "BackCompat" ) {
 	// jQuery has never supported or tested Quirks Mode
 	migrateWarn( "jQuery is not compatible with Quirks Mode" );
 }
-
-
 var attrFn = jQuery( "<input/>", { size: 1 } ).attr("size") && jQuery.attrFn,
 	oldAttr = jQuery.attr,
 	valueAttrGet = jQuery.attrHooks.value && jQuery.attrHooks.value.get ||
@@ -90,14 +77,11 @@ var attrFn = jQuery( "<input/>", { size: 1 } ).attr("size") && jQuery.attrFn,
 	rnoAttrNodeType = /^[238]$/,
 	rboolean = /^(?:autofocus|autoplay|async|checked|controls|defer|disabled|hidden|loop|multiple|open|readonly|required|scoped|selected)$/i,
 	ruseDefault = /^(?:checked|selected)$/i;
-
 // jQuery.attrFn
 migrateWarnProp( jQuery, "attrFn", attrFn || {}, "jQuery.attrFn is deprecated" );
-
 jQuery.attr = function( elem, name, value, pass ) {
 	var lowerName = name.toLowerCase(),
 		nType = elem && elem.nodeType;
-
 	if ( pass ) {
 		// Since pass is used internally, we only warn for new jQuery
 		// versions where there isn't a pass arg in the formal params
@@ -109,13 +93,11 @@ jQuery.attr = function( elem, name, value, pass ) {
 			return jQuery( elem )[ name ]( value );
 		}
 	}
-
 	// Warn if user tries to set `type`, since it breaks on IE 6/7/8; by checking
 	// for disconnected elements we don't warn on $( "<button>", { type: "button" } ).
 	if ( name === "type" && value !== undefined && rnoType.test( elem.nodeName ) && elem.parentNode ) {
 		migrateWarn("Can't change the 'type' of an input or button in IE 6/7/8");
 	}
-
 	// Restore boolHook for boolean property/attribute synchronization
 	if ( !jQuery.attrHooks[ lowerName ] && rboolean.test( lowerName ) ) {
 		jQuery.attrHooks[ lowerName ] = {
@@ -126,7 +108,6 @@ jQuery.attr = function( elem, name, value, pass ) {
 					property = jQuery.prop( elem, name );
 				return property === true || typeof property !== "boolean" &&
 					( attrNode = elem.getAttributeNode(name) ) && attrNode.nodeValue !== false ?
-
 					name.toLowerCase() :
 					undefined;
 			},
@@ -143,22 +124,18 @@ jQuery.attr = function( elem, name, value, pass ) {
 						// Only set the IDL specifically if it already exists on the element
 						elem[ propName ] = true;
 					}
-
 					elem.setAttribute( name, name.toLowerCase() );
 				}
 				return name;
 			}
 		};
-
 		// Warn only for attributes that can remain distinct from their properties post-1.9
 		if ( ruseDefault.test( lowerName ) ) {
 			migrateWarn( "jQuery.fn.attr('" + lowerName + "') may use property instead of attribute" );
 		}
 	}
-
 	return oldAttr.call( jQuery, elem, name, value );
 };
-
 // attrHooks: value
 jQuery.attrHooks.value = {
 	get: function( elem, name ) {
@@ -185,18 +162,14 @@ jQuery.attrHooks.value = {
 		elem.value = value;
 	}
 };
-
-
 var matched, browser,
 	oldInit = jQuery.fn.init,
 	oldParseJSON = jQuery.parseJSON,
 	// Note: XSS check is done below after string is trimmed
 	rquickExpr = /^([^<]*)(<[\w\W]+>)([^>]*)$/;
-
 // $(html) "looks like html" rule change
 jQuery.fn.init = function( selector, context, rootjQuery ) {
 	var match;
-
 	if ( selector && typeof selector === "string" && !jQuery.isPlainObject( context ) &&
 			(match = rquickExpr.exec( jQuery.trim( selector ) )) && match[ 0 ] ) {
 		// This is an HTML string according to the "old" rules; is it still?
@@ -225,7 +198,6 @@ jQuery.fn.init = function( selector, context, rootjQuery ) {
 	return oldInit.apply( this, arguments );
 };
 jQuery.fn.init.prototype = jQuery.fn;
-
 // Let $.parseJSON(falsy_value) return null
 jQuery.parseJSON = function( json ) {
 	if ( !json && json !== null ) {
@@ -234,46 +206,37 @@ jQuery.parseJSON = function( json ) {
 	}
 	return oldParseJSON.apply( this, arguments );
 };
-
 jQuery.uaMatch = function( ua ) {
 	ua = ua.toLowerCase();
-
 	var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
 		/(webkit)[ \/]([\w.]+)/.exec( ua ) ||
 		/(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
 		/(msie) ([\w.]+)/.exec( ua ) ||
 		ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
 		[];
-
 	return {
 		browser: match[ 1 ] || "",
 		version: match[ 2 ] || "0"
 	};
 };
-
 // Don't clobber any existing jQuery.browser in case it's different
 if ( !jQuery.browser ) {
 	matched = jQuery.uaMatch( navigator.userAgent );
 	browser = {};
-
 	if ( matched.browser ) {
 		browser[ matched.browser ] = true;
 		browser.version = matched.version;
 	}
-
 	// Chrome is Webkit, but Webkit is also Safari.
 	if ( browser.chrome ) {
 		browser.webkit = true;
 	} else if ( browser.webkit ) {
 		browser.safari = true;
 	}
-
 	jQuery.browser = browser;
 }
-
 // Warn if the code tries to get jQuery.browser
 migrateWarnProp( jQuery, "browser", jQuery.browser, "jQuery.browser is deprecated" );
-
 jQuery.sub = function() {
 	function jQuerySub( selector, context ) {
 		return new jQuerySub.fn.init( selector, context );
@@ -287,7 +250,6 @@ jQuery.sub = function() {
 		if ( context && context instanceof jQuery && !(context instanceof jQuerySub) ) {
 			context = jQuerySub( context );
 		}
-
 		return jQuery.fn.init.call( this, selector, context, rootjQuerySub );
 	};
 	jQuerySub.fn.init.prototype = jQuerySub.fn;
@@ -295,22 +257,16 @@ jQuery.sub = function() {
 	migrateWarn( "jQuery.sub() is deprecated" );
 	return jQuerySub;
 };
-
-
 // Ensure that $.ajax gets the new parseJSON defined in core.js
 jQuery.ajaxSetup({
 	converters: {
 		"text json": jQuery.parseJSON
 	}
 });
-
-
 var oldFnData = jQuery.fn.data;
-
 jQuery.fn.data = function( name ) {
 	var ret, evt,
 		elem = this[0];
-
 	// Handles 1.7 which has this behavior and 1.8 which doesn't
 	if ( elem && name === "events" && arguments.length === 1 ) {
 		ret = jQuery.data( elem, name );
@@ -322,16 +278,12 @@ jQuery.fn.data = function( name ) {
 	}
 	return oldFnData.apply( this, arguments );
 };
-
-
 var rscriptType = /\/(java|ecma)script/i,
 	oldSelf = jQuery.fn.andSelf || jQuery.fn.addBack;
-
 jQuery.fn.andSelf = function() {
 	migrateWarn("jQuery.fn.andSelf() replaced by jQuery.fn.addBack()");
 	return oldSelf.apply( this, arguments );
 };
-
 // Since jQuery.clean is used internally on older versions, we only shim if it's missing
 if ( !jQuery.clean ) {
 	jQuery.clean = function( elems, context, fragment, scripts ) {
@@ -339,14 +291,10 @@ if ( !jQuery.clean ) {
 		context = context || document;
 		context = !context.nodeType && context[0] || context;
 		context = context.ownerDocument || context;
-
 		migrateWarn("jQuery.clean() is deprecated");
-
 		var i, elem, handleScript, jsTags,
 			ret = [];
-
 		jQuery.merge( ret, jQuery.buildFragment( elems, context ).childNodes );
-
 		// Complex logic lifted directly from jQuery 1.8
 		if ( fragment ) {
 			// Special handling of each script element
@@ -360,7 +308,6 @@ if ( !jQuery.clean ) {
 						fragment.appendChild( elem );
 				}
 			};
-
 			for ( i = 0; (elem = ret[i]) != null; i++ ) {
 				// Check if we're done after handling an executable script
 				if ( !( jQuery.nodeName( elem, "script" ) && handleScript( elem ) ) ) {
@@ -369,7 +316,6 @@ if ( !jQuery.clean ) {
 					if ( typeof elem.getElementsByTagName !== "undefined" ) {
 						// handleScript alters the DOM, so use jQuery.merge to ensure snapshot iteration
 						jsTags = jQuery.grep( jQuery.merge( [], elem.getElementsByTagName("script") ), handleScript );
-
 						// Splice the scripts into ret after their former ancestor and advance our index beyond them
 						ret.splice.apply( ret, [i + 1, 0].concat( jsTags ) );
 						i += jsTags.length;
@@ -377,11 +323,9 @@ if ( !jQuery.clean ) {
 				}
 			}
 		}
-
 		return ret;
 	};
 }
-
 var eventAdd = jQuery.event.add,
 	eventRemove = jQuery.event.remove,
 	eventTrigger = jQuery.event.trigger,
@@ -400,17 +344,14 @@ var eventAdd = jQuery.event.add,
 		}
 		return events && events.replace( rhoverHack, "mouseenter$1 mouseleave$1" );
 	};
-
 // Event props removed in 1.9, put them back if needed; no practical way to warn them
 if ( jQuery.event.props && jQuery.event.props[ 0 ] !== "attrChange" ) {
 	jQuery.event.props.unshift( "attrChange", "attrName", "relatedNode", "srcElement" );
 }
-
 // Undocumented jQuery.event.handle was "deprecated" in jQuery 1.7
 if ( jQuery.event.dispatch ) {
 	migrateWarnProp( jQuery.event, "handle", jQuery.event.dispatch, "jQuery.event.handle is undocumented and deprecated" );
 }
-
 // Support for 'hover' pseudo-event and ajax event warnings
 jQuery.event.add = function( elem, types, handler, data, selector ){
 	if ( elem !== document && rajaxEvent.test( types ) ) {
@@ -421,7 +362,6 @@ jQuery.event.add = function( elem, types, handler, data, selector ){
 jQuery.event.remove = function( elem, types, handler, selector, mappedTypes ){
 	eventRemove.call( this, elem, hoverHack( types ) || "", handler, selector, mappedTypes );
 };
-
 jQuery.fn.error = function() {
 	var args = Array.prototype.slice.call( arguments, 0);
 	migrateWarn("jQuery.fn.error() is deprecated");
@@ -433,15 +373,12 @@ jQuery.fn.error = function() {
 	this.triggerHandler.apply( this, args );
 	return this;
 };
-
 jQuery.fn.toggle = function( fn, fn2 ) {
-
 	// Don't mess with animation or css toggles
 	if ( !jQuery.isFunction( fn ) || !jQuery.isFunction( fn2 ) ) {
 		return oldToggle.apply( this, arguments );
 	}
 	migrateWarn("jQuery.fn.toggle(handler, handler...) is deprecated");
-
 	// Save reference to arguments for access in closure
 	var args = arguments,
 		guid = fn.guid || jQuery.guid++,
@@ -450,23 +387,18 @@ jQuery.fn.toggle = function( fn, fn2 ) {
 			// Figure out which function to execute
 			var lastToggle = ( jQuery._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
 			jQuery._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
-
 			// Make sure that clicks stop
 			event.preventDefault();
-
 			// and execute the function
 			return args[ lastToggle ].apply( this, arguments ) || false;
 		};
-
 	// link all the functions, so any of them can unbind this click handler
 	toggler.guid = guid;
 	while ( i < args.length ) {
 		args[ i++ ].guid = guid;
 	}
-
 	return this.click( toggler );
 };
-
 jQuery.fn.live = function( types, data, fn ) {
 	migrateWarn("jQuery.fn.live() is deprecated");
 	if ( oldLive ) {
@@ -475,7 +407,6 @@ jQuery.fn.live = function( types, data, fn ) {
 	jQuery( this.context ).on( types, this.selector, data, fn );
 	return this;
 };
-
 jQuery.fn.die = function( types, fn ) {
 	migrateWarn("jQuery.fn.die() is deprecated");
 	if ( oldDie ) {
@@ -484,7 +415,6 @@ jQuery.fn.die = function( types, fn ) {
 	jQuery( this.context ).off( types, this.selector || "**", fn );
 	return this;
 };
-
 // Turn global events into document-triggered events
 jQuery.event.trigger = function( event, data, elem, onlyHandlers  ){
 	if ( !elem && !rajaxEvent.test( event ) ) {
@@ -497,7 +427,6 @@ jQuery.each( ajaxEvents.split("|"),
 		jQuery.event.special[ name ] = {
 			setup: function() {
 				var elem = this;
-
 				// The document needs no shimming; must be !== for oldIE
 				if ( elem !== document ) {
 					jQuery.event.add( document, name + "." + jQuery.guid, function() {
@@ -516,6 +445,4 @@ jQuery.each( ajaxEvents.split("|"),
 		};
 	}
 );
-
-
 })( jQuery, window );

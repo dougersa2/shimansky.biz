@@ -25,7 +25,6 @@
     	 var startX;
     	 var startY;
 		 var isMoving = false;
-
     	 function cancelTouch() {
     		 this.removeEventListener('touchmove', onTouchMove);
     		 startX = null;

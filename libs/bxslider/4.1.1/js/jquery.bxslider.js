@@ -7,13 +7,9 @@
  *
  * Released under the MIT license - http://opensource.org/licenses/MIT
  */
-
 ;(function($){
-
 	var plugin = {};
-
 	var defaults = {
-
 		// GENERAL
 		mode: 'horizontal',
 		slideSelector: '',
@@ -33,14 +29,12 @@
 		useCSS: true,
 		preloadImages: 'visible',
 		responsive: true,
-
 		// TOUCH
 		touchEnabled: true,
 		swipeThreshold: 50,
 		oneToOneTouch: true,
 		preventDefaultSwipeX: true,
 		preventDefaultSwipeY: false,
-
 		// PAGER
 		pager: true,
 		pagerType: 'full',
@@ -48,7 +42,6 @@
 		pagerSelector: null,
 		buildPager: null,
 		pagerCustom: null,
-
 		// CONTROLS
 		controls: true,
 		nextText: 'Next',
@@ -60,7 +53,6 @@
 		stopText: 'Stop',
 		autoControlsCombine: false,
 		autoControlsSelector: null,
-
 		// AUTO
 		auto: false,
 		pause: 4000,
@@ -68,13 +60,11 @@
 		autoDirection: 'next',
 		autoHover: false,
 		autoDelay: 0,
-
 		// CAROUSEL
 		minSlides: 1,
 		maxSlides: 1,
 		moveSlides: 0,
 		slideWidth: 0,
-
 		// CALLBACKS
 		onSliderLoad: function() {},
 		onSlideBefore: function() {},
@@ -82,38 +72,29 @@
 		onSlideNext: function() {},
 		onSlidePrev: function() {}
 	}
-
 	$.fn.bxSlider = function(options){
-
 		if(this.length == 0) return this;
-
 		// support mutltiple elements
 		if(this.length > 1){
 			this.each(function(){$(this).bxSlider(options)});
 			return this;
 		}
-
 		// create a namespace to be used throughout the plugin
 		var slider = {};
 		// set a reference to our slider element
 		var el = this;
 		plugin.el = this;
-
 		/**
 		 * Makes slideshow responsive
 		 */
 		// first get the original window dimens (thanks alot IE)
 		var windowWidth = $(window).width();
 		var windowHeight = $(window).height();
-
-
-
 		/**
 		 * ===================================================================================
 		 * = PRIVATE FUNCTIONS
 		 * ===================================================================================
 		 */
-
 		/**
 		 * Initializes namespace settings to be used throughout plugin
 		 */
@@ -173,7 +154,6 @@
 			// perform all DOM / CSS modifications
 			setup();
 		}
-
 		/**
 		 * Performs all DOM and CSS modifications
 		 */
@@ -263,7 +243,6 @@
 			// preload all images, then perform final DOM / CSS modifications that depend on images being loaded
 			loadElements(preloadSelector, start);
 		}
-
 		var loadElements = function(selector, callback){
 			var total = selector.find('img, iframe').length;
 			if (total == 0){
@@ -279,7 +258,6 @@
 				});
 			});
 		}
-
 		/**
 		 * Start the slider
 		 */
@@ -318,7 +296,6 @@
 			// if touchEnabled is true, setup the touch events
 			if (slider.settings.touchEnabled && !slider.settings.ticker) initTouch();
 		}
-
 		/**
 		 * Returns the calculated height of the viewport, used to determine either adaptiveHeight or the maxHeight value
 		 */
@@ -367,7 +344,6 @@
 			}
 			return height;
 		}
-
 		/**
 		 * Returns the calculated width to be used for the outer wrapper / viewport
 		 */
@@ -382,7 +358,6 @@
 			}
 			return width;
 		}
-
 		/**
 		 * Returns the calculated width to be applied to each slide
 		 */
@@ -406,7 +381,6 @@
 			}
 			return newElWidth;
 		}
-
 		/**
 		 * Returns the number of slides currently visible in the viewport (includes partially visible slides)
 		 */
@@ -430,7 +404,6 @@
 			}
 			return slidesShowing;
 		}
-
 		/**
 		 * Returns the number of pages (one full viewport of slides is one "page")
 		 */
@@ -457,7 +430,6 @@
 			}
 			return pagerQty;
 		}
-
 		/**
 		 * Returns the number of indivual slides by which to shift the slider
 		 */
@@ -469,7 +441,6 @@
 			// if moveSlides is 0 (auto)
 			return getNumberSlidesShowing();
 		}
-
 		/**
 		 * Sets the slider's (el) left or top position
 		 */
@@ -502,7 +473,6 @@
 				}
 			}
 		}
-
 		/**
 		 * Sets the el's animating property position (which in turn will sometimes animate el).
 		 * If using CSS, sets the transform property. If not using CSS, sets the top / left property.
@@ -570,7 +540,6 @@
 				}
 			}
 		}
-
 		/**
 		 * Populates the pager with proper amount of pages
 		 */
@@ -595,7 +564,6 @@
 			// populate the pager element with pager links
 			slider.pagerEl.html(pagerHtml);
 		}
-
 		/**
 		 * Appends the pager to the controls element
 		 */
@@ -618,7 +586,6 @@
 			// assign the pager click binding
 			slider.pagerEl.delegate('a', 'click', clickPagerBind);
 		}
-
 		/**
 		 * Appends prev / next controls to the controls element
 		 */
@@ -646,7 +613,6 @@
 				slider.controls.el.addClass('bx-has-controls-direction').append(slider.controls.directionEl);
 			}
 		}
-
 		/**
 		 * Appends start / stop auto controls to the controls element
 		 */
@@ -675,7 +641,6 @@
 			// update the auto controls
 			updateAutoControls(slider.settings.autoStart ? 'stop' : 'start');
 		}
-
 		/**
 		 * Appends image captions to the DOM
 		 */
@@ -690,7 +655,6 @@
                 }
 			});
 		}
-
 		/**
 		 * Click next binding
 		 *
@@ -703,7 +667,6 @@
 			el.goToNextSlide();
 			e.preventDefault();
 		}
-
 		/**
 		 * Click prev binding
 		 *
@@ -716,7 +679,6 @@
 			el.goToPrevSlide();
 			e.preventDefault();
 		}
-
 		/**
 		 * Click start binding
 		 *
@@ -727,7 +689,6 @@
 			el.startAuto();
 			e.preventDefault();
 		}
-
 		/**
 		 * Click stop binding
 		 *
@@ -738,7 +699,6 @@
 			el.stopAuto();
 			e.preventDefault();
 		}
-
 		/**
 		 * Click pager binding
 		 *
@@ -754,7 +714,6 @@
 			if(pagerIndex != slider.active.index) el.goToSlide(pagerIndex);
 			e.preventDefault();
 		}
-
 		/**
 		 * Updates the pager links with an active class
 		 *
@@ -776,7 +735,6 @@
 			// apply the active class for all pagers
 			slider.pagerEl.each(function(i, el) { $(el).find('a').eq(slideIndex).addClass('active'); });
 		}
-
 		/**
 		 * Performs needed actions after a slide transition
 		 */
@@ -803,7 +761,6 @@
 			// onSlideAfter callback
 			slider.settings.onSlideAfter(slider.children.eq(slider.active.index), slider.oldIndex, slider.active.index);
 		}
-
 		/**
 		 * Updates the auto controls state (either active, or combined switch)
 		 *
@@ -820,7 +777,6 @@
 				slider.controls.autoEl.find('a:not(.bx-' + state + ')').addClass('active');
 			}
 		}
-
 		/**
 		 * Updates the direction controls (checks if either should be hidden)
 		 */
@@ -844,7 +800,6 @@
 				}
 			}
 		}
-
 		/**
 		 * Initialzes the auto process
 		 */
@@ -878,7 +833,6 @@
 				});
 			}
 		}
-
 		/**
 		 * Initialzes the ticker process
 		 */
@@ -921,7 +875,6 @@
 			// start the ticker loop
 			tickerLoop();
 		}
-
 		/**
 		 * Runs a continuous loop, news ticker-style
 		 */
@@ -941,7 +894,6 @@
 			var params = {resetValue: resetValue};
 			setPositionProperty(animateProperty, 'ticker', speed, params);
 		}
-
 		/**
 		 * Initializes touch events
 		 */
@@ -953,7 +905,6 @@
 			}
 			slider.viewport.bind('touchstart', onTouchStart);
 		}
-
 		/**
 		 * Event handler for "touchstart"
 		 *
@@ -976,7 +927,6 @@
 				slider.viewport.bind('touchend', onTouchEnd);
 			}
 		}
-
 		/**
 		 * Event handler for "touchmove"
 		 *
@@ -1009,7 +959,6 @@
 				setPositionProperty(value, 'reset', 0);
 			}
 		}
-
 		/**
 		 * Event handler for "touchend"
 		 *
@@ -1057,7 +1006,6 @@
 			}
 			slider.viewport.unbind('touchend', onTouchEnd);
 		}
-
 		/**
 		 * Window resize event callback
 		 */
@@ -1076,13 +1024,11 @@
 				el.redrawSlider();
 			}
 		}
-
 		/**
 		 * ===================================================================================
 		 * = PUBLIC FUNCTIONS
 		 * ===================================================================================
 		 */
-
 		/**
 		 * Performs slide transition to the specified slide
 		 *
@@ -1172,7 +1118,6 @@
 					var requestEl = slideIndex * getMoveBy();
 					position = slider.children.eq(requestEl).position();
 				}
-
 				/* If the position doesn't exist
 				 * (e.g. if you destroy the slider on a next click),
 				 * it doesn't throw an error.
@@ -1184,7 +1129,6 @@
 				}
 			}
 		}
-
 		/**
 		 * Transitions to the next slide in the show
 		 */
@@ -1194,7 +1138,6 @@
 			var pagerIndex = parseInt(slider.active.index) + 1;
 			el.goToSlide(pagerIndex, 'next');
 		}
-
 		/**
 		 * Transitions to the prev slide in the show
 		 */
@@ -1204,7 +1147,6 @@
 			var pagerIndex = parseInt(slider.active.index) - 1;
 			el.goToSlide(pagerIndex, 'prev');
 		}
-
 		/**
 		 * Starts the auto show
 		 *
@@ -1221,7 +1163,6 @@
 			// if auto controls are displayed and preventControlUpdate is not true
 			if (slider.settings.autoControls && preventControlUpdate != true) updateAutoControls('stop');
 		}
-
 		/**
 		 * Stops the auto show
 		 *
@@ -1237,21 +1178,18 @@
 			// if auto controls are displayed and preventControlUpdate is not true
 			if (slider.settings.autoControls && preventControlUpdate != true) updateAutoControls('start');
 		}
-
 		/**
 		 * Returns current slide index (zero-based)
 		 */
 		el.getCurrentSlide = function(){
 			return slider.active.index;
 		}
-
 		/**
 		 * Returns number of slides in show
 		 */
 		el.getSlideCount = function(){
 			return slider.children.length;
 		}
-
 		/**
 		 * Update all dynamic slider elements
 		 */
@@ -1273,7 +1211,6 @@
 				updatePagerActive(slider.active.index);
 			}
 		}
-
 		/**
 		 * Destroy the current instance of the slider (revert everything back to original state)
 		 */
@@ -1296,7 +1233,6 @@
 			clearInterval(slider.interval);
 			if(slider.settings.responsive) $(window).unbind('resize', resizeWindow);
 		}
-
 		/**
 		 * Reload the slider (revert all DOM changes, and re-initialize)
 		 */
@@ -1305,11 +1241,8 @@
 			el.destroySlider();
 			init();
 		}
-
 		init();
-
 		// returns the current jQuery object
 		return this;
 	}
-
 })(jQuery);

@@ -14,7 +14,6 @@
 // Also available as Modernizr.load via the Modernizr Project
 //
 ( function ( window, doc, undef ) {
-
 var docElement            = doc.documentElement,
     sTimeout              = window.setTimeout,
     firstScript           = doc.getElementsByTagName( "script" )[ 0 ],
@@ -65,46 +64,34 @@ var docElement            = doc.documentElement,
     },
     handler,
     yepnope;
-
   /* Loader helper functions */
   function isFileReady ( readyState ) {
     // Check to see if any of the ways a file can be ready are available as properties on the file's element
     return ( ! readyState || readyState == "loaded" || readyState == "complete" || readyState == "uninitialized" );
   }
-
-
   // Takes a preloaded js obj (changes in different browsers) and injects it into the head
   // in the appropriate order
   function injectJs ( src, cb, attrs, timeout, /* internal use */ err, internal ) {
 	  
     var script = doc.createElement( "script" ),
         done, i;
-
     timeout = timeout || yepnope['errorTimeout'];
-
     script.src = src;
-
     // Add our extra attributes to the script element
     for ( i in attrs ) {
         script.setAttribute( i, attrs[ i ] );
     }
-
     cb = internal ? executeStack : ( cb || noop );
-
     // Bind to load events
     script.onreadystatechange = script.onload = function () {
-
       if ( ! done && isFileReady( script.readyState ) ) {
-
         // Set done to prevent this function from being called twice.
         done = 1;
         cb();
-
         // Handle memory leak in IE
         script.onload = script.onreadystatechange = null;
       }
     };
-
     // 404 Fallback
     sTimeout(function () {
       if ( ! done ) {
@@ -113,47 +100,37 @@ var docElement            = doc.documentElement,
         cb(1);
       }
     }, timeout );
-
     // Inject script into to document
     // or immediately callback if we know there
     // was previously a timeout error
     readFirstScript();
     err ? script.onload() : firstScript.parentNode.insertBefore( script, firstScript );
   }
-
   // Takes a preloaded css obj (changes in different browsers) and injects it into the head
   function injectCss ( href, cb, attrs, timeout, /* Internal use */ err, internal ) {
-
     // Create stylesheet link
     var link = doc.createElement( "link" ),
         done, i;
-
     timeout = timeout || yepnope['errorTimeout'];
-
     cb = internal ? executeStack : ( cb || noop );
-
     // Add attributes
     link.href = href;
     link.rel  = "stylesheet";
     link.type = "text/css";
-
     // Add our extra attributes to the link element
     for ( i in attrs ) {
       link.setAttribute( i, attrs[ i ] );
     }
-
     if ( ! err ) {
       readFirstScript();
       firstScript.parentNode.insertBefore( link, firstScript );
       sTimeout(cb, 0);
     }
   }
-
   function executeStack ( ) {
     // shift an element off of the stack
     var i   = execStack.shift();
     started = 1;
-
     // if a is truthy and the first item in the stack has an src
     if ( i ) {
       // if it's a script, inject it into the head with no type attribute
@@ -175,11 +152,8 @@ var docElement            = doc.documentElement,
       started = 0;
     }
   }
-
   function preloadFile ( elem, url, type, splicePoint, dontExec, attrObj, timeout ) {
-
     timeout = timeout || yepnope['errorTimeout'];
-
     // Create appropriate element for browser and type
     var preloadElem = doc.createElement( elem ),
         done        = 0,
@@ -192,27 +166,21 @@ var docElement            = doc.documentElement,
           "a": attrObj,
           "x": timeout
         };
-
     // The first time (common-case)
     if ( scriptCache[ url ] === 1 ) {
       firstFlag = 1;
       scriptCache[ url ] = [];
     }
-
     function onload ( first ) {
       // If the script/css file is loaded
       if ( ! done && isFileReady( preloadElem.readyState ) ) {
-
         // Set done to prevent this function from being called twice.
         stackObject['r'] = done = 1;
-
         ! started && executeStack();
-
         if ( first ) {
           if ( elem != "img" ) {
             sTimeout(function(){ insBeforeObj.removeChild( preloadElem ) }, 50);
           }
-
           for ( var i in scriptCache[ url ] ) {
             if ( scriptCache[ url ].hasOwnProperty( i ) ) {
               scriptCache[ url ][ i ].onload();
@@ -224,8 +192,6 @@ var docElement            = doc.documentElement,
         }
       }
     }
-
-
     // Setting url to data for objects or src for img/scripts
     if ( elem == "object" ) {
       preloadElem.data = url;
@@ -235,14 +201,11 @@ var docElement            = doc.documentElement,
       preloadElem.setAttribute("type", "text/css");
     } else {
       preloadElem.src = url;
-
       // Setting bogus script type to allow the script to be cached
       preloadElem.type = elem;
     }
-
     // Don't let it show up visually
     preloadElem.width = preloadElem.height = "0";
-
     // Attach handlers for all browsers
     preloadElem.onerror = preloadElem.onload = preloadElem.onreadystatechange = function(){
       onload.call(this, firstFlag);
@@ -250,7 +213,6 @@ var docElement            = doc.documentElement,
     // inject the element into the stack depending on if it's
     // in the middle of other scripts or not
     execStack.splice( splicePoint, 0, stackObject );
-
     // The only place these can't go is in the <head> element, since objects won't load in there
     // so we have two options - insert before the head element (which is hard to assume) - or
     // insertBefore technically takes null/undefined as a second param and it will insert the element into
@@ -260,7 +222,6 @@ var docElement            = doc.documentElement,
       if ( firstFlag || scriptCache[ url ] === 2 ) {
         readFirstScript();
         insBeforeObj.insertBefore( preloadElem, isGeckoLTE18 ? null : firstScript );
-
         // If something fails, and onerror doesn't fire,
         // continue after a timeout.
         sTimeout( onload, timeout );
@@ -271,12 +232,10 @@ var docElement            = doc.documentElement,
       }
     }
   }
-
   function load ( resource, type, dontExec, attrObj, timeout ) {
     // If this method gets hit multiple times, we should flag
     // that the execution of other threads should halt.
     started = 0;
-
     // We'll do 'j' for js and 'c' for css, yay for unreadable minification tactics
     type = type || "j";
     if ( isString( resource ) ) {
@@ -287,11 +246,9 @@ var docElement            = doc.documentElement,
       execStack.splice( this['i']++, 0, resource );
       execStack.length == 1 && executeStack();
     }
-
     // OMG is this jQueries? For chaining...
     return this;
   }
-
   // return the yepnope object with a fresh loader attached
   function getYepnope () {
     var y = yepnope;
@@ -301,16 +258,13 @@ var docElement            = doc.documentElement,
     };
     return y;
   }
-
   /* End loader helper functions */
   // Yepnope Function
   yepnope = function ( needs ) {
-
     var i,
         need,
         // start the chain as a plain instance
         chain = this['yepnope']['loader'];
-
     function satisfyPrefixes ( url ) {
       // split all prefixes out
       var parts   = url.split( "!" ),
@@ -326,7 +280,6 @@ var docElement            = doc.documentElement,
       mFunc,
       j,
       prefix_parts;
-
       // loop through prefixes
       // if there are none, this automatically gets skipped
       for ( j = 0; j < pLen; j++ ) {
@@ -336,34 +289,28 @@ var docElement            = doc.documentElement,
           res = mFunc( res, prefix_parts );
         }
       }
-
       // Go through our global filters
       for ( j = 0; j < gLen; j++ ) {
         res = globalFilters[ j ]( res );
       }
-
       // return the final url
       return res;
     }
-
      function getExtension ( url ) {
       //The extension is always the last characters before the ? and after a period.
       //The previous method was not accounting for the possibility of a period in the query string.
       var b = url.split('?')[0];
       return b.substr(b.lastIndexOf('.')+1);
     }
-
     function loadScriptOrStyle ( input, callback, chain, index, testResult ) {
       // run through our set of prefixes
       var resource     = satisfyPrefixes( input ),
           autoCallback = resource['autoCallback'],
           extension    = getExtension( resource['url'] );
-
       // if no object is returned or the url is empty/0 just exit the load
       if ( resource['bypass'] ) {
         return;
       }
-
       // Determine callback, if any
       if ( callback ) {
         callback = isFunction( callback ) ?
@@ -372,7 +319,6 @@ var docElement            = doc.documentElement,
           callback[ index ] ||
           callback[ ( input.split( "/" ).pop().split( "?" )[ 0 ] ) ];
       }
-
       // if someone is overriding all normal functionality
       if ( resource['instead'] ) {
         return resource['instead']( input, callback, chain, index, testResult );
@@ -386,10 +332,8 @@ var docElement            = doc.documentElement,
         else {
           scriptCache[ resource['url'] ] = 1;
         }
-
         // Throw this into the queue
         input && chain.load( resource['url'], ( ( resource['forceCSS'] || ( ! resource['forceJS'] && "css" == getExtension( resource['url'] ) ) ) ) ? "c" : undef, resource['noexec'], resource['attrs'], resource['timeout'] );
-
         // If we have a callback, we'll start the chain over
         if ( isFunction( callback ) || isFunction( autoCallback ) ) {
           // Call getJS with our current stack of things
@@ -399,14 +343,12 @@ var docElement            = doc.documentElement,
             // Call our callbacks with this set of data
             callback && callback( resource['origUrl'], testResult, index );
             autoCallback && autoCallback( resource['origUrl'], testResult, index );
-
             // Override this to just a boolean positive
             scriptCache[ resource['url'] ] = 2;
           } );
         }
       }
     }
-
     function loadFromTestObject ( testObject, chain ) {
         var testResult = !! testObject['test'],
             group      = testResult ? testObject['yep'] : testObject['nope'],
@@ -453,7 +395,6 @@ var docElement            = doc.documentElement,
               }
               return count;
             })();
-
             for ( callbackKey in needGroup ) {
               // Safari 2 does not have hasOwnProperty, but not worth the bytes for a shim
               // patch if needed. Kangax has a nice shim for it. Or just remove the check
@@ -486,19 +427,14 @@ var docElement            = doc.documentElement,
             }
           }
         }
-
         // figure out what this group should do
         handleGroup( group, !!always || !!testObject['complete']);
-
         // Run our loader on the load/both group too
         // the always stuff always loads second.
         always && handleGroup( always );
-
 	// If complete callback is used without loading anything
         !always && !!testObject['complete'] && handleGroup('');
-
     }
-
     // Someone just decides to load a single script or css file as a string
     if ( isString( needs ) ) {
       loadScriptOrStyle( needs, 0, chain, 0 );
@@ -508,7 +444,6 @@ var docElement            = doc.documentElement,
       // go through the list of needs
       for( i = 0; i < needs.length; i++ ) {
         need = needs[ i ];
-
         // if it's a string, just load it
         if ( isString( need ) ) {
           loadScriptOrStyle( need, 0, chain, 0 );
@@ -528,7 +463,6 @@ var docElement            = doc.documentElement,
       loadFromTestObject( needs, chain );
     }
   };
-
   // This publicly exposed function is for allowing
   // you to add functionality based on prefixes on the
   // string files you add. 'css!' is a builtin prefix
@@ -542,7 +476,6 @@ var docElement            = doc.documentElement,
   yepnope['addPrefix'] = function ( prefix, callback ) {
     prefixes[ prefix ] = callback;
   };
-
   // A filter is a global function that every resource
   // object that passes through yepnope will see. You can
   // of course conditionally choose to modify the resource objects
@@ -554,10 +487,8 @@ var docElement            = doc.documentElement,
   yepnope['addFilter'] = function ( filter ) {
     globalFilters.push( filter );
   };
-
   // Default error timeout to 10sec - modify to alter
   yepnope['errorTimeout'] = 1e4;
-
   // Webreflection readystate hack
   // safe for jQuery 1.4+ ( i.e. don't use yepnope with jQuery 1.3.2 )
   // if the readyState is null and we have a listener
@@ -572,14 +503,11 @@ var docElement            = doc.documentElement,
       doc.readyState = "complete";
     }, 0 );
   }
-
   // Attach loader &
   // Leak it
   window['yepnope'] = getYepnope();
-
   // Exposing executeStack to better facilitate plugins
   window['yepnope']['executeStack'] = executeStack;
   window['yepnope']['injectJs'] = injectJs;
   window['yepnope']['injectCss'] = injectCss;
-
 })( this, document );

@@ -7,9 +7,6 @@
  * 0px gutter
  * 768px-769px breakpoint
  */
-
-
-
 /* Reusable column setup */
 .col {
  border:0px solid rgba(0,0,0,0);
@@ -21,16 +18,10 @@
  -webkit-background-clip:padding-box !important;
  background-clip:padding-box !important;
 }
-
-
-
  /* 1. 1 Column Grid 0px - 759px
  -----------------------------------------------------------------------------
-
  Span 1: 100%
-
  ----------------------------------------------------------------------------- */
-
  @media screen and (min-width: 0px) and (max-width: 768px) {
  
  .col {
@@ -57,10 +48,8 @@
  width:100%;
  }
  }
-
  /* 2. 12 Column Grid 760px - Infinity
  -----------------------------------------------------------------------------
-
  Span 1: 8.33333333333%
  Span 2: 16.6666666667%
  Span 3: 25.0%
@@ -73,9 +62,7 @@
  Span 10: 83.3333333333%
  Span 11: 91.6666666667%
  Span 12: 100%
-
  ----------------------------------------------------------------------------- */
-
  @media screen and (min-width: 769px) {
  
  .col {
@@ -127,7 +114,6 @@
  width:100%;
  }
  }
-
 /*!
  * fixes to Gridpak
  */
