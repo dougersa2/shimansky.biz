@@ -342,7 +342,7 @@ RewriteRule .* - [F]
 #then serve it a 403 Forbidden
 #RewriteRule .* - [F]
 
-RewriteRule ^m/pages/(.*) /pages/$1 [R=301,L]
+#RewriteRule ^m/pages/(.*) /pages/$1 [R=301,L]
 
 RewriteCond %{REQUEST_URI} pages/products_sourceforge_londonpictures\.html$
 RewriteRule .* - [F]

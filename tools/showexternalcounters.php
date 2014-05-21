@@ -204,7 +204,7 @@ if ($event == 'clear') {
 		<meta name="keywords" content="репетитор,тушино,егэ,гиа,английский,английского,английскому,глаголы,диалоги,идиомы,ключи,неправильные,онлайн,ответы,подкасты,репетиторы,рефераты,решебник,скачать,тесты,топики,уроки,mp3,mp4"/>
 		<meta name="description" content="Журнал посещений" />
 		<title>Журнал посещений</title>
-		<link rel="alternate" media="handheld" href="/pages/visual_dictionary_online/" />
+		<link rel="alternate" media="handheld" href="/m/" />
 		<link rel="P3Pv1" href="/w3c/p3p.xml" />
 		<link rel="icon" href="/favicon.png" type="image/png" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
