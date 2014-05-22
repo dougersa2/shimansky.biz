@@ -403,7 +403,7 @@ $SQLITE_CACHE = null;
 			<div id="wrapper">
 				<div id="sidebar-wrapper" role="navigation">
 					<ul class="sidebar-icon">
-						<li class="sidebar-header"><a href="/" title="на Главную"><span class="sitelogo"></span></a></li>
+						<li class="sidebar-header"><a href="/" title="Начало"><span class="sitelogo"></span></a></li>
 						<li><a href="http://vk.com/public62872178" class="vk-50x50"></a></li>
 						<li><a href="https://vimeo.com/user20994901" class="vimeo-50x50"></a></li>
 						<li><a href="https://twitter.com/shimanskybiz" class="twitter-50x50"></a></li>
