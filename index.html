@@ -14,7 +14,6 @@
 		<meta name="keywords" content="репетитор,тушино,егэ,гиа,английский,английского,английскому,глаголы,диалоги,идиомы,ключи,неправильные,онлайн,ответы,подкасты,репетиторы,рефераты,решебник,скачать,тесты,топики,уроки,mp3,mp4" />
 		<meta name="description" content="Английский без регистрации" />
 		<title>Английский без регистрации</title>
-		<link rel="alternate" media="handheld" href="/m/" />
 		<link rel="P3Pv1" href="/w3c/p3p.xml" />
 		<link rel="icon" href="/favicon.png" type="image/png" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -116,6 +115,9 @@
 							<div class="getstarted">
 								<a href="/pages/" class="btn-2c">*&#160;Содержание&#160;*</a>
 							</div>
+							<div class="vk_like_holder">
+								<span id="vk_like2"></span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -131,7 +133,7 @@
 		</div>
 		<script src="/libs/early.js/1.0/js/early.min.js"></script>
 		<script>
-			var a=document.getElementById("parallax")||"",b=document.getElementById("parallax_disabled")||"";("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&(a.style.display="none",b.style.display="block");
+			("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&(function(a,b){a&&(a.style.display="none");b&&(b.style.display="block")}(document.getElementById("parallax")||"",document.getElementById("parallax_disabled")||""));
 			var deferredJS = function () {
 				yepnope.injectJs("//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", function () {
 					("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("//cdn.jsdelivr.net/cookies.js/0.3.1/cookies.min.js",function(){
@@ -155,8 +157,11 @@
 					("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||("undefined"!==typeof window.jQuery&&function(a,b){var w=$("#"+b).width();$(a).on("focus","#"+b,function(){$(this).animate({width:w+145+"px"},300)});$(a).on("blur","#"+b,function(){$(this).animate({width:w+"px"},300)})}(document,"search_text"));
 					(function(){var a=document.getElementById("page"),b=document.getElementById("circularG");b&&(b.style.display="none");a&&(a.style.display="block")})();
 				},{charset:"utf-8"},5E3);
-				document.getElementById("vk_like")&&!/localhost/.test(self.location.host)&&yepnope.injectJs("//vk.com/js/api/openapi.js?105", function () {
+				("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||document.getElementById("vk_like")&&!/localhost/.test(self.location.host)&&yepnope.injectJs("//vk.com/js/api/openapi.js?105", function () {
 					domready(function(){(VK.init({apiId:4331247,nameTransportPath:"/xd_receiver.htm",onlyWidgets:!0}),VK.Widgets.Like("vk_like",{type:"button",height:24}))});
+				},{charset:"utf-8"},5E3);
+				("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&document.getElementById("vk_like2")&&!/localhost/.test(self.location.host)&&yepnope.injectJs("//vk.com/js/api/openapi.js?105", function () {
+					domready(function(){(VK.init({apiId:4331247,nameTransportPath:"/xd_receiver.htm",onlyWidgets:!0}),VK.Widgets.Like("vk_like2",{type:"button",height:24}))});
 				},{charset:"utf-8"},5E3);
 			};
 			addEvent(window,"load",function(){deferredJS()},!1);

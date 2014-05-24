@@ -204,7 +204,6 @@ if ($event == 'clear') {
 		<meta name="keywords" content="репетитор,тушино,егэ,гиа,английский,английского,английскому,глаголы,диалоги,идиомы,ключи,неправильные,онлайн,ответы,подкасты,репетиторы,рефераты,решебник,скачать,тесты,топики,уроки,mp3,mp4"/>
 		<meta name="description" content="Журнал посещений" />
 		<title>Журнал посещений</title>
-		<link rel="alternate" media="handheld" href="/m/" />
 		<link rel="P3Pv1" href="/w3c/p3p.xml" />
 		<link rel="icon" href="/favicon.png" type="image/png" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -320,11 +319,11 @@ try {
 				}
 				echo '
 <tr class="pme-sortinfo">
-<td class="pme-cell-0" style="width:5%;">' . date("H:i:s", $fr[1]) . '<br/>' . $fr[1] . '
-<td class="pme-cell-0" style="width:25%;"><span class="SlateGray"><strong>from:</strong>&#160;&#160;' . $fr4_text . '</span>&#160;&#160;<a href="' . $ShowExternalCounters->ensure_amp($fr[4]) . '" target="_blank">[&#8594;]</a><br/><span class="DarkSlateGray"><strong>to:</strong>&#160;&#160;' . $fr5_text . '</span>&#160;&#160;<a href="' . $ShowExternalCounters->ensure_amp($fr[5]) . '" target="_blank">[&#8594;]</a></td>
+<td class="pme-cell-0" style="width:5%;">' . date("H:i:s", $fr[1]) . '<br />' . $fr[1] . '
+<td class="pme-cell-0" style="width:25%;"><span class="SlateGray"><strong>from:</strong>&#160;&#160;' . $fr4_text . '</span>&#160;&#160;<a href="' . $ShowExternalCounters->ensure_amp($fr[4]) . '" target="_blank">[&#8594;]</a><br /><span class="DarkSlateGray"><strong>to:</strong>&#160;&#160;' . $fr5_text . '</span>&#160;&#160;<a href="' . $ShowExternalCounters->ensure_amp($fr[5]) . '" target="_blank">[&#8594;]</a></td>
 <td class="pme-cell-0" style="width:25%;"><span class="DarkSlateGray">' . $ShowExternalCounters->ensure_amp($ShowExternalCounters->remove_tags(urldecode($fr[6]))) . '</span></td>
-<td class="pme-cell-0" style="width:25%;"><span class="FireBrick">' . $fr[7] . ' ' . $fr[8] . '</span><br/><span class="SeaGreen">' . $fr[9] . '</span><br/><span class="DarkSlateGray">' . $fr[10] . '</span></td>
-<td class="pme-cell-0" style="width:20%;"><span class="DarkSlateGray">' . $fr11_text . '<br/><a href="http://' . htmlentities($fr[12]) . '/" target="_blank">' . htmlentities(wordwrap($fr[12], 20, ' ', 1)) . '</a><br/><a href="http://ip-lookup.net/?ip=' . urlencode($fr[12]) . '" target="_blank">IP-LOOKUP</a>&#160;<a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&amp;full_query_string=&amp;searchtext=' . urlencode($fr[12]) . '&amp;submit.x=13&amp;submit.y=14&amp;submit=Search" target="_blank">RIPE</a>&#160;';
+<td class="pme-cell-0" style="width:25%;"><span class="FireBrick">' . $fr[7] . ' ' . $fr[8] . '</span><br /><span class="SeaGreen">' . $fr[9] . '</span><br /><span class="DarkSlateGray">' . $fr[10] . '</span></td>
+<td class="pme-cell-0" style="width:20%;"><span class="DarkSlateGray">' . $fr11_text . '<br /><a href="http://' . htmlentities($fr[12]) . '/" target="_blank">' . htmlentities(wordwrap($fr[12], 20, ' ', 1)) . '</a><br /><a href="http://ip-lookup.net/?ip=' . urlencode($fr[12]) . '" target="_blank">IP-LOOKUP</a>&#160;<a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&amp;full_query_string=&amp;searchtext=' . urlencode($fr[12]) . '&amp;submit.x=13&amp;submit.y=14&amp;submit=Search" target="_blank">RIPE</a>&#160;';
 				if ($ShowExternalCounters->is_ip($fr[12])) {
 					echo '<a href="http://www.ipchecking.com/?ip=' . urlencode($fr[12]) . '&amp;check=Lookup" target="_blank">ipchecking</a>';
 				} else {

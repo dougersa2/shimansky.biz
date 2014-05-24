@@ -17,6 +17,7 @@
 $dir = null;
 
 $dir[] = array('/');
+$dir[] = array('m/');
 $dir[] = array('pages/');
 $dir[] = array('pages/aids/');
 $dir[] = array('pages/articles/');

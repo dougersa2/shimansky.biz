@@ -51,7 +51,6 @@
  */
 .sidr {
 	display: none;
-	position: absolute;
 	position: fixed;
 	top: 0;
 	height: 100%;
@@ -616,19 +615,15 @@ pre.prettyprint {
 	min-width: 35%;
 }
 .col table tr {
-	background: #ECECEC;
 	background-color: transparent;
 }
 .col table tr:nth-of-type(odd) {
-	background: #ECECEC;
 	background-color: transparent;
 }
 .col table th {
 	font-size: 1rem;
 	line-height: 1.200;
 	font-weight: normal;
-	/* font-style: italic; */
-	background-color: #E2E2E2;
 	background-color: transparent;
 }
 .col table caption {

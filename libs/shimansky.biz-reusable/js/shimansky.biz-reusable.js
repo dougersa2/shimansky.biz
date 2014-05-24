@@ -1764,6 +1764,12 @@ yepnope.injectJs("//cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.11/skrollr.min.js
  *
  *
  */
+window.onclick = clickEvent;
+function clickEvent(a) {
+	a = a || window.event;
+	a = a.target || a.srcElement;
+	return (a.name || a.href) && "string" == typeof a.href && "http" == a.href.substr(0, 4) ? ("#" !== a.attributes.href.value && window.open(a.href, "_system", "location=yes"), !1) : !0
+};
  /*!
  *
  *
@@ -1772,4 +1778,3 @@ yepnope.injectJs("//cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.11/skrollr.min.js
  *
  *
  */
- 

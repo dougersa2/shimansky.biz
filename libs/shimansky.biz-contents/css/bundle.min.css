@@ -52,7 +52,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
  */
 .sidr {
 	display: none;
-	position: absolute;
 	position: fixed;
 	top: 0;
 	height: 100%;

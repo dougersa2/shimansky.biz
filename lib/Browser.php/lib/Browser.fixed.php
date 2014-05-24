@@ -351,10 +351,10 @@ class Browser
      */
     public function __toString()
     {
-        return "<strong>Browser Name:</strong> {$this->getBrowser()}<br/>\n" .
-        "<strong>Browser Version:</strong> {$this->getVersion()}<br/>\n" .
-        "<strong>Browser User Agent String:</strong> {$this->getUserAgent()}<br/>\n" .
-        "<strong>Platform:</strong> {$this->getPlatform()}<br/>";
+        return "<strong>Browser Name:</strong> {$this->getBrowser()}<br />\n" .
+        "<strong>Browser Version:</strong> {$this->getVersion()}<br />\n" .
+        "<strong>Browser User Agent String:</strong> {$this->getUserAgent()}<br />\n" .
+        "<strong>Platform:</strong> {$this->getPlatform()}<br />";
     }
 
     /**

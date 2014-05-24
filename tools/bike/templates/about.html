@@ -8,14 +8,14 @@
 &lt;?php
 
 br()
-  ->config()
-    ->set( 'db'
-         , array( 'engine'   => 'mysql'
-                , 'hostname' => 'localhost'
-                , 'name'     => '[dbname]' 
-                , 'username' => '[dbuser]'
-                , 'password' => '[dbpassword]'
-                ));
+ ->config()
+ ->set( 'db'
+ , array( 'engine' => 'mysql'
+ , 'hostname' => 'localhost'
+ , 'name' => '[dbname]' 
+ , 'username' => '[dbuser]'
+ , 'password' => '[dbpassword]'
+ ));
 </pre>
 <h3>Saved queries</h3>
 <p>Bike is not creating any tables in your database so if you are going to save your code snippets and use them later or share with other users - please adjust permissions for folder <code>[[config.savedQueriesPath]]</code>. It must be writeable for your webserver.</p>
@@ -23,10 +23,10 @@ br()
 <p>Basically Bike is an SQL runner, so, actually, you can do pretty much if you are familiar with SQL.</p>
 <p>Also there are some nice features included</p>
 <ul>
-  <li>40 recent queries</li>
-  <li>Named saved queries</li>
-  <li>Queries library</li>
-  <li>Nice AJAX UI :)</li>
+ <li>40 recent queries</li>
+ <li>Named saved queries</li>
+ <li>Queries library</li>
+ <li>Nice AJAX UI :)</li>
 </ul>
 <h2>Security & Restricted access</h2>
 <p>On current stage I don't care about login screen. Put Bike into folder with name like "tASTDKUWYVEjhas" or just use Apache httpauth as workaround.<p>
