@@ -819,27 +819,6 @@ pre.prettyprint {
 	font-size: 18px;
 	font-style: normal;
 }
-.col h2 + h3.abc {
-	margin-top: 13px;
-}
-.col h4 + h3.abc {
-	margin-top: 12px;
-}
-.col h3.abc {
-	display: inline-block!important;
-	padding: 5px 7px;
-}
-.col span.h3_inline {
-	display: inline-block!important;
-}
-.col h3.abc,
-.col span.h3_inline {
-	font-weight: 600;
-	font-style: normal;
-	color: inherit;
-	background-color: #F7DCB8;
-	clear: both;
-}
 .col select {
 	width: 272px;
 	position: relative;
