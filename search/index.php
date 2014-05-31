@@ -534,7 +534,7 @@ $SQLITE_CACHE = null;
 	</div>
 	<div class="module module-clean">
 		<div class="module-header">
-			<h4><a href="http://serguei.shimansky.biz/">Репетитор английского</a></h4>
+			<h4><a href="http://maps.yandex.ru/org/1085972151">Репетитор английского</a></h4>
 		</div>
 		<div class="module-content">
 			<p>Преподаю английский школьникам, студентам и&#160;взрослым в&#160;частном порядке в&#160;Тушино. &#171;С нуля&#187;, подтянуть, улучшить, подготовка к&#160;ЕГЭ</p>
@@ -565,7 +565,7 @@ $SQLITE_CACHE = null;
 					window.Modernizr&&Modernizr.touch&&yepnope.injectJs("//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js", function () {
 						(function(b){var f=/localhost/.test(self.location.host)?"http://localhost/externalcounters/":"http://shimansky.biz/externalcounters/",d=b.getElementsByTagName("a")||"",a=self.location.protocol+"//"+self.location.host+"/"||"",g=self.location.host+"/"||"",h=encodeURIComponent(b.location.href||""),k=encodeURIComponent(b.title||"").replace("\x27","&#39;");if(d&&a&&g&&"undefined"!==typeof window.jQuery&&"undefined"!==typeof window.Hammer)for(var c,e,a=0;a<d.length;a+=1)if(c=d[a],(e=c.getAttribute("href")|| "")&&(e.match(/^\/scripts\//)||/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)|(localhost)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/.test(e))&&!c.getAttribute("rel"))$(c).hammer().on("touch",$(this),function(a){a.preventDefault();a=$(this).attr("href");var c=b.getElementsByTagName("body")[0].firstChild,d=b.createElement("div");d.setAttribute("style","position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+f+"?dmn="+encodeURIComponent(a)+"&rfrr="+h+"&ttl="+k+"&encoding=utf-8) top left no-repeat;"); c.parentNode.insertBefore(d,c);b.location.href=a})})(document);
 					},{charset:"utf-8"},5E3);
-					(function(){var a=document.getElementById("page"),b=document.getElementById("circularG");b&&(b.style.display="none");a&&(a.style.display="block")})();
+					(function(a,b){b&&(b.style.display="none");a&&(a.style.display="block")})(document.getElementById("page")||"",document.getElementById("circularG")||"");
 				},{charset:"utf-8"},5E3);
 				(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(100);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
 				addEvent(window,"load",function(a){a&&a.focus()}(document.getElementById("search_text")||""),!1);

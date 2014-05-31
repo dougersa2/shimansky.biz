@@ -213,12 +213,10 @@ yepnope.injectJs("/libs/superbox/shimansky.biz/js/superbox.fixed.min.js", functi
  *
  *
  */
-(function () {
-	var a = document.getElementById("page"),
-	b = document.getElementById("circularG");
+(function (a, b) {
 	b && (b.style.display = "none");
 	a && (a.style.display = "block")
-})();
+})(document.getElementById("page") || "", document.getElementById("circularG") || "");
 /*!
  *
  *
@@ -441,10 +439,10 @@ yepnope.injectJs("/libs/jquery-2.0.3/jquery.fixed.min.js", function () {
  *
  *
  */
-(function (a, b, c) {
-	if (d = a.getElementById(b) || "")
-		a = a.createElement("audio"), a.setAttribute("id", "player_" + b), a.setAttribute("src", c), a.setAttribute("type", "audio/mp3"), a.setAttribute("controls", "controls"), d.appendChild(a)
-})(document, "audio1", "/dl/mp3/tests_macmillan_practice_tests_for_the_russian_state_exam_2nd_test_20.mp3");
+(function (b, c, d) {
+	if (f = b.getElementById(c))
+		a = b.createElement("iframe"), a.setAttribute("src", d), a.setAttribute("width", "100%"), a.setAttribute("height", "166"), a.setAttribute("scrolling", "no"), a.setAttribute("frameborder", "no"), f.appendChild(a)
+})(document, "audio1", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/151337571&amp;color=555555&amp;auto_play=false&amp;hide_related=true&amp;show_artwork=false");
 /*!
  *
  *
@@ -484,10 +482,10 @@ yepnope.injectJs("/libs/jquery-2.0.3/jquery.fixed.min.js", function () {
  *
  *
  */
-("undefined" !== typeof sbizIsMobileBrowser && sbizIsMobileBrowser) || (function (b, c) {
+("undefined" !== typeof earlyIsMobileBrowser && earlyIsMobileBrowser) || (function (b, c, d) {
 	if (f = b.getElementById(c))
-		a = b.createElement("iframe"), a.setAttribute("src", "//player.vimeo.com/video/78267173"), a.setAttribute("width", "500"), a.setAttribute("height", "282"), a.setAttribute("style", "border:none;"), a.setAttribute("webkitallowfullscreen", "true"), a.setAttribute("mozallowfullscreen", "true"), a.setAttribute("allowfullscreen", "true"), f.appendChild(a)
-})(document, "video_78267173");
+		a = b.createElement("iframe"), a.setAttribute("src", d), a.setAttribute("width", "500"), a.setAttribute("height", "282"), a.setAttribute("style", "border:none;"), a.setAttribute("webkitallowfullscreen", "true"), a.setAttribute("mozallowfullscreen", "true"), a.setAttribute("allowfullscreen", "true"), f.appendChild(a)
+})(document, "video_78267632", "//player.vimeo.com/video/78267632");
  /*!
  *
  *
@@ -1774,7 +1772,68 @@ function clickEvent(a) {
  *
  *
  */
+
  /*!
  *
  *
  */
+ /*!
+ *
+ *
+ */
+function loadJs(c, b) {
+	var a = document.createElement("script");
+	a.type = "text/javascript";
+	a.readyState ? a.onreadystatechange = function () {
+		if ("loaded" == a.readyState || "complete" == a.readyState)
+			a.onreadystatechange = null, b && b()
+	}
+	 : a.onload = function () {
+		b && b()
+	};
+	a.src = c;
+	document.body.appendChild(a)
+};
+ /*!
+ *
+ *
+ */
+function loadCss(c, b) {
+	var a = document.createElement("link");
+	a.rel = "stylesheet";
+	a.readyState ? a.onreadystatechange = function () {
+		if ("loaded" == a.readyState || "complete" == script.readyState)
+			a.onreadystatechange = null, b && b()
+	}
+	 : a.onload = function () {
+		b && b()
+	};
+	a.media = "all";
+	a.href = c;
+	document.getElementsByTagName("head")[0].appendChild(a);
+};
+
+ /*!
+ *
+ *
+ */
+ /*!
+ *
+ *
+ */
+ /*!
+ *
+ *
+ */
+ /*!
+ *
+ *
+ */
+ /*!
+ *
+ *
+ */
+ /*!
+ *
+ *
+ */ 

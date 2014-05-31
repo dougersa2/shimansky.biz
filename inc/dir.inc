@@ -17,7 +17,6 @@
 $dir = null;
 
 $dir[] = array('/');
-$dir[] = array('m/');
 $dir[] = array('pages/');
 $dir[] = array('pages/aids/');
 $dir[] = array('pages/articles/');
@@ -25,3 +24,8 @@ $dir[] = array('pages/blog/');
 $dir[] = array('pages/grammar/');
 $dir[] = array('pages/more/');
 $dir[] = array('pages/tests/');
+$dir[] = array('m/');
+$dir[] = array('m/pages/aids/');
+$dir[] = array('m/pages/articles/');
+$dir[] = array('m/pages/grammar/');
+$dir[] = array('m/pages/tests/');
