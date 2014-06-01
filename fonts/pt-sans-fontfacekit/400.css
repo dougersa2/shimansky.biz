@@ -1,5 +1,6 @@
-/**
- * rename font-family into PT Sans like it is named in other css
+/*!
+ * PT Sans
+ * rename font-family
  * fix font-weight and font-style
  * put svg fonts above woff for Chrome browser
  */
