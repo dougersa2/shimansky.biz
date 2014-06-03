@@ -637,12 +637,12 @@ pre.prettyprint {
 	display: inline-block;
 	width: 72px;
 	height: 72px;
-	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-DB4040-72x72.svg) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-rounded-DB4040-72x72.svg) top left no-repeat;
 	background-size: 72px 72px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg .parallax .sitelogo {
-	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-DB4040-72x72.png) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-rounded-DB4040-72x72.png) top left no-repeat;
 	background-size: 72px 72px;
 }
 .parallax .sitetitle_holder {
@@ -787,12 +787,12 @@ pre.prettyprint {
 	display: inline-block;
 	width: 72px;
 	height: 72px;
-	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-DB4040-72x72.svg) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-rounded-DB4040-72x72.svg) top left no-repeat;
 	background-size: 72px 72px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg .parallax_disabled .sitelogo {
-	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-DB4040-72x72.png) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-rounded-DB4040-72x72.png) top left no-repeat;
 	background-size: 72px 72px;
 }
 .parallax_disabled .sitetitle_holder {
