@@ -1,3 +1,14 @@
+/*!
+ * Open Sans
+ * rename font-family
+ * fix font-weight and font-style
+ * put svg fonts above woff for Chrome browser
+ */
+@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Light-webfont.svg#open_sanslight) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Light-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Light-webfont.ttf) format('truetype');font-weight: 300;font-style: normal;}
+@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.svg#open_sansitalic) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Italic-webfont.ttf) format('truetype');font-weight: 400;font-style: italic;}
+@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.svg#open_sanssemibold_italic) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Semibold-webfont.ttf) format('truetype');font-weight: 600;font-style: normal;}
+@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.svg#open_sanssemibold_italic) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-SemiboldItalic-webfont.ttf) format('truetype');font-weight: 600;font-style: italic;}
 /*! http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
  License: none (public domain)

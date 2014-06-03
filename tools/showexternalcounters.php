@@ -226,7 +226,6 @@ if ($event == 'clear') {
 		<link rel="alternate" href="http://feeds.feedburner.com/Shimanskybiz?format=xml" type="application/rss+xml" title="Shimansky.biz (English Without Signing Up) - Articles" />
 		<link rel="alternate" href="/feeds/pages.xml" type="application/rss+xml" title="Shimansky.biz (Английский без регистрации) - Статьи" />
 		<link rel="search" href="/searchplugins/mycroft/sitesearch.xml" type="application/opensearchdescription+xml" title="Shimansky.biz (Английский без регистрации) - Поиск" />
-		<link rel="stylesheet" href="/fonts/open-sans-fontfacekit/300-400-400italic-600-600italic.css" />
 		<link rel="stylesheet" href="/libs/shimansky.biz-admin/css/bundle.min.css" />
 	</head>
 	<body>

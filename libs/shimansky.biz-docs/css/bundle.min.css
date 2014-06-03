@@ -1,3 +1,28 @@
+/*!
+ * Roboto
+ * rename font-family
+ * fix font-weight and font-style
+ * put svg fonts above woff for Chrome browser
+ */
+@font-face {font-family: 'Roboto';src: url(../../../fonts/roboto-fontfacekit/Roboto-Regular-webfont.eot);src: url(../../../fonts/roboto-fontfacekit/Roboto-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/roboto-fontfacekit/Roboto-Regular-webfont.svg#robotoregular) format('svg'),url(../../../fonts/roboto-fontfacekit/Roboto-Regular-webfont.woff) format('woff'),url(../../../fonts/roboto-fontfacekit/Roboto-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'Roboto';src: url(../../../fonts/roboto-fontfacekit/Roboto-Italic-webfont.eot);src: url(../../../fonts/roboto-fontfacekit/Roboto-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/roboto-fontfacekit/Roboto-Italic-webfont.svg#robotoitalic) format('svg'),url(../../../fonts/roboto-fontfacekit/Roboto-Italic-webfont.woff) format('woff'),url(../../../fonts/roboto-fontfacekit/Roboto-Italic-webfont.ttf) format('truetype');font-weight: 400;font-style: italic;}
+@font-face {font-family: 'Roboto';src: url(../../../fonts/roboto-fontfacekit/Roboto-Bold-webfont.eot);src: url(../../../fonts/roboto-fontfacekit/Roboto-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/roboto-fontfacekit/Roboto-Bold-webfont.svg#robotobold) format('svg'),url(../../../fonts/roboto-fontfacekit/Roboto-Bold-webfont.woff) format('woff'),url(../../../fonts/roboto-fontfacekit/Roboto-Bold-webfont.ttf) format('truetype');font-weight: 700;font-style: normal;}
+@font-face {font-family: 'Roboto';src: url(../../../fonts/roboto-fontfacekit/Roboto-BoldItalic-webfont.eot);src: url(../../../fonts/roboto-fontfacekit/Roboto-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/roboto-fontfacekit/Roboto-BoldItalic-webfont.svg#robotobold_italic) format('svg'),url(../../../fonts/roboto-fontfacekit/Roboto-BoldItalic-webfont.woff) format('woff'),url(../../../fonts/roboto-fontfacekit/Roboto-BoldItalic-webfont.ttf) format('truetype');font-weight: 700;font-style: italic;}
+/*!
+ * Roboto Slab
+ * rename font-family
+ * fix font-weight and font-style
+ * put svg fonts above woff for Chrome browser
+ */
+@font-face {font-family: 'Roboto Slab';src: url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Regular-webfont.eot);src: url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Regular-webfont.svg#roboto_slabregular) format('svg'),url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Regular-webfont.woff) format('woff'),url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'Roboto Slab';src: url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Bold-webfont.eot);src: url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Bold-webfont.svg#roboto_slabbold) format('svg'),url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Bold-webfont.woff) format('woff'),url(../../../fonts/roboto-slab-fontfacekit/RobotoSlab-Bold-webfont.ttf) format('truetype');font-weight: 700;font-style: normal;}
+/*!
+ * Open Sans
+ * rename font-family
+ * fix font-weight and font-style
+ * put svg fonts above woff for Chrome browser
+ */
+@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
 /*! http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
  License: none (public domain)
