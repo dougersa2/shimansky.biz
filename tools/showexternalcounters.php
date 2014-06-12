@@ -702,24 +702,23 @@ ob_end_flush();
 				</div>
 			</nav>
 		</div>
-		<script src="/libs/early.js/1.0/js/early.min.js"></script>
+		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
-			var deferredJS = function () {
-				yepnope.injectJs("//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", function () {
-					yepnope.injectJs("//cdn.jsdelivr.net/jquery.mmenu/4.2.5/js/jquery.mmenu.min.js", function () {
-						"undefined"!==typeof window.jQuery&&function(){$(function(){$("nav#menu-left").mmenu()});$(function(){$("nav#menu-right").mmenu({position:"right",counters:!0,searchfield:!0});})}();
+				yepnope.injectJs("/libs/early.js/1.0/js/early.min.js",function(){
+					yepnope.injectJs("//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", function () {
+						yepnope.injectJs("//cdn.jsdelivr.net/jquery.mmenu/4.2.5/js/jquery.mmenu.min.js", function () {
+							"undefined"!==typeof window.jQuery&&function(){$(function(){$("nav#menu-left").mmenu()});$(function(){$("nav#menu-right").mmenu({position:"right",counters:!0,searchfield:!0});})}();
+						},{charset:"utf-8"},5E3);
+						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("/libs/jquery-ui/1.10.4/custom/js/jquery-ui.min.js", function () {
+							"undefined"!==typeof window.jQuery&&function(d,c,e,f){$("#"+c).autocomplete({source:function(b,a){$.ajax({url:f,dataType:"json",data:{q:b.term,c:10},success:function(b){a($.map(b,function(a){return{label:a.value,value:a.name}}))}})},minLength:1,select:function(b,a){if(a.item.value&&(a.item.value.match(/^http\:\/\//)||a.item.value.match(/^https\:\/\//)||a.item.value.match(/^\/search\//)||a.item.value.match(/^\//)))return d.location.href=a.item.value,!1;$(b.target).val($("#"+c).val());$("#"+e).submit()}, open:function(){},close:function(){}})}(document,"search_text","search_form","/libs/jquery-ui/1.10.4/custom/autocomplete/");
+						},{charset:"utf-8"},5E3);
+						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&yepnope.injectJs("/libs/jquery.webks-responsive-table/1.0.0/js/jquery.webks-responsive-table.fixed.min.js", function () {
+							"undefined"!==typeof window.jQuery&&domready(function(){(function(a,b,c,d){a.innerWidth&&(0<a.innerWidth?a.innerWidth:screen.width)&&$(function(){$("body").addClass("javascript-active");$(b).responsiveTable({displayResponsiveCallback:function(){return c>(a.innerWidth?0<a.innerWidth?a.innerWidth:screen.width:"")}});$(a).bind("orientationchange",function(a){setTimeout("$(\x27"+b+"\x27).responsiveTableUpdate()",d)});$(a).resize(function(){$(b).responsiveTableUpdate()})})})(window,"table.respond",768,100)});
+						},{charset:"utf-8"},5E3);
 					},{charset:"utf-8"},5E3);
-					("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("/libs/jquery-ui/1.10.4/custom/js/jquery-ui.min.js", function () {
-						"undefined"!==typeof window.jQuery&&function(d,c,e,f){$("#"+c).autocomplete({source:function(b,a){$.ajax({url:f,dataType:"json",data:{q:b.term,c:10},success:function(b){a($.map(b,function(a){return{label:a.value,value:a.name}}))}})},minLength:1,select:function(b,a){if(a.item.value&&(a.item.value.match(/^http\:\/\//)||a.item.value.match(/^https\:\/\//)||a.item.value.match(/^\/search\//)||a.item.value.match(/^\//)))return d.location.href=a.item.value,!1;$(b.target).val($("#"+c).val());$("#"+e).submit()}, open:function(){},close:function(){}})}(document,"search_text","search_form","/libs/jquery-ui/1.10.4/custom/autocomplete/");
-					},{charset:"utf-8"},5E3);
-					("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&yepnope.injectJs("/libs/jquery.webks-responsive-table/1.0.0/js/jquery.webks-responsive-table.fixed.min.js", function () {
-						"undefined"!==typeof window.jQuery&&domready(function(){(function(a,b,c,d){a.innerWidth&&(0<a.innerWidth?a.innerWidth:screen.width)&&$(function(){$("body").addClass("javascript-active");$(b).responsiveTable({displayResponsiveCallback:function(){return c>(a.innerWidth?0<a.innerWidth?a.innerWidth:screen.width:"")}});$(a).bind("orientationchange",function(a){setTimeout("$(\x27"+b+"\x27).responsiveTableUpdate()",d)});$(a).resize(function(){$(b).responsiveTableUpdate()})})})(window,"table.respond",768,100)});
-					},{charset:"utf-8"},5E3);
+					(function(a,c){a&&c&&c.setAttribute("action",a)})(self.location.href||"/",document.getElementById("actions_form")||"");
+					(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(100);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
 				},{charset:"utf-8"},5E3);
-				(function(a,c){a&&c&&c.setAttribute("action",a)})(self.location.href||"/",document.getElementById("actions_form")||"");
-				(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(100);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
-			};
-			addEvent(window,"load",function(){deferredJS()},!1);
 		</script>
 	</body>
 </html>

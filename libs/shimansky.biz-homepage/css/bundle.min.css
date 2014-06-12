@@ -510,12 +510,12 @@ pre.prettyprint {
 	height: 100%;
 	margin-top: -60px;
 	margin-left: 0;
-	background: transparent url(../img/background.svg) top left repeat;
+	background: transparent url(../img/bg.svg) top left repeat;
 	background-size: 417px 417px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg .background {
-	background: transparent url(../img/background.png) top left repeat;
+	background: transparent url(../img/bg.png) top left repeat;
 	background-size: 417px 417px;
 }
 .container {
@@ -653,12 +653,12 @@ pre.prettyprint {
 	display: inline-block;
 	width: 270px;
 	height: 40px;
-	background: transparent url(../img/sitetitle-270x40.svg) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-text-270x40.svg) top left no-repeat;
 	background-size: 270px 40px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg .parallax .sitetitle {
-	background: transparent url(../img/sitetitle-270x40.png) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-text-270x40.png) top left no-repeat;
 	background-size: 270px 40px;
 }
 .parallax .smartphone {
@@ -803,22 +803,22 @@ pre.prettyprint {
 	display: inline-block;
 	width: 270px;
 	height: 40px;
-	background: transparent url(../img/sitetitle-270x40.svg) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-text-270x40.svg) top left no-repeat;
 	background-size: 270px 40px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg .parallax_disabled .sitetitle {
-	background: transparent url(../img/sitetitle-270x40.png) top left no-repeat;
+	background: transparent url(../../shimansky.biz-branding/icons/sitelogo-text-270x40.png) top left no-repeat;
 	background-size: 270px 40px;
 }
 .topbanner {
 	height: 9px;
-	background: transparent url(../img/topbanner.svg) top left repeat-x;
+	background: transparent url(../../shimansky.biz-branding/banners/tb-FFAA4D-480x60.svg) top left repeat-x;
 	background-size: 480px 60px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg .topbanner {
-	background: transparent url(../img/topbanner.png) top left repeat-x;
+	background: transparent url(../../shimansky.biz-branding/banners/tb-FFAA4D-480x60.png) top left repeat-x;
 	background-size: 480px 60px;
 }
 .topnavbar a.leftnavbtn {
@@ -925,38 +925,6 @@ pre.prettyprint {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-}
-.moveup_btn {
-	display: inline-block;
-	font-size: 0;
-	width: 32px;
-	height: 20px;
-	color: transparent;
-	background: transparent url(../img/uparrow.svg) top left no-repeat;
-	background-size: 32px 20px;
-	-webkit-transform: translate3d(0,0,0);
-	padding: 0;
-	margin: 15px 9px;
-}
-.no-svg .moveup_btn {
-	background: transparent url(../img/uparrow.png) top left no-repeat;
-	background-size: 32px 20px;
-}
-.movedown_btn {
-	display: inline-block;
-	font-size: 0;
-	width: 32px;
-	height: 20px;
-	color: transparent;
-	background: transparent url(../img/downarrow.svg) top left no-repeat;
-	background-size: 32px 20px;
-	-webkit-transform: translate3d(0,0,0);
-	padding: 0;
-	margin: 15px 9px;
-}
-.no-svg .movedown_btn {
-	background: transparent url(../img/downarrow.png) top left no-repeat;
-	background-size: 32px 20px;
 }
 .more_content {
 	display: inline-block;
@@ -1096,12 +1064,12 @@ pre.prettyprint {
 #page {
 	display: none;
 	height: 100%;
-	background: transparent url(../img/background.svg) top left repeat;
+	background: transparent url(../img/bg.svg) top left repeat;
 	background-size: 417px 417px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg #page {
-	background: transparent url(../img/background.png) top left repeat;
+	background: transparent url(../img/bg.png) top left repeat;
 	background-size: 417px 417px;
 }
 /*!
