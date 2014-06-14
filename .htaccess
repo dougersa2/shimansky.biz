@@ -255,7 +255,8 @@ AddType text/x-vcard		vcf
  ExpiresByType image/x-icon		 "access plus 1 week"
 
 # Media: images, video, audio
-# shimansky - counters are gif images: they shouldn't expire?! 	ExpiresByType image/gif		"access plus 0 seconds"
+# shimansky - counters are gif images: they shouldn't expire?!
+ ExpiresByType image/gif		"access plus 0 seconds"
  ExpiresByType image/png		"access plus 0 seconds"
  ExpiresByType image/jpg		"access plus 0 seconds"
  ExpiresByType image/jpeg		"access plus 0 seconds"
