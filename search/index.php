@@ -551,17 +551,17 @@ $SQLITE_CACHE = null;
 		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
 				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/33ffedf7ff6bcae86581510d9974d9d1ee298092/1.0/js/early.min.js",function(){
-					yepnope.injectJs("//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", function () {
-						yepnope.injectJs("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", function () {
+					yepnope.injectJs("http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", function () {
+						yepnope.injectJs("http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", function () {
 							"undefined"!==typeof window.jQuery&&$(document).ready(function(){$("#show-menu").click(function(e){e.preventDefault();$("#wrapper").toggleClass("active");});var maxHeight=0;$(".activity-feed-wrapper").each(function(){if($(this).height()>maxHeight){maxHeight=$(this).height();}});$(".activity-feed-wrapper").height(maxHeight);});
 						},{charset:"utf-8"},5E3);
-						yepnope.injectJs("//cdn.jsdelivr.net/pnotify/1.3.1/jquery.pnotify.js",function(){
+						yepnope.injectJs("http://cdn.jsdelivr.net/pnotify/1.3.1/jquery.pnotify.js",function(){
 							"undefined"!==typeof window.jQuery&&domready(function(){(function(a,b,c,d,e,f){a&&function(){a&&b.click(function(){return a.val()?d.submit():(f(c),!1)});e.click(function(){a.focus()})}()})($("#search_text")||"",$("#search_form_submit_button")||"",{history:!1,stack:!1,title:"\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e",text:"\u00a0\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0412\u0430\u0448 \u0437\u0430\u043f\u0440\u043e\u0441!\u00a0",opacity:1,width:"280px",remove:!0,pnotify_addclass:"ui-pnotify-error", delay:3E3},$("#search_form")||"",$("#search_form_reset_button")||"",jQuery.pnotify||"")});
 						},{charset:"utf-8"},5E3);
 						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("/libs/jquery-ui/1.10.4/custom/js/jquery-ui.min.js", function () {
 							"undefined"!==typeof window.jQuery&&function(d,c,e,f){$("#"+c).autocomplete({source:function(b,a){$.ajax({url:f,dataType:"json",data:{q:b.term,c:10},success:function(b){a($.map(b,function(a){return{label:a.value,value:a.name}}))}})},minLength:1,select:function(b,a){if(a.item.value&&(a.item.value.match(/^http\:\/\//)||a.item.value.match(/^https\:\/\//)||a.item.value.match(/^\/search\//)||a.item.value.match(/^\//)))return d.location.href=a.item.value,!1;$(b.target).val($("#"+c).val());$("#"+e).submit()}, open:function(){},close:function(){}})}(document,"search_text","search_form","/libs/jquery-ui/1.10.4/custom/autocomplete/");
 						},{charset:"utf-8"},5E3);
-						window.Modernizr&&Modernizr.touch&&yepnope.injectJs("//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js", function () {
+						window.Modernizr&&Modernizr.touch&&yepnope.injectJs("http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js", function () {
 							(function(b){var f=/localhost/.test(self.location.host)?"http://localhost/externalcounters/":"http://shimansky.biz/externalcounters/",d=b.getElementsByTagName("a")||"",a=self.location.protocol+"//"+self.location.host+"/"||"",g=self.location.host+"/"||"",h=encodeURIComponent(b.location.href||""),k=encodeURIComponent(b.title||"").replace("\x27","&#39;");if(d&&a&&g&&"undefined"!==typeof window.jQuery&&"undefined"!==typeof window.Hammer)for(var c,e,a=0;a<d.length;a+=1)if(c=d[a],(e=c.getAttribute("href")|| "")&&(e.match(/^\/scripts\//)||/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)|(localhost)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/.test(e))&&!c.getAttribute("rel"))$(c).hammer().on("touch",$(this),function(a){a.preventDefault();a=$(this).attr("href");var c=b.getElementsByTagName("body")[0].firstChild,d=b.createElement("div");d.setAttribute("style","position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+f+"?dmn="+encodeURIComponent(a)+"&rfrr="+h+"&ttl="+k+"&encoding=utf-8) top left no-repeat;"); c.parentNode.insertBefore(d,c);b.location.href=a})})(document);
 						},{charset:"utf-8"},5E3);
 						(function(a,b){b&&(b.style.display="none");a&&(a.style.display="block")})(document.getElementById("page")||"",document.getElementById("circularG")||"");
