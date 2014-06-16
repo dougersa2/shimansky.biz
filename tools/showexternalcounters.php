@@ -704,7 +704,7 @@ ob_end_flush();
 		</div>
 		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
-				yepnope.injectJs("/libs/early.js/1.0/js/early.min.js",function(){
+				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/33ffedf7ff6bcae86581510d9974d9d1ee298092/1.0/js/early.min.js",function(){
 					yepnope.injectJs("//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", function () {
 						yepnope.injectJs("//cdn.jsdelivr.net/jquery.mmenu/4.2.5/js/jquery.mmenu.min.js", function () {
 							"undefined"!==typeof window.jQuery&&function(){$(function(){$("nav#menu-left").mmenu()});$(function(){$("nav#menu-right").mmenu({position:"right",counters:!0,searchfield:!0});})}();

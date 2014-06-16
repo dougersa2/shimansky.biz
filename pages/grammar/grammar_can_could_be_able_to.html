@@ -99,7 +99,7 @@
 		</div>
 		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
-				yepnope.injectJs("/libs/early.js/1.0/js/early.min.js",function(){
+				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/33ffedf7ff6bcae86581510d9974d9d1ee298092/1.0/js/early.min.js",function(){
 					yepnope.injectJs("//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", function () {
 						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("//cdn.jsdelivr.net/cookies.js/0.3.1/cookies.min.js",function(){
 							yepnope.injectJs("//cdn.jsdelivr.net/pnotify/1.3.1/jquery.pnotify.min.js",function(){
@@ -113,7 +113,7 @@
 								(function(a){a(window).touchwipe({wipeLeft:function(){a.sidr("close","leftnav")},wipeRight:function(){a.sidr("open","leftnav")},preventDefaultEvents:!1})})(jQuery);
 							},{charset:"utf-8"},5E3);
 						},{charset:"utf-8"},5E3);
-						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&yepnope.injectJs("/libs/jquery.webks-responsive-table/1.0.0/js/jquery.webks-responsive-table.fixed.min.js", function () {
+						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&yepnope.injectJs("//cdn.rawgit.com/englishextra/jquery.webks-responsive-table/adee3235010970f38e29f5ac38eb5b5fbac14b3a/jquery.webks-responsive-table.min.js", function () {
 							"undefined"!==typeof window.jQuery&&domready(function(){(function(a,b,c,d){a.innerWidth&&(0<a.innerWidth?a.innerWidth:screen.width)&&$(function(){$("body").addClass("javascript-active");$(b).responsiveTable({displayResponsiveCallback:function(){return c>(a.innerWidth?0<a.innerWidth?a.innerWidth:screen.width:"")}});$(a).bind("orientationchange",function(a){setTimeout("$(\x27"+b+"\x27).responsiveTableUpdate()",d)});$(a).resize(function(){$(b).responsiveTableUpdate()})})})(window,"table.respond",768,100)});
 						},{charset:"utf-8"},5E3);
 						(function(a,b){b&&(b.style.display="none");a&&(a.style.display="block")})(document.getElementById("page")||"",document.getElementById("circularG")||"");
