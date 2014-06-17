@@ -493,7 +493,7 @@ $SQLITE_CACHE = null;
 <div class="col-lg-4">
 	<div class="module module-clean">
 		<div class="module-header">
-			<h4><a href="http://englishextra.github.io/libs/shimansky.biz-blog_web_designer_s_online_tools/">Web Designer&#8217;s Tools</a></h4>
+			<h4><a href="http://englishextra.github.io/pages/blog/blog_web_designer_s_online_tools.html">Web Designer&#8217;s Tools</a></h4>
 		</div>
 		<div class="module-content">
 			<p>Another list of web designer&#8217;s online tools that mentions only those services that have been used at least a couple of times, and those used a lot on daily&#160;basis</p>
@@ -542,7 +542,7 @@ $SQLITE_CACHE = null;
 </div>
 						</div>
 						<div class="footer" role="contentinfo">
-							<p>&#169;&#160;<a href="http://englishextra.github.io/libs/shimansky.biz-serguei/">englishextra.github.com</a>, 2014</p>
+							<p>&#169;&#160;<a href="http://englishextra.github.io/serguei/">englishextra.github.com</a>, 2014</p>
 						</div>
 					</div>
 				</div>
