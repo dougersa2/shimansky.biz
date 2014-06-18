@@ -403,10 +403,11 @@ $SQLITE_CACHE = null;
 					<ul class="sidebar-icon">
 						<li class="sidebar-header"><a href="/" title="Начало"><span class="sitelogo"></span></a></li>
 						<li><a href="http://vk.com/public62872178" class="vk-50x50"></a></li>
+						<li><a href="http://odnoklassniki.ru/shimansky" class="odnoklassniki-50x50"></a></li>
 						<li><a href="https://vimeo.com/user20994901" class="vimeo-50x50"></a></li>
-						<li><a href="https://twitter.com/shimanskybiz" class="twitter-50x50"></a></li>
+						<!-- <li><a href="https://twitter.com/shimanskybiz" class="twitter-50x50"></a></li>
 						<li><a href="http://englishextra.github.io/" class="github-50x50"></a></li>
-						<li><a href="http://serguei.shimansky.biz/epishev2_instagram.html" class="instagram-50x50"></a></li>
+						<li><a href="http://englishextra.github.io/serguei/epishev2_instagram.html" class="instagram-50x50"></a></li> -->
 					</ul>
 					<div class="tab-content">
 						<ul class="sidebar-group tab-pane active" id="tabelements">
@@ -423,7 +424,7 @@ $SQLITE_CACHE = null;
 							<li><a href="/pages/more/more_irregular_verbs.html">Неправильные глаголы</a></li>
 							<li><a href="/pages/more/more_resume_writing.html">Пишем резюме</a></li>
 							<li><a href="/pages/articles/articles_reading_rules_utf.html">Правила чтения</a></li>
-							<li><a href="/pages/tests/tests_gia_english_test_sample.html">ГИА-9&#160;АЯ</a></li>
+							<li><a href="/pages/tests/tests_gia_english_test_sample.html">ГИА-9&#160;(ОГЭ)&#160;АЯ</a></li>
 							<li><a href="/pages/tests/tests_ege_english_test_sample.html">ЕГЭ-11&#160;АЯ</a></li>
 							<li><a href="/pages/comments.html">Отзывы</a></li>
 							<li><a href="/pages/about.html">О&#160;сайте</a></li>

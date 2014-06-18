@@ -956,6 +956,22 @@ pre.prettyprint {
 	background: transparent url(../img/instagram-50x50.png) top left no-repeat;
 	background-size: 50px 50px;
 }
+.odnoklassniki-50x50 {
+	display: inline-block;
+	font-size: 0;
+	width: 50px;
+	height: 50px;
+	color: transparent;
+	background: transparent url(../img/odnoklassniki-50x50.svg) top left no-repeat;
+	background-size: 50px 50px;
+	-webkit-transform: translate3d(0,0,0);
+	padding: 0;
+	margin: 0;
+}
+.no-svg .odnoklassniki-50x50 {
+	background: transparent url(../img/odnoklassniki-50x50.png) top left no-repeat;
+	background-size: 50px 50px;
+}
 .bt-menu-trigger-holder {
 	display: inline-block;
 	width: 52px;
