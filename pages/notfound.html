@@ -181,7 +181,7 @@ body {
 								(function(a){a(window).touchwipe({wipeLeft:function(){a.sidr("close","leftnav")},wipeRight:function(){a.sidr("open","leftnav")},preventDefaultEvents:!1})})(jQuery);
 							},{charset:"utf-8"},5E3);
 						},{charset:"utf-8"},5E3);
-						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("/libs/shimansky.biz-jquery-ui/1.10.4/custom/js/jquery-ui.min.js", function () {
+						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("https://cdn.rawgit.com/englishextra/shimansky.biz-jquery-ui/6cd341d5fb626b1454420791f5fee54e37f9f6af/1.10.4/custom/js/jquery-ui.min.js", function () {
 							"undefined"!==typeof window.jQuery&&function(d,c,e,f){$("#"+c).autocomplete({source:function(b,a){$.ajax({url:f,dataType:"json",data:{q:b.term,c:10},success:function(b){a($.map(b,function(a){return{label:a.value,value:a.name}}))}})},minLength:1,select:function(b,a){if(a.item.value&&(a.item.value.match(/^http\:\/\//)||a.item.value.match(/^https\:\/\//)||a.item.value.match(/^\/search\//)||a.item.value.match(/^\//)))return d.location.href=a.item.value,!1;$(b.target).val($("#"+c).val());$("#"+e).submit()}, open:function(){},close:function(){}})}(document,"search_text","search_form","/libs/shimansky.biz-jquery-ui/1.10.4/custom/autocomplete/");
 						},{charset:"utf-8"},5E3);
 						(function(a,b){b&&(b.style.display="none");a&&(a.style.display="block")})(document.getElementById("page")||"",document.getElementById("circularG")||"");
