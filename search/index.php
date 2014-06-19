@@ -510,7 +510,7 @@ $SQLITE_CACHE = null;
 	</div>
 	<div class="module module-clean">
 		<div class="module-header">
-			<h4><a href="http://englishextra.github.io/">Сделаю сайт-визитку</a></h4>
+			<h4><a href="http://englishextra.github.io/portfolio/">Сделаю сайт-визитку</a></h4>
 		</div>
 		<div class="module-content">
 			<p>В течение трех рабочих дней сверстаю макет сайта-визитки для Вашего бизнеса. Это&#160;обойдется Вам в&#160;среднем в&#160;4500&#8212;8000&#160;рублей в&#160;зависимости от&#160;требований к&#160;интерфейсу</p>

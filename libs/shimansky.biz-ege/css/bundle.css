@@ -805,9 +805,11 @@ pre.prettyprint {
  * fixes to 16pixels
  */
 .col .mejs-container {
-	display: inline-block;
 	width: 260px !important;
 	margin-top: 24px;
+}
+.col .mejs-horizontal-volume-slider.mejs-mute {
+	display:none;
 }
 .col h1 {
 	font-family: Open Sans, sans-serif;
