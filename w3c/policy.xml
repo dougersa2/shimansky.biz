@@ -4,7 +4,7 @@
 <EXPIRY max-age="604800"/>
 <POLICY
 name="public"
-discuri="http://shimansky.biz/pages/policy.html"
+discuri="http://shimansky.biz/pages/about.html"
 xml:lang="ru">
 <!-- Description of the entity making this policy statement -->
 <ENTITY>
