@@ -1,64 +1,449 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
 <channel>
-  <title>ROR Sitemap for http://localhost/</title>
-  <link>http://localhost/</link>
-	<item><link>http:/localhost/</link><title>Английский без регистрации</title><description>Английский без регистрации</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/about.html</link><title>О сайте &#171;Английский без регистрации&#187;</title><description>О сайте &#171;Английский без регистрации&#187;</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/comments.html</link><title>Отзывы</title><description>Отзывы</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/</link><title>Содержание</title><description>Содержание</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/notfound.html</link><title>Ничего не найдено</title><description>Ничего не найдено</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/aids/aids_topics.html</link><title>Топики на английском</title><description>Топики на английском</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/articles/articles_reading_rules_utf.html</link><title>Статьи &#8211; Правила чтения в английском языке</title><description>Правила чтения в английском языке</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/blog/blog_web_designer_s_online_tools.html</link><title>Блог &#8211; Web Designer&#8217;s Online Tools</title><description>Web Designer&#8217;s Online Tools</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_all_whole_entire.html</link><title>Грамматика &#8211; all / the whole / the entire</title><description>all / the whole / the entire</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_attributes_order.html</link><title>Грамматика &#8211; Порядок определений</title><description>Порядок определений</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_can_could_be_able_to.html</link><title>Грамматика &#8211; can / could / be able to</title><description>can / could / be able to</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_capital_letters.html</link><title>Грамматика &#8211; с большой или с маленькой</title><description>С большой или с маленькой</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_comma_before_who_which_that.html</link><title>Грамматика &#8211; Who / which / that и запятые</title><description>Who / which / that и запятые</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_common_and_proper_nouns.html</link><title>Грамматика &#8211; Нарицательное / собственное</title><description>Нарицательное / собственное</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_conditionals.html</link><title>Грамматика &#8211; Согласование времен</title><description>Согласование времен</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_degrees_of_comparison.html</link><title>Грамматика &#8211; Степени сравнения</title><description>Степени сравнения</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_foreign_words.html</link><title>Грамматика &#8211; Заимствованные слова</title><description>Заимствованные слова</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_grammar_girl_s_quick_and_dirty_grammar_at_a_glance.html</link><title>Грамматика &#8211; Quick and Dirty Grammar</title><description>Quick and Dirty Grammar</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_in_at_on.html</link><title>Грамматика &#8211; In / at / on</title><description>In / at / on</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_in_hospital_at_work.html</link><title>Грамматика &#8211; In hospital / at work etc.</title><description>In hospital / at work etc.</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_irregular_verbs.html</link><title>Грамматика &#8211; Неправильные глаголы: слайды</title><description>Неправильные глаголы: слайды</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_may_might_be_allowed_to.html</link><title>Грамматика &#8211; may / might / be allowed to</title><description>may / might / be allowed to</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_modal_verbs.html</link><title>Грамматика &#8211; Модальные глаголы</title><description>Модальные глаголы</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_much_many_little_few.html</link><title>Грамматика &#8211; much / many / little / few</title><description>much / many / little / few</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_or_nor_neither.html</link><title>Грамматика &#8211; or / nor / neither</title><description>or / nor / neither</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_reported_speech.html</link><title>Грамматика &#8211; Косвенная речь</title><description>Косвенная речь</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_saying_numbers.html</link><title>Грамматика &#8211; Числа по&#8211;английски</title><description>Числа по&#8211;английски</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_too_enough_so_such.html</link><title>Грамматика &#8211; too / enough и so / such</title><description>too / enough и so / such</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_translating_participles.html</link><title>Грамматика &#8211; Перевод причастий и деепричастий</title><description>Перевод причастий и деепричастий</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_usage_of_articles_a_the.html</link><title>Грамматика &#8211; Артикли a / an и the</title><description>Артикли a / an и the</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_usage_of_hyphens.html</link><title>Грамматика &#8211; Расстановка дефисов</title><description>Расстановка дефисов</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_usage_of_tenses.html</link><title>Грамматика &#8211; Употребление английских времен</title><description>Употребление английских времен</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_when_must_means_probably.html</link><title>Грамматика &#8211; Когда must = &#171;должно быть&#187;</title><description>Когда must = &#171;должно быть&#187;</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_word_order.html</link><title>Грамматика &#8211; Порядок слов в предложении</title><description>Порядок слов в предложении</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/grammar/grammar_world_capitals.html</link><title>Грамматика &#8211; World Capitals</title><description>World Capitals</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/more/more_irregular_verbs.html</link><title>Еще! &#8211; Неправильные глаголы: скачать</title><description>Неправильные глаголы: скачать</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/more/more_newsletter_can_get_english_for_free.html</link><title>Еще! &#8211; Бесплатный английский в сети</title><description>Бесплатный английский в сети</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/more/more_resume_writing.html</link><title>Еще! &#8211; Пишем резюме на английском</title><description>Пишем резюме на английском</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/more/more_rough_and_ready_grammar_tips.html</link><title>Еще! &#8211; Подсказки по грамматике</title><description>Подсказки по грамматике</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_advanced_grammar_in_use_level_test.html</link><title>Тесты &#8211; Advanced Grammar in Use Level Test</title><description>Advanced Grammar in Use Level Test</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_ege_english_test_sample.html</link><title>Тесты &#8211; Демо&#8211;вариант ЕГЭ&#8211;11 АЯ 2014</title><description>Демо&#8211;вариант ЕГЭ&#8211;11 АЯ 2014</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_ege_english_test_sample_2013.html</link><title>Тесты &#8211; Демо&#8211;вариант ЕГЭ&#8211;11 АЯ 2013</title><description>Демо&#8211;вариант ЕГЭ&#8211;11 АЯ 2013</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_ege_infographics.html</link><title>Тесты &#8211; ЕГЭ&#8211;11 АЯ 2014 &#8211; Процедура (инфографика)</title><description>ЕГЭ&#8211;11 АЯ 2014 &#8211; Процедура (инфографика)</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_english_allrussian_olympiad_regional_stage_2013.html</link><title>Тесты &#8211; XIV Олимпиада по английскому</title><description>XIV Олимпиада по английскому</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_english_grammar_in_use_level_test.html</link><title>Тесты &#8211; English Grammar in Use Level Test</title><description>English Grammar in Use Level Test</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_essential_grammar_in_use_level_test.html</link><title>Тесты &#8211; Essential Grammar in Use Level Test</title><description>Essential Grammar in Use Level Test</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_gia_ege_letter_sample.html</link><title>Тесты &#8211; Примеры заданий &#171;Письмо&#187; C1 и C2</title><description>Примеры заданий &#171;Письмо&#187; C1 и C2</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_gia_english_test_sample.html</link><title>Тесты &#8211; Демо&#8211;вариант ГИА&#8211;9 (ОГЭ) АЯ 2014</title><description>Демо&#8211;вариант ГИА&#8211;9 (ОГЭ) АЯ 2014</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_grammar_tests_with_answers.html</link><title>Тесты &#8211; Тесты по грамматике английского</title><description>Тесты по грамматике английского</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_languagelink_online_test.html</link><title>Тесты &#8211; Тест по английскому online</title><description>Тест по английскому online</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_macmillan_ege_english_test_sample_2013.html</link><title>Тесты &#8211; Тестирование в формате ЕГЭ&#8211;11 АЯ 2013</title><description>Тестирование в формате ЕГЭ&#8211;11 АЯ 2013</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_macmillan_gia_english_test_sample_2013.html</link><title>Тесты &#8211; Тестирование в формате ГИА&#8211;9 (ОГЭ) АЯ 2013</title><description>Тестирование в формате ГИА&#8211;9 (ОГЭ) АЯ 2013</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_2nd_test_20.html</link><title>Тесты &#8211; Macmillan Practice Tests. Test 20</title><description>Macmillan Practice Tests. Test 20</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys.html</link><title>Тесты &#8211; Ответы к Macmillan Practice Tests (1&#8211;е изд.)</title><description>Ответы к Macmillan Practice Tests (1&#8211;е изд.)</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys_2nd.html</link><title>Тесты &#8211; Ответы к Macmillan Practice Tests (2&#8211;е изд.)</title><description>Ответы к Macmillan Practice Tests (2&#8211;е изд.)</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
-<item><link>http:/localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_transcripts_2nd.html</link><title>Тесты &#8211; Тексты к Macmillan Practice Tests</title><description>Тексты к Macmillan Practice Tests</description><ror:updatePeriod>daily</ror:updatePeriod><ror:sortOrder>1</ror:sortOrder><ror:resourceOf>sitemap</ror:resourceOf></item>
+  <title>ROR Sitemap for http://shimansky.biz/</title>
+  <link>http://shimansky.biz/</link>
 
-	</channel>
-	</rss>
+<item>
+     <link>http://shimansky.biz/</link>
+     <title>Английский без регистрации</title>
+     <description>Английский без регистрации</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/</link>
+     <title>Содержание</title>
+     <description>Содержание</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/more/more_newsletter_can_get_english_for_free.html</link>
+     <title>Еще! - Бесплатный английский в&amp;#160;сети</title>
+     <description>Бесплатный английский в&amp;#160;сети</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/more/more_rough_and_ready_grammar_tips.html</link>
+     <title>Еще! - Подсказки по&amp;#160;грамматике</title>
+     <description>Подсказки по&amp;#160;грамматике</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/more/more_irregular_verbs.html</link>
+     <title>Еще! - Неправильные глаголы: скачать</title>
+     <description>Неправильные глаголы: скачать</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/more/more_resume_writing.html</link>
+     <title>Еще! - Пишем резюме на&amp;#160;английском</title>
+     <description>Пишем резюме на&amp;#160;английском</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/articles/articles_reading_rules_utf.html</link>
+     <title>Статьи - Правила чтения в&amp;#160;английском языке</title>
+     <description>Правила чтения в&amp;#160;английском языке</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_gia_english_test_sample.html</link>
+     <title>Тесты - Демо-вариант ГИА-9&amp;#160;(ОГЭ)&amp;#160;АЯ&amp;#160;2014</title>
+     <description>Демо-вариант ГИА-9&amp;#160;(ОГЭ)&amp;#160;АЯ&amp;#160;2014</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_ege_english_test_sample.html</link>
+     <title>Тесты - Демо-вариант ЕГЭ-11&amp;#160;АЯ&amp;#160;2014</title>
+     <description>Демо-вариант ЕГЭ-11&amp;#160;АЯ&amp;#160;2014</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/comments.html</link>
+     <title>Отзывы</title>
+     <description>Отзывы</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/about.html</link>
+     <title>О&amp;#160;сайте &amp;#171;Английский без&amp;#160;регистрации&amp;#187;</title>
+     <description>О&amp;#160;сайте &amp;#171;Английский без&amp;#160;регистрации&amp;#187;</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_ege_infographics.html</link>
+     <title>Тесты - ЕГЭ-11&amp;#160;АЯ&amp;#160;2014 - Процедура (инфографика)</title>
+     <description>ЕГЭ-11&amp;#160;АЯ&amp;#160;2014 - Процедура (инфографика)</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_phrasal_verbs.html</link>
+     <title>Грамматика - Фразовые глаголы</title>
+     <description>Тесты по&amp;#160;грамматике английского</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_common_and_proper_nouns.html</link>
+     <title>Грамматика - Нарицательное&amp;#160;/ собственное</title>
+     <description>Нарицательное&amp;#160;/ собственное</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_modal_verbs.html</link>
+     <title>Грамматика - Модальные глаголы</title>
+     <description>Модальные глаголы</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_usage_of_articles_a_the.html</link>
+     <title>Грамматика - Артикли a&amp;#160;/ an и&amp;#160;the</title>
+     <description>Артикли a&amp;#160;/ an и&amp;#160;the</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_usage_of_tenses.html</link>
+     <title>Грамматика - Употребление английских времен</title>
+     <description>Употребление английских времен</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_reported_speech.html</link>
+     <title>Грамматика - Косвенная речь</title>
+     <description>Косвенная речь</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_degrees_of_comparison.html</link>
+     <title>Грамматика - Степени сравнения</title>
+     <description>Степени сравнения</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_word_order.html</link>
+     <title>Грамматика - Порядок слов в&amp;#160;предложении</title>
+     <description>Порядок слов в&amp;#160;предложении</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_conditionals.html</link>
+     <title>Грамматика - Согласование времен</title>
+     <description>Согласование времен</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_all_whole_entire.html</link>
+     <title>Грамматика - all / the whole / the entire</title>
+     <description>all / the whole / the entire</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_attributes_order.html</link>
+     <title>Грамматика - Порядок определений</title>
+     <description>Порядок определений</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_or_nor_neither.html</link>
+     <title>Грамматика - or&amp;#160;/ nor&amp;#160;/ neither</title>
+     <description>or&amp;#160;/ nor&amp;#160;/ neither</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_too_enough_so_such.html</link>
+     <title>Грамматика - too&amp;#160;/ enough и&amp;#160;so&amp;#160;/ such</title>
+     <description>too&amp;#160;/ enough и&amp;#160;so&amp;#160;/ such</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_translating_participles.html</link>
+     <title>Грамматика - Перевод причастий и&amp;#160;деепричастий</title>
+     <description>Перевод причастий и&amp;#160;деепричастий</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_may_might_be_allowed_to.html</link>
+     <title>Грамматика - may&amp;#160;/ might&amp;#160;/ be allowed to</title>
+     <description>may&amp;#160;/ might&amp;#160;/ be allowed to</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_can_could_be_able_to.html</link>
+     <title>Грамматика - can&amp;#160;/ could&amp;#160;/ be able to</title>
+     <description>can&amp;#160;/ could&amp;#160;/ be able to</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_capital_letters.html</link>
+     <title>Грамматика - с&amp;#160;большой или с&amp;#160;маленькой</title>
+     <description>С большой или с&amp;#160;маленькой</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_saying_numbers.html</link>
+     <title>Грамматика - Числа по-английски</title>
+     <description>Числа по-английски</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_grammar_girl_s_quick_and_dirty_grammar_at_a_glance.html</link>
+     <title>Грамматика - Quick and Dirty Grammar</title>
+     <description>Quick and Dirty Grammar</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_macmillan_gia_english_test_sample_2013.html</link>
+     <title>Тесты - Тестирование в&amp;#160;формате ГИА-9&amp;#160;(ОГЭ)&amp;#160;АЯ&amp;#160;2013</title>
+     <description>Тестирование в&amp;#160;формате ГИА-9&amp;#160;(ОГЭ)&amp;#160;АЯ&amp;#160;2013</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_gia_ege_letter_sample.html</link>
+     <title>Тесты - Примеры заданий &amp;#171;Письмо&amp;#187;&amp;#160;C1 и&amp;#160;C2</title>
+     <description>Примеры заданий &amp;#171;Письмо&amp;#187;&amp;#160;C1 и&amp;#160;C2</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_macmillan_ege_english_test_sample_2013.html</link>
+     <title>Тесты - Тестирование в&amp;#160;формате ЕГЭ-11&amp;#160;АЯ&amp;#160;2013</title>
+     <description>Тестирование в&amp;#160;формате ЕГЭ-11&amp;#160;АЯ&amp;#160;2013</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_ege_english_test_sample_2013.html</link>
+     <title>Тесты - Демо-вариант ЕГЭ-11&amp;#160;АЯ&amp;#160;2013</title>
+     <description>Демо-вариант ЕГЭ-11&amp;#160;АЯ&amp;#160;2013</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_2nd_test_20.html</link>
+     <title>Тесты - Macmillan Practice Tests. Test&amp;#160;20</title>
+     <description>Macmillan Practice Tests. Test&amp;#160;20</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys.html</link>
+     <title>Тесты - Ответы к&amp;#160;Macmillan Practice Tests (1-е&amp;#160;изд.)</title>
+     <description>Ответы к&amp;#160;Macmillan Practice Tests (1-е&amp;#160;изд.)</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys_2nd.html</link>
+     <title>Тесты - Ответы к&amp;#160;Macmillan Practice Tests (2-е&amp;#160;изд.)</title>
+     <description>Ответы к&amp;#160;Macmillan Practice Tests (2-е&amp;#160;изд.)</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_transcripts_2nd.html</link>
+     <title>Тесты - Тексты к&amp;#160;Macmillan Practice Tests</title>
+     <description>Тексты к&amp;#160;Macmillan Practice Tests</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_english_allrussian_olympiad_regional_stage_2013.html</link>
+     <title>Тесты - XIV&amp;#160;Олимпиада по&amp;#160;английскому</title>
+     <description>XIV&amp;#160;Олимпиада по&amp;#160;английскому</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_grammar_tests_with_answers.html</link>
+     <title>Тесты - Тесты по&amp;#160;грамматике английского</title>
+     <description>Тесты по&amp;#160;грамматике английского</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_languagelink_online_test.html</link>
+     <title>Тесты - Тест по&amp;#160;английскому online</title>
+     <description>Тест по&amp;#160;английскому online</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_essential_grammar_in_use_level_test.html</link>
+     <title>Тесты - Essential Grammar in&amp;#160;Use Level Test</title>
+     <description>Essential Grammar in&amp;#160;Use Level Test</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_english_grammar_in_use_level_test.html</link>
+     <title>Тесты - English Grammar in&amp;#160;Use Level Test</title>
+     <description>English Grammar in&amp;#160;Use Level Test</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/tests/tests_advanced_grammar_in_use_level_test.html</link>
+     <title>Тесты - Advanced Grammar in&amp;#160;Use Level Test</title>
+     <description>Advanced Grammar in&amp;#160;Use Level Test</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_comma_before_who_which_that.html</link>
+     <title>Грамматика - Who&amp;#160;/ which&amp;#160;/ that и&amp;#160;запятые</title>
+     <description>Who&amp;#160;/ which&amp;#160;/ that и&amp;#160;запятые</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_usage_of_hyphens.html</link>
+     <title>Грамматика - Расстановка дефисов</title>
+     <description>Расстановка дефисов</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_in_hospital_at_work.html</link>
+     <title>Грамматика - In hospital&amp;#160;/ at work etc.</title>
+     <description>In hospital&amp;#160;/ at work etc.</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_foreign_words.html</link>
+     <title>Грамматика - Заимствованные слова</title>
+     <description>Заимствованные слова</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_irregular_verbs.html</link>
+     <title>Грамматика - Неправильные глаголы: слайды</title>
+     <description>Неправильные глаголы: слайды</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_world_capitals.html</link>
+     <title>Грамматика - World Capitals</title>
+     <description>World Capitals</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_much_many_little_few.html</link>
+     <title>Грамматика - much&amp;#160;/ many&amp;#160;/ little&amp;#160;/ few</title>
+     <description>much&amp;#160;/ many&amp;#160;/ little&amp;#160;/ few</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_when_must_means_probably.html</link>
+     <title>Грамматика - Когда must&amp;#160;= &amp;#171;должно быть&amp;#187;</title>
+     <description>Когда must&amp;#160;= &amp;#171;должно быть&amp;#187;</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/grammar/grammar_in_at_on.html</link>
+     <title>Грамматика - In&amp;#160;/ at&amp;#160;/ on</title>
+     <description>In&amp;#160;/ at&amp;#160;/ on</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://shimansky.biz/pages/aids/aids_topics.html</link>
+     <title>Топики на&amp;#160;английском</title>
+     <description>Топики на&amp;#160;английском</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
