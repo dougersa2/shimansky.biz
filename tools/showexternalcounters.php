@@ -369,7 +369,7 @@ ob_end_flush();
 							<li><a href="http://englishextra.github.io/libs/early.js/">englishextra.github.io/libs/early.js (23664397)</a></li>
 							<li><a href="http://portfolio.shimansky.biz/">portfolio.shimansky.biz (23664397)</a></li>
 							<li><a href="http://divans.shimansky.biz/">divans.shimansky.biz (23181226)</a></li>
-							<li><a href="http://geograph.shimansky.biz/">geograph.shimansky.biz (23171383)</a></li>
+							<li><a href="http://englishextra.github.io/geograph/">geograph.shimansky.biz (23171383)</a></li>
 							<li><a href="http://lytcomp.shimansky.biz/">lytcomp.shimansky.biz (17844787)</a></li>
 							<li><a href="http://nativeclub.shimansky.biz/">nativeclub.shimansky.biz (23181040)</a></li>
 							<li><a href="http://englishextra.lealta.ru/">englishextra.lealta.ru (11613547)</a></li>
