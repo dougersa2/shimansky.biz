@@ -591,7 +591,7 @@ php_value date.timezone "Europe/Moscow"
  php_value session.cookie_httponly true
 </IfModule>
 
-Order Allow,Deny
+# Order Allow,Deny
 # # Deny from 89.250.
 # Deny from 1.126.
 # Deny from 113.187.
@@ -626,46 +626,46 @@ Order Allow,Deny
 # Deny from 89.208.
 # Deny from 90.151.
 # Deny from 92.242.
-Deny from 31.40.
-Deny from 54.244.
-Deny from 213.87.
-Deny from 83.99.
-Deny from 80.76.
-Deny from 77.43.
-Deny from 178.47.
-Deny from 92.240.
-Deny from 37.115.
-Deny from 150.70.
-Deny from 178.169.
-Deny from 46.229.
-Deny from 115.93.
-Deny from 46.227.
-Deny from 95.104.
-Deny from 93.85.
-Deny from 90.151.
-Deny from 95.58.
-Deny from 93.116.
-Deny from 46.250.
-Deny from 89.218.
-Deny from 41.4.
-Deny from 217.72.
-Deny from 217.118.
-Deny from 58.169.
-Deny from 89.178.
-Deny from 49.180.
-Deny from 77.121.
-Deny from 46.164.
-Deny from 95.27.
-Deny from 37.78.
-Deny from 86.62.
-Deny from 92.126.
-Deny from 188.123.
-Deny from 178.167.
-Deny from 217.76.
-Deny from 83.149.
-Deny from 78.25.
-Deny from 62.192.
-Allow from all
+# Deny from 31.40.
+# Deny from 54.244.
+# Deny from 213.87.
+# Deny from 83.99.
+# Deny from 80.76.
+# Deny from 77.43.
+# Deny from 178.47.
+# Deny from 92.240.
+# Deny from 37.115.
+# Deny from 150.70.
+# Deny from 178.169.
+# Deny from 46.229.
+# Deny from 115.93.
+# Deny from 46.227.
+# Deny from 95.104.
+# Deny from 93.85.
+# Deny from 90.151.
+# Deny from 95.58.
+# Deny from 93.116.
+# Deny from 46.250.
+# Deny from 89.218.
+# Deny from 41.4.
+# Deny from 217.72.
+# Deny from 217.118.
+# Deny from 58.169.
+# Deny from 89.178.
+# Deny from 49.180.
+# Deny from 77.121.
+# Deny from 46.164.
+# Deny from 95.27.
+# Deny from 37.78.
+# Deny from 86.62.
+# Deny from 92.126.
+# Deny from 188.123.
+# Deny from 178.167.
+# Deny from 217.76.
+# Deny from 83.149.
+# Deny from 78.25.
+# Deny from 62.192.
+# Allow from all
 
 # https://github.com/h5bp/html5-boilerplate/wiki/htaccess
 # Do not turn off your ServerSignature (i.e., the Server: HTTP header). Serious attackers can use other kinds of fingerprinting methods to figure out the actual server and components running behind a port. Instead, as a site owner, you should keep track of what's listening on ports on hosts that you control. Run a periodic scanner to make sure nothing suspicious is running on a host you control, and use the ServerSignature to determine if this is the web server and version that you expect.
