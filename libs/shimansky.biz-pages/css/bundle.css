@@ -601,7 +601,6 @@ pre.prettyprint {
 }
 .footer {
 	width: 100%;
-	font-size: 14px;
 	font-size: 0;
 	line-height: 0;
 	font-weight: 600;
@@ -618,9 +617,6 @@ pre.prettyprint {
 	margin: 0;
 	padding: 0 0 24px 0;
 	padding: 0;
-}
-.sf_articlesreadingrulesutf_stat_holder {
-	visibility: hidden;
 }
 .ccbynd {
 	display: inline-block;
