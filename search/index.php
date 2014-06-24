@@ -551,7 +551,7 @@ $SQLITE_CACHE = null;
 		</div>
 		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
-				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/33ffedf7ff6bcae86581510d9974d9d1ee298092/1.0/js/early.min.js",function(){
+				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/9ac385b2386805963c8122bb60be474b5d483989/1.0/js/early.min.js",function(){
 					yepnope.injectJs("http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", function () {
 						yepnope.injectJs("http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", function () {
 							"undefined"!==typeof window.jQuery&&$(document).ready(function(){$("#show-menu").click(function(e){e.preventDefault();$("#wrapper").toggleClass("active");});var maxHeight=0;$(".activity-feed-wrapper").each(function(){if($(this).height()>maxHeight){maxHeight=$(this).height();}});$(".activity-feed-wrapper").height(maxHeight);});
