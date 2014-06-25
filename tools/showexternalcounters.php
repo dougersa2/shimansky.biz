@@ -226,14 +226,14 @@ if ($event == 'clear') {
 		<link rel="alternate" href="http://feeds.feedburner.com/Shimanskybiz?format=xml" type="application/rss+xml" title="Shimansky.biz (English Without Signing Up) - Articles" />
 		<link rel="alternate" href="/feeds/pages.xml" type="application/rss+xml" title="Shimansky.biz (Английский без регистрации) - Статьи" />
 		<link rel="search" href="/searchplugins/mycroft/sitesearch.xml" type="application/opensearchdescription+xml" title="Shimansky.biz (Английский без регистрации) - Поиск" />
-		<link rel="stylesheet" href="/libs/shimansky.biz-admin/css/bundle.min.css" />
+		<link rel="stylesheet" href="../libs/shimansky.biz-admin/css/bundle.min.css" />
 	</head>
 	<body>
 		<div id="page">
 			<div id="topbanner"></div>
 			<div class="header" id="header">
 				<a class="navpanel" href="#menu-left"></a>
-				<a class="sitelogo" href="/"></a>
+				<a class="sitelogo" href="../index.html"></a>
 				<a class="searchpanel" href="#menu-right"></a>
 			</div>
 			<div id="content">
@@ -702,7 +702,7 @@ ob_end_flush();
 				</div>
 			</nav>
 		</div>
-		<!--#include virtual="/virtual/yepnope.min.js.html" -->
+		<!--#include virtual="../virtual/yepnope.min.js.html" -->
 		<script>
 				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/9ac385b2386805963c8122bb60be474b5d483989/1.0/js/early.min.js",function(){
 					yepnope.injectJs("http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", function () {
@@ -710,7 +710,7 @@ ob_end_flush();
 							"undefined"!==typeof window.jQuery&&function(){$(function(){$("nav#menu-left").mmenu()});$(function(){$("nav#menu-right").mmenu({position:"right",counters:!0,searchfield:!0});})}();
 						},{charset:"utf-8"},5E3);
 						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("https://cdn.rawgit.com/englishextra/shimansky.biz-jquery-ui/6cd341d5fb626b1454420791f5fee54e37f9f6af/1.10.4/custom/js/jquery-ui.min.js", function () {
-							"undefined"!==typeof window.jQuery&&function(d,c,e,f){$("#"+c).autocomplete({source:function(b,a){$.ajax({url:f,dataType:"json",data:{q:b.term,c:10},success:function(b){a($.map(b,function(a){return{label:a.value,value:a.name}}))}})},minLength:1,select:function(b,a){if(a.item.value&&(a.item.value.match(/^http\:\/\//)||a.item.value.match(/^https\:\/\//)||a.item.value.match(/^\/search\//)||a.item.value.match(/^\//)))return d.location.href=a.item.value,!1;$(b.target).val($("#"+c).val());$("#"+e).submit()}, open:function(){},close:function(){}})}(document,"search_text","search_form","/libs/shimansky.biz-jquery-ui/1.10.4/custom/autocomplete/");
+							"undefined"!==typeof window.jQuery&&function(d,c,e,f){$("#"+c).autocomplete({source:function(b,a){$.ajax({url:f,dataType:"json",data:{q:b.term,c:10},success:function(b){a($.map(b,function(a){return{label:a.value,value:a.name}}))}})},minLength:1,select:function(b,a){if(a.item.value&&(a.item.value.match(/^http\:\/\//)||a.item.value.match(/^https\:\/\//)||a.item.value.match(/^\/search\//)||a.item.value.match(/^\//)))return d.location.href=a.item.value,!1;$(b.target).val($("#"+c).val());$("#"+e).submit()}, open:function(){},close:function(){}})}(document,"search_text","search_form","../libs/shimansky.biz-jquery-ui/1.10.4/custom/autocomplete/");
 						},{charset:"utf-8"},5E3);
 						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&yepnope.injectJs("http://cdn.rawgit.com/englishextra/jquery.webks-responsive-table/adee3235010970f38e29f5ac38eb5b5fbac14b3a/jquery.webks-responsive-table.min.js", function () {
 							"undefined"!==typeof window.jQuery&&domready(function(){(function(a,b,c,d){a.innerWidth&&(0<a.innerWidth?a.innerWidth:screen.width)&&$(function(){$("body").addClass("javascript-active");$(b).responsiveTable({displayResponsiveCallback:function(){return c>(a.innerWidth?0<a.innerWidth?a.innerWidth:screen.width:"")}});$(a).bind("orientationchange",function(a){setTimeout("$(\x27"+b+"\x27).responsiveTableUpdate()",d)});$(a).resize(function(){$(b).responsiveTableUpdate()})})})(window,"table.respond",768,100)});

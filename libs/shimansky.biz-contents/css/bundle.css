@@ -855,6 +855,7 @@ pre.prettyprint {
 	opacity: 0.5;
 }
 .topbanner {
+	display: none;
 	height: 9px;
 	background: transparent url(../../shimansky.biz-branding/banners/tb-FEC4B1-480x60.svg) top left repeat-x;
 	background-size: 480px 60px;
