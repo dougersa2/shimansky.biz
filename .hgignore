@@ -8,7 +8,6 @@ syntax: glob
 *.gz
 *.git*
 *.hg*
-*.ico
 *.iml
 .DS_Store
 __MACOSX/
@@ -20,7 +19,6 @@ inc/regional_*
 pub/
 piwik/
 sql/
-src/
 sqlite/
 temp/
 divans/
@@ -32,10 +30,6 @@ tools/webdesignrepo/
 
 syntax: regexp
 ^\.(?!htaccess$|hgignore$|gitignore$).*
-^[^/]*\.gif
-^[^/]*\.ico
 ^[^/]*\.iml
-^[^/]*\.jpg
-^[^/]*\.png
 ^[^/]*\.gz
 ^[^/]*\.komodoproject
