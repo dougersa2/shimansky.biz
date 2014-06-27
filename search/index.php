@@ -556,7 +556,7 @@ $SQLITE_CACHE = null;
 						yepnope.injectJs("http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", function () {
 							"undefined"!==typeof window.jQuery&&$(document).ready(function(){$("#show-menu").click(function(e){e.preventDefault();$("#wrapper").toggleClass("active");});var maxHeight=0;$(".activity-feed-wrapper").each(function(){if($(this).height()>maxHeight){maxHeight=$(this).height();}});$(".activity-feed-wrapper").height(maxHeight);});
 						},{charset:"utf-8"},5E3);
-						yepnope.injectJs("http://cdn.jsdelivr.net/pnotify/1.3.1/jquery.pnotify.js",function(){
+						yepnope.injectJs("http://cdn.jsdelivr.net/pnotify/1.3.1/jquery.pnotify.min.js",function(){
 							"undefined"!==typeof window.jQuery&&domready(function(){(function(a,b,c,d,e,f){a&&function(){a&&b.click(function(){return a.val()?d.submit():(f(c),!1)});e.click(function(){a.focus()})}()})($("#search_text")||"",$("#search_form_submit_button")||"",{history:!1,stack:!1,title:"\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e",text:"\u00a0\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0412\u0430\u0448 \u0437\u0430\u043f\u0440\u043e\u0441!\u00a0",opacity:1,width:"280px",remove:!0,pnotify_addclass:"ui-pnotify-error", delay:3E3},$("#search_form")||"",$("#search_form_reset_button")||"",jQuery.pnotify||"")});
 						},{charset:"utf-8"},5E3);
 						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("https://cdn.rawgit.com/englishextra/shimansky.biz-jquery-ui/6cd341d5fb626b1454420791f5fee54e37f9f6af/1.10.4/custom/js/jquery-ui.min.js", function () {
