@@ -1,509 +1,39 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="msapplication-square70x70logo" content="/smalltile.png" />
+		<meta name="msapplication-square150x150logo" content="/mediumtile.png" />
+		<meta name="msapplication-wide310x150logo" content="/widetile.png" />
+		<meta name="msapplication-square310x310logo" content="/largetile.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<title>Pushy - Off-Canvas Navigation Menu</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans%7CPT+Sans%7CPT+Serif:400,400italic,700italic,700&amp;subset=latin,cyrillic" />
-		<link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
-		<link rel="stylesheet" href="http://cdn.jsdelivr.net/typeboost.css/0.1/typeboost.min.css" />
-		<link rel="stylesheet" href="http://cdn.jsdelivr.net/pushy/0.9.1/pushy.min.css" />
-		<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.uitotop/1.2/css/ui.totop.css" />
-		<style>
-			/*!
-			 * ui.totop.min.css
-			 * pastebin.com/9F7UKvTz
-			 */
-			#toTop {
-				width: 50px;
-				height: 50px;
-				display: none;
-				position: fixed;
-				bottom: 10px;
-				right: 10px;
-				overflow: hidden;
-				text-decoration: none;
-				text-indent: 100%;
-				background: transparent url(../../libs/shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
-				background-size: 50px 50px;
-				-webkit-transform: translate3d(0,0,0);
-				border: none;
-				outline: none;
-				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-			}
-			.no-svg #toTop {
-				background: transparent url(../../libs/shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
-				background-size: 50px 50px;
-			}
-			#toTopHover {
-				width: 50px;
-				height: 50px;
-				float: left;
-				display: block;
-				overflow: hidden;
-				background: transparent url(../../libs/shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
-				background-size: 50px 50px;
-				-webkit-transform: translate3d(0,0,0);
-			}
-			.no-svg #toTopHover {
-				background: transparent url(../../libs/shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
-				background-size: 50px 50px;
-			}
-			#toTop:hover {
-				opacity: 0.5 !important;
-			}
-			/*!
-			 * overrides to toTop
-			 */
-			#toTop {
-				position: fixed;
-				bottom: 0;
-				right: 0;
-			}
-			/*!
-			 * fixed pushy replacing PXs with REMs
-			 * and some color and margins and paddings changes
-			 */
-			/*!
-			 * Pushy - v0.9.1 - 2013-9-16
-			 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
-			 * https://github.com/christophery/pushy/
-			 * by Christopher Yee
-			 */
-			.pushy {
-				position: fixed;
-				width: 18rem;
-				height: 100%;
-				top: 0;
-				font-size: 0.875rem;
-				font-family: Open Sans, sans-serif;
-				font-weight: normal;
-				background: rgba(68, 68, 70, 1);
-				-webkit-box-shadow: inset -0.625rem 0 0.375rem -0.563rem rgba(0,0,0,.7);
-				-moz-box-shadow: inset -0.625rem 0 0.375rem -0.563rem rgba(0,0,0,.7);
-				box-shadow: inset -0.625rem 0 0.375rem -0.563rem rgba(0,0,0,.7);
-				z-index: 9999;
-				overflow: auto;
-				-webkit-overflow-scrolling: touch;
-			}
-			.pushy a {
-				display: block;
-				color: #FFF;
-				padding: 0.813rem 1.188rem;
-				/*border-bottom: 1px solid rgba(0,0,0,.1);
-				 border-top: 1px solid rgba(255,255,255,.1);*/
-				border-top: 1px solid rgba(255,255,255,.05);
-				border-bottom: none;
-				text-decoration: none;
-			}
-			.pushy ul {
-				margin: 0;
-				padding: 0;
-			}
-			.pushy li:first-child a {
-				border-top: none;
-			}
-			.pushy a:hover {
-				background: rgba(255,255,255,.05);
-				color: #FFF;
-				border-top-color: transparent;
-			}
-			.pushy-left {
-				-webkit-transform: translate3d(-18rem,0,0);
-				-moz-transform: translate3d(-18rem,0,0);
-				-ms-transform: translate3d(-18rem,0,0);
-				-o-transform: translate3d(-18rem,0,0);
-				transform: translate3d(-18rem,0,0);
-			}
-			.pushy-open {
-				-webkit-transform: translate3d(0,0,0);
-				-moz-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				-o-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-			.container-push, .push-push {
-				-webkit-transform: translate3d(18rem,0,0);
-				-moz-transform: translate3d(18rem,0,0);
-				-ms-transform: translate3d(18rem,0,0);
-				-o-transform: translate3d(18rem,0,0);
-				transform: translate3d(18rem,0,0);
-			}
-			.pushy, #container, .push {
-				-webkit-transition: -webkit-transform .2s cubic-bezier(.16,.68,.43,.99);
-				-moz-transition: -moz-transform .2s cubic-bezier(.16,.68,.43,.99);
-				-o-transition: -o-transform .2s cubic-bezier(.16,.68,.43,.99);
-				transition: transform .2s cubic-bezier(.16,.68,.43,.99);
-				-webkit-backface-visibility: hidden;
-				-webkit-perspective: 1000;
-			}
-			.site-overlay {
-				display: none;
-			}
-			.pushy-active .site-overlay {
-				display: block;
-				position: fixed;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 18rem;
-				z-index: 9999;
-			}
-			.menu-btn {
-				display: inline-block;
-				font-size: 1.625rem;
-				text-align: center;
-				/*color: #FFF;*/
-				color: inherit;
-				/*background: rgba(68, 68, 70, 1);*/
-				background: transparent none !important;
-				/*-webkit-border-radius: 4px;
-				border-radius: 4px;*/
-				cursor: pointer;
-				/*padding: 0.125rem 0.750rem;*/
-				margin: 0 0 1.250rem 0;
-			}
-			.menu-btn:hover {
-				/*background: rgba(0,0,0,.5);
-				color: #FFF;*/
-			}
-			/*!
-			 * rest of content
-			 */
-			html {
-				font-size: 120%;
-			}
-			html,
-			body {
-				/*overflow-x: hidden;*/
-				-webkit-tap-highlight-color: rgba(0,0,0,0);
-				height: 100%;
-			}
-			body {
-				width: 100%;
-				font-size: 100%;
-				font-family: PT Serif, serif;
-				font-weight: normal;
-				line-height: 1.500;
-				color: #3A3A3C;
-				background: #FFF;
-				backgound-size: 100% 100%;
-				-webkit-touch-callout: none;
-				-webkit-tap-highlight-color: rgba(0,0,0,0);
-				-webkit-text-size-adjust: none;
-				-o-user-select: none;
-				-khtml-user-select: none;
-				-webkit-user-select: none;
-				overflow-x: hidden;
-				margin: 0;
-				padding: 0;
-			}
-			a {
-				color: inherit;
-				text-decoration: none;
-				outline: none;
-				-webkit-tap-highlight-color: rgba(0,0,0,0);
-			}
-			a:hover,a:active,a:focus {
-				outline: none;
-				-webkit-tap-highlight-color: rgba(0,0,0,0);
-			}
-			img {
-				border: 0;
-				-ms-interpolation-mode: bicubic;
-				vertical-align: bottom;
-			}
-			p:first-child {
-				margin-top: 0;
-			}
-			p:last-child {
-				margin-bottom: 0;
-			}
-			b,
-			strong,
-			.bolder {
-				font-weight: bolder;
-			}
-			*,*:after,
-			*::before {
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-			}
-			::selection {
-				color: #FFF;
-				background: #67737C;
-			}
-			::-moz-selection {
-				color: #FFF;
-				background: #67737C;
-			}
-			table.respond {
-				width: auto;
-			}
-			pre.prettyprint {
-				background: #404445 !important;
-				border: 0px solid transparent !important;
-			}
-			.container {
-				position: relative;
-				padding: 1rem 1.500rem 0 1.500rem;
-				margin: 0 auto 1.500rem 0;
-			}
-			/*!
-			 * custom fixes to typeboost.css
-			 */
-			.col {
-				max-width: 29rem;
-				margin: 0 auto;
-			}
-			.col a {
-				text-decoration: underline;
-			}
-			.col a:hover,
-			.col a:focus,
-			.col a:active {
-				color: #D84054;
-			}
-			.col h1 {
-				font-size: 2.313rem;
-				font-family: PT Sans, sans-serif;
-				font-weight: normal;
-				text-transform: uppercase;
-				letter-spacing: 0.125rem;
-				color: #58585A;
-				margin-top: 0 !important;
-			}
-			.col h2 {
-				font-size: 1.563rem;
-				font-weight: normal;
-				color: #444446;
-			}
-			.col h3 {
-				font-style: normal;
-			}
-			.col h3,
-			.col h4,
-			.col h5,
-			.col h6 {
-				color: #444446;
-			}
-			.col table {
-				min-width: 35%;
-			}
-			.col table tr {
-				background-color: transparent;
-			}
-			.col table tr:nth-of-type(odd) {
-				background-color: transparent;
-			}
-			.col table th {
-				font-size: 1rem;
-				line-height: 1.200;
-				font-weight: normal;
-				background-color: transparent;
-			}
-			.col table caption {
-				font-size: 1.063rem;
-				line-height: 1.250;
-			}
-			.col table td,
-			.col table th {
-				padding: .313rem 1rem .313rem 0;
-			}
-			.col table td {
-				border-bottom: 1px solid #444446;
-			}
-			.col table th {
-				border-bottom: 3px solid #58585A;
-			}
-			.col form {
-				font-family: PT Sans, sans-serif;
-			}
-			.col select {
-				width: 17rem;
-				/**
-				 * to work on android use
-				 * position: relative;
-				 */
-				position: relative;
-				font-family: sans-serif !important;
-			}
-			.col .hr {
-				background-color: #444446;
-			}
-			.col .hyphenate {
-				text-align: justify;
-			}
-			/*!
-			 * i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/
-			 * At least requires the meta viewport tag with content width=device-width
-			 */
-			/*!
-			 * max and portrait
-			 */
-			@media only screen and (max-width: 1080px) and (orientation: portrait) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 800px) and (orientation: portrait) {
-				html {
-					font-size: 130%;
-				}
-			}
-			@media only screen and (max-width: 768px) and (orientation: portrait) {
-				html {
-					font-size: 130%;
-				}
-			}
-			@media only screen and (max-width: 640px) and (orientation: portrait) {
-				html {
-					font-size: 130%;
-				}
-			}
-			@media only screen and (max-width: 600px) and (orientation: portrait) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 540px) and (orientation: portrait) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 480px) and (orientation: portrait) {
-				html {
-					font-size: 110%;
-				}
-				.col img,
-				.col select	{
-					width: 100%;
-				}
-			}
-			@media only screen and (max-width: 400px) and (orientation: portrait) {
-				html {
-					font-size: 110%;
-				}
-				.col img,
-				.col select	{
-					width: 100%;
-				}
-			}
-			@media only screen and (max-width: 360px) and (orientation: portrait) {
-				html {
-					font-size: 100%;
-				}
-				.col h1 {
-					font-size: 1.625rem;
-				}
-				.col h2 {
-					font-size: 1.375rem;
-				}
-				.col img,
-				.col select	{
-					width: 100%;
-				}
-			}
-			@media only screen and (max-width: 240px) and (orientation: portrait) {
-				html {
-					font-size: 90%;
-				}
-				.col h1 {
-					font-size: 1.625rem;
-				}
-				.col h2 {
-					font-size: 1.375rem;
-				}
-				.col img,
-				.col select	{
-					width: 100%;
-				}
-			}
-			/*!
-			 * max and landscape
-			 */
-			@media only screen and (max-width: 1920px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 1366px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 1280px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 1130px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 1024px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 980px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 802px) and (orientation: landscape) {
-				html {
-					font-size: 130%;
-				}
-			}
-			@media only screen and (max-width: 691px) and (orientation: landscape) {
-				html {
-					font-size: 130%;
-				}
-			}
-			@media only screen and (max-width: 640px) and (orientation: landscape) {
-				html {
-					font-size: 130%;
-				}
-			}
-			@media only screen and (max-width: 600px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 540px) and (orientation: landscape) {
-				html {
-					font-size: 120%;
-				}
-			}
-			@media only screen and (max-width: 480px) and (orientation: landscape) {
-				html {
-					font-size: 110%;
-				}
-				.col img,
-				.col select	{
-					width: 100%;
-				}
-			}
-			@media only screen and (max-width: 320px) and (orientation: landscape) {
-				html {
-					font-size: 100%;
-				}
-				.col h1 {
-					font-size: 1.625rem;
-				}
-				.col h2 {
-					font-size: 1.375rem;
-				}
-				.col img,
-				.col select	{
-					width: 100%;
-				}
-			}
-		</style>
+		<meta name="robots" content="index,follow" />
+		<meta name="author" content="Serguei Shimansky editor@shimansky.biz" />
+		<meta name="keywords" content="репетитор,тушино,егэ,гиа,английский,английского,английскому,глаголы,диалоги,идиомы,ключи,неправильные,онлайн,ответы,подкасты,репетиторы,рефераты,решебник,скачать,тесты,топики,уроки,mp3,mp4" />
+		<meta name="description" content="The Man with the Scar" />
+		<title>Чтение - The Man with the Scar</title>
+		<link rel="icon" href="/favicon.png" type="image/png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-152x152.png" />
+		<link rel="image_src" href="/apple-touch-icon-57x57.png" type="image/png" title="Английский без регистрации" />
+		<link rel="me" type="text/html" href="https://plus.google.com/115554566251160327074" />
+		<link rel="me" type="text/html" href="http://www.youtube.com/user/shimanskybiz" />
+		<link rel="me" type="text/html" href="https://github.com/englishextra" />
+		<link rel="me" type="text/html" href="http://runet-id.com/78189/" />
+		<link rel="me" type="text/html" href="http://freelansim.ru/freelancers/epishev2" />
+		<link rel="search" href="/searchplugins/mycroft/sitesearch.xml" type="application/opensearchdescription+xml" title="Shimansky.biz (Английский без регистрации) - Поиск" />
+		<link rel="stylesheet" href="../../libs/shimansky.biz-blog/css/bundle.min.css" />
 	</head>
 	<body>
 		<nav class="pushy pushy-left">
@@ -526,9 +56,10 @@
 				<i class="fa fa-navicon"></i>
 			</a>
 			<div class="col">
-				<h1>Plan for Analysis</h1>
+				<h1>The Man with the Scar</h1>
 				<div class="hr"></div>
-				<h2>Reading VI: The Man with the Scar</h2>
+				<h2>Plan for Analysis</h2>
+				<h2>The Man with the Scar</h2>
 				<p class="hyphenate text" lang="en">When Detective Paul Nichols asked the teller at the Middleton Bank to describe the robber, she replied.</p>
 				<p class="hyphenate text" lang="en">'He had a long, ugly scar on his right cheek. Also, he seemed quite <strong>ill at ease</strong>, as though he might be unsure of what he was doing. But&#160;he did it. I&#160;had the feeling, though, that he went through with it almost just <strong>to save face</strong>. Once&#160;he decided to rob the bank, he had <strong>to carry out</strong> his plan.'</p>
 				<p class="hyphenate text" lang="en">She explained that the man had come into the bank that morning and stood in line with the other customers, as if waiting to deposit money or cash a check. When&#160;he reached the window, however, he did not <strong>beat around the bush</strong> he handed the girl a piece of paper that had written on it, 'Do not say anything or do anything unusual. I&#160;have a gun and will use it if I&#160;have to. Put&#160;five thousand dollars in an envelope and hand it to me.'</p>
@@ -1312,21 +843,23 @@
 			</div>
 		</div>
 		<!--#include virtual="../../virtual/yepnope.min.js.html" -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-		<!-- <script src="http://cdn.jsdelivr.net/pushy/0.9.1/pushy.min.js"></script> -->
 		<script>
 				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/9ac385b2386805963c8122bb60be474b5d483989/1.0/js/early.min.js",function(){
-					/*! Pushy - v0.9.1 - 2013-9-16
-					* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
-					* https://github.com/christophery/pushy/
-					* by Christopher Yee */("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||"undefined"!==typeof window.jQuery&&$(document).on("click",".menu-btn",function(a){a.preventDefault()})&&$(function(){function h(){t.toggleClass(o);e.toggleClass(s);n.toggleClass(u);r.toggleClass(a)}function p(){t.addClass(o);e.animate({left:"0px"},l);n.animate({left:c},l);r.animate({left:c},l)}function d(){t.removeClass(o);e.animate({left:"-"+c},l);n.animate({left:"0px"},l);r.animate({left:"0px"},l)}var e=$(".pushy"),t=$("body"),n=$("#container"),r=$(".push"),i=$(".site-overlay"),s="pushy-left pushy-open",o="pushy-active",u="container-push",a="push-push",f=$(".menu-btn, .pushy a"),l=200,c=e.width()+"px";if(Modernizr.csstransforms3d){f.click(function(){h()});i.click(function(){h()})}else{e.css({left:"-"+c});n.css({"overflow-x":"hidden"});var v=!0;f.click(function(){if(v){p();v=!1}else{d();v=!0}});i.click(function(){if(v){p();v=!1}else{d();v=!0}})}});
+					yepnope.injectJs("http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js",function(){
+						yepnope.injectJs("http://cdn.jsdelivr.net/pushy/0.9.1/pushy.min.js",function(){
+							"undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser||("undefined"!==typeof window.jQuery||"undefined"!==typeof window.Zepto)&&$(document).on("click",".menu-btn",function(a){a.preventDefault()});
+						},{charset:"utf-8"},5E3);
+					},{charset:"utf-8"},5E3);
+					(function(a,b){b&&(b.onchange=function(){a.location.href=this.value})})(document,document.getElementById("select")||"");
+					(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(100);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
+					/*("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&document.getElementById("vk_like")&&!/localhost/.test(self.location.host)&&yepnope.injectJs("http://vk.com/js/api/openapi.js?105", function () {
+						domready(function(){(VK.init({apiId:4367728,nameTransportPath:"/xd_receiver.htm",onlyWidgets:!0}),VK.Widgets.Like("vk_like",{type:"button",height:24}))});
+					},{charset:"utf-8"},5E3);*/
 					!/localhost/.test(self.location.host)&&(function(b,a,c,d){if(c&&d){var e=encodeURIComponent(a.referrer||"");b=encodeURIComponent(b.location.href||"");a=encodeURIComponent(("undefined"!==typeof earlyDocumentTitle?earlyDocumentTitle:(a.title||"")).replace("\x27","&#39;").replace("\x28","&#40;").replace("\x29","&#41;"));c.setAttribute("style","position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+d+"?dmn="+b+"&rfrr="+e+"&ttl="+a+"&encoding=utf-8) top left no-repeat;")}})(window,document,document.getElementById("externalcounters")||"",/localhost/.test(self.location.host)?"http://localhost/externalcounters/": "http://shimansky.biz/externalcounters/");
 					(function(d){var g=/localhost/.test(self.location.host)?"http://localhost/externalcounters/":"http://shimansky.biz/externalcounters/",c=d.getElementsByTagName("a")||"",a=self.location.protocol+"//"+self.location.host+"/"||"",h=self.location.host+"/"||"",k=encodeURIComponent(d.location.href||""),l=encodeURIComponent((d.title||"").replace("\x27","&#39;").replace("\x28","&#40;").replace("\x29","&#41;"));if(c&&a&&h)for(a=0;a<c.length;a+=1)if(b=c[a],(e=b.getAttribute("href")||"")&&(e.match(/^\/scripts\//)||/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)|(localhost)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/.test(e))&& !b.getAttribute("rel"))c[a].onclick=function(){var a=this.getAttribute("href"),c=d.getElementsByTagName("body")[0].firstChild,f=d.createElement("div");f.setAttribute("style","position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+g+"?dmn="+encodeURIComponent(a)+"&rfrr="+k+"&ttl="+l+"&encoding=utf-8) top left no-repeat;");c.parentNode.insertBefore(f,c)}})(document);
 					addEvent(window,"blur",function(){(function (d,w){var a=/localhost/.test(self.location.host)?"http://localhost/externalcounters/":"http://shimansky.biz/externalcounters/",b=encodeURIComponent(d.referrer||""),c=encodeURIComponent(w.location.href||""),e=encodeURIComponent((d.title||"").replace("\x27","&#39;").replace("\x28","&#40;").replace("\x29","&#41;")+" - \u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u043d\u0435 \u0430\u043a\u0442\u0438\u0432\u0435\u043d"),f=d.createElement("div"),g=d.getElementsByTagName("body")[0].firstChild;f.setAttribute("style", "position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+a+"?dmn="+c+"\x26rfrr="+b+"\x26ttl="+e+"\x26encoding=utf-8) top left no-repeat;");g.parentNode.insertBefore(f,g);}(document,window));},!1);
 				},{charset:"utf-8"},5E3);
-				(function(e,f,a,h,k){b=document.createElement("a");b.setAttribute("style","display:none;");b.setAttribute("href","#");b.setAttribute("id",h);b.setAttribute("onclick","function scrollTop2(c){var b=window.pageYOffset,d=0,e=setInterval(function(b,a){return function(){a-=b*c;window.scrollTo(0,a);d++;(150<d||0>a)&&clearInterval(e)}}(c,b--),50)};scrollTop2(100);return false;");c=document.createElement("span");c.setAttribute("id",k);b.appendChild(c);d=document.createTextNode("\u041d\u0430\u0432\u0435\u0440\u0445");b.appendChild(d);e.appendChild(b);f.onscroll=function(){var e=f.pageYOffset||a.documentElement.scrollTop||a.body.scrollTop,k=f.innerHeight||a.documentElement.clientHeight||a.body.clientHeight,g=a.getElementById(h)||"";g&&(e>k?g.style.display="inline":g.style.display="none")}})(document.getElementsByTagName("body")[0]||document.documentElement,window,document,"toTop","toTopHover");
 		</script>
-		<script src="http://cdn.rawgit.com/englishextra/shimansky.biz-hyphenator/5a842bf8893034c4cbf5dd845de591d15d752110/4.2.0/js/hyphenator.min.js"></script>
 		<!--[if lt IE 9]>
 		<script>(function(a,c){c.innerHTML="";c.style.color="black";c.style.backgroundColor="white";c.style.padding="1em";var b=a.createElement("div");d=a.createElement("h1");f=a.createTextNode("\u0418\u0437\u0432\u0438\u043d\u0438\u0442\u0435, \u0412\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440 \u043d\u0435 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044f");d.appendChild(f);b.appendChild(d);g=a.createTextNode("\n");b.appendChild(g);h=a.createElement("p");k=a.createTextNode("\u0414\u043b\u044f \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b \u0442\u0430\u043a, \u043a\u0430\u043a \u043e\u043d\u0430 \u0437\u0430\u0434\u0443\u043c\u0430\u043d\u0430, \u0441\u043a\u0430\u0447\u0430\u0439\u0442\u0435 \u0438 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0439 \u0438, \u043a \u0442\u043e\u043c\u0443 \u0436\u0435 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043e\u0431\u043e\u0437\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u044c."); h.appendChild(k);b.appendChild(h);m=a.createTextNode("\n");b.appendChild(m);p=a.createElement("p");q=a.createElement("a");q.setAttribute("href","http://www.mozilla.org/ru/");r=a.createTextNode("Firefox");q.appendChild(r);p.appendChild(q);p_2_text=a.createTextNode(" / ");p.appendChild(p_2_text);s=a.createElement("a");s.setAttribute("href","http://www.opera.com/ru");t=a.createTextNode("Opera");s.appendChild(t);p.appendChild(s);u=a.createTextNode(" / ");p.appendChild(u);v=a.createElement("a");v.setAttribute("href", "https://www.google.ru/intl/ru/chrome/browser/");w=a.createTextNode("Chrome");v.appendChild(w);p.appendChild(v);x=a.createTextNode(" / ");p.appendChild(x);y=a.createElement("a");y.setAttribute("href","http://windows.microsoft.com/ru-Ru/internet-explorer/ie-11-worldwide-languages");z=a.createTextNode("Internet Explorer");y.appendChild(z);p.appendChild(y);b.appendChild(p);c.appendChild(b)})(document,document.body||document.documentElement);</script>
 		<![endif]-->
