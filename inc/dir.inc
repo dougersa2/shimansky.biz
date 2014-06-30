@@ -23,6 +23,7 @@ $dir[] = array('pages/articles/');
 $dir[] = array('pages/blog/');
 $dir[] = array('pages/grammar/');
 $dir[] = array('pages/more/');
+$dir[] = array('pages/reading/');
 $dir[] = array('pages/tests/');
 $dir[] = array('m/');
 $dir[] = array('m/pages/aids/');
