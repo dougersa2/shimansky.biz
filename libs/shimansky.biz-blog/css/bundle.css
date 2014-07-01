@@ -201,7 +201,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	overflow: hidden;
 	text-decoration: none;
 	text-indent: 100%;
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
 	background-size: 50px 50px;
 	-webkit-transform: translate3d(0,0,0);
 	border: none;
@@ -209,7 +209,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .no-svg #toTop {
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
 	background-size: 50px 50px;
 }
 #toTopHover {
@@ -218,12 +218,12 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	float: left;
 	display: block;
 	overflow: hidden;
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
 	background-size: 50px 50px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg #toTopHover {
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
 	background-size: 50px 50px;
 }
 #toTop:hover {
@@ -418,6 +418,9 @@ pre.prettyprint {
 .col.span_4 .webks-responsive-table dl dd {
 	font-size: 0.813rem;
 	line-height: 1.188;
+}
+.webks-responsive-table dl dd {
+	background: #ECECEC;
 }
 .webks-responsive-table dl dd:nth-of-type(odd) {
 	background: #ECECEC;

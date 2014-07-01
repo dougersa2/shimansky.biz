@@ -386,7 +386,7 @@ html > body > .ui-pnotify {
 	overflow: hidden;
 	text-decoration: none;
 	text-indent: 100%;
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
 	background-size: 50px 50px;
 	-webkit-transform: translate3d(0,0,0);
 	border: none;
@@ -394,7 +394,7 @@ html > body > .ui-pnotify {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .no-svg #toTop {
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
 	background-size: 50px 50px;
 }
 #toTopHover {
@@ -403,12 +403,12 @@ html > body > .ui-pnotify {
 	float: left;
 	display: block;
 	overflow: hidden;
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.svg) top left no-repeat;
 	background-size: 50px 50px;
 	-webkit-transform: translate3d(0,0,0);
 }
 .no-svg #toTopHover {
-	background: transparent url(../../shimansky.biz-UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
+	background: transparent url(../../UItoTop-jQuery-Plugin/1.2/img/totop-50x50.png) top left no-repeat;
 	background-size: 50px 50px;
 }
 #toTop:hover {
@@ -652,6 +652,9 @@ pre.prettyprint {
 	font-weight: 400;
 	color: inherit;
 	background: #E2E2E2;
+}
+.webks-responsive-table dl dd {
+	background: #ECECEC;
 }
 .webks-responsive-table dl dd:nth-of-type(odd) {
 	background: #ECECEC;

@@ -846,8 +846,8 @@
 		<script>
 				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/9ac385b2386805963c8122bb60be474b5d483989/1.0/js/early.min.js",function(){
 					yepnope.injectJs("http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js",function(){
-						yepnope.injectJs("http://cdn.jsdelivr.net/pushy/0.9.1/pushy.min.js",function(){
-							"undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser||("undefined"!==typeof window.jQuery||"undefined"!==typeof window.Zepto)&&$(document).on("click",".menu-btn",function(a){a.preventDefault()});
+						("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)||yepnope.injectJs("http://cdn.jsdelivr.net/pushy/0.9.1/pushy.min.js",function(){
+							("undefined"!==typeof window.jQuery||"undefined"!==typeof window.Zepto)&&$(document).on("click",".menu-btn",function(a){a.preventDefault()});
 						},{charset:"utf-8"},5E3);
 					},{charset:"utf-8"},5E3);
 					(function(a,b){b&&(b.onchange=function(){a.location.href=this.value})})(document,document.getElementById("select")||"");
