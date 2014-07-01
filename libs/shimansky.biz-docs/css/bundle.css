@@ -564,13 +564,13 @@ pre.prettyprint {
 	display: inline-block;
 	width: 120px;
 	height: 42px;
-	background: transparent url(../../shimansky.biz-cc/img/by-nd-120x42.svg) left top no-repeat;
+	background: transparent url(../../shimansky.biz-cc-buttons/img/by-nd-120x42.svg) left top no-repeat;
 	background-size: 120px 42px;
 	-webkit-transform: translate3d(0,0,0);
 	cursor: pointer;
 }
 .no-svg .ccbynd {
-	background: transparent url(../../shimansky.biz-cc/img/by-nd-120x42.png) left top no-repeat;
+	background: transparent url(../../shimansky.biz-cc-buttons/img/by-nd-120x42.png) left top no-repeat;
 	background-size: 120px 42px;
 }
 /*!
