@@ -319,14 +319,6 @@ pre.prettyprint {
 	max-width: 29rem;
 	margin: 0 auto;
 }
-.col a {
-	text-decoration: underline;
-}
-.col a:hover,
-.col a:focus,
-.col a:active {
-	color: #D84054;
-}
 .col h1 {
 	font-size: 2.313rem;
 	font-family: PT Sans, sans-serif;
@@ -349,6 +341,19 @@ pre.prettyprint {
 .col h5,
 .col h6 {
 	color: #444446;
+}
+.col a:hover,
+.col a:focus,
+.col a:active {
+	color: #D84054;
+}
+.col .footer a {
+	color: inherit;
+}
+.col .footer a:hover,
+.col .footer a:focus,
+.col .footer a:active {
+	color: #D84054;
 }
 .col table {
 	min-width: 35%;
@@ -391,8 +396,29 @@ pre.prettyprint {
 	position: relative;
 	font-family: sans-serif !important;
 }
+.col .footer a {
+	color: inherit;
+}
+.col .footer a:hover,
+.col .footer a:focus,
+.col .footer a:active {
+	color: #D84054;
+}
 .col .hr {
 	background-color: #444446;
+}
+.ccbynd {
+	display: inline-block;
+	width: 120px;
+	height: 42px;
+	background: transparent url(../../../CDN/cc-buttons/6b424072ffe0b47f7d9c9593e7a5480c84765357/img/by-nd-120x42.svg) left top no-repeat;
+	background-size: 120px 42px;
+	-webkit-transform: translate3d(0,0,0);
+	cursor: pointer;
+}
+.no-svg .ccbynd {
+	background: transparent url(../../../CDN/cc-buttons/6b424072ffe0b47f7d9c9593e7a5480c84765357/img/by-nd-120x42.png) left top no-repeat;
+	background-size: 120px 42px;
 }
 /* .col .hyphenate {
 	text-align: justify;

@@ -621,13 +621,6 @@ pre.prettyprint {
 	font-size: 1.125rem;
 	font-style: normal;
 }
-.col pre {
-	font-family: Ubuntu Mono, Consolas, DejaVu Sans Mono, monospace;
-	border: none;
-}
-.col pre code {
-	font-family: Ubuntu Mono, Consolas, DejaVu Sans Mono, monospace;
-}
 .col a {
 	color: #4174A7;
 }
@@ -643,6 +636,13 @@ pre.prettyprint {
 .col .footer a:focus,
 .col .footer a:active {
 	color: #D84054;
+}
+.col pre {
+	font-family: Ubuntu Mono, Consolas, DejaVu Sans Mono, monospace;
+	border: none;
+}
+.col pre code {
+	font-family: Ubuntu Mono, Consolas, DejaVu Sans Mono, monospace;
 }
 .col table {
 	min-width: 35%;
