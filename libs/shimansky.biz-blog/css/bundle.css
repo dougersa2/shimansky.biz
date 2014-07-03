@@ -266,7 +266,9 @@ a {
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-a:hover,a:active,a:focus {
+a:hover,
+a:active,
+a:focus {
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -284,7 +286,12 @@ p:last-child {
 b,
 strong,
 .bolder {
-	font-weight: bolder;
+	font-weight: bold;
+}
+i,
+em,
+.italic {
+	font-style: italic;
 }
 *,*:after,
 *::before {
@@ -395,14 +402,6 @@ pre.prettyprint {
 	 */
 	position: relative;
 	font-family: sans-serif !important;
-}
-.col .footer a {
-	color: inherit;
-}
-.col .footer a:hover,
-.col .footer a:focus,
-.col .footer a:active {
-	color: #D84054;
 }
 .col .hr {
 	background-color: #444446;

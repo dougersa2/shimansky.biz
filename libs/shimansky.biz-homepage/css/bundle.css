@@ -471,9 +471,15 @@ p:first-child {
 p:last-child {
 	margin-bottom: 0;
 }
+b,
 strong,
 .bolder {
-	font-weight: bolder;
+	font-weight: bold;
+}
+i,
+em,
+.italic {
+	font-style: italic;
 }
 *,*:after,
 *::before {
