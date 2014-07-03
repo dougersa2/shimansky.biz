@@ -513,6 +513,11 @@ em,
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+[class^="fa-"],[class*=" fa-"] {
+	font-style: normal;
+	font-family: FontAwesome !important;
+	-webkit-font-smoothing: antialiased;
+}
 ::selection {
 	color: #FFF;
 	background: #67737C;
@@ -521,10 +526,16 @@ em,
 	color: #FFF;
 	background: #67737C;
 }
+i.fa {
+	font-style: normal;
+}
 /* * {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 } */
+i.fa {
+	font-style: normal;
+}
 table.respond {
 	width: auto;
 }
