@@ -16,10 +16,10 @@
 $relpa = ($relpa0 = preg_replace("/[\/]+/", "/", $_SERVER['DOCUMENT_ROOT'] . '/')) ? $relpa0 : '';
 
 $a_inc = array(
-	'inc/regional.inc',
-	'inc/adminauth.inc',
-	'inc/vars2.inc',
-	'lib/swamper.class.php'
+	/* 'inc/regional.inc',
+	'inc/adminauth.inc', */
+	'lib/swamper.class.php',
+	'inc/vars2.inc'
 );
 
 foreach ($a_inc as $v) {
@@ -34,8 +34,10 @@ class SitemapGenerator extends Swamper {
 	
 	public function fix_dir_index($s) {
 
-		$s = str_replace(array("/index.html", "/index.php"), array("/", "/"), $s);
-		$s = preg_replace("/[\/]+$/", "/", $s);
+		/* $s = str_replace(array("/index.html", "/index.php"), array("/", "/"), $s); */
+		$s = preg_replace("/[\/]+/", "/", $s);
+		/* $s = preg_replace("/[\/]+$/", "/", $s); */
+		$s = preg_replace("/^\//", "", $s);
 
 		return $s;
 	}	
@@ -45,6 +47,7 @@ class SitemapGenerator extends Swamper {
 		$p = '';
 
 		$dir = $relpa . $production_dir;
+		$dir = preg_replace("/[\/]+/", "/", $dir);
 
 		if ($opendir = opendir($dir)) {
 
@@ -66,7 +69,15 @@ class SitemapGenerator extends Swamper {
 						&& $file != 'index.php'
 				) {
 
-					$p .= '<url>' . "\n" . '<loc>' . $this->ensure_amp(htmlentities( $this->fix_dir_index($site_root . $production_dir . $file) )) . '</loc>' . "\n" . '<lastmod>' . date('Y-m-d\TH:i:s+00:00') . '</lastmod>' . "\n" . '<changefreq>' . $changefreq . '</changefreq>' . "\n" . '<priority>' . $priority . '</priority>' . "\n" . '</url>' . "\n";
+					$content = file_get_contents($dir . $file);
+
+					if (
+							preg_match('#<title[^>]*>(.+?)</title>#', $content, $matches0)
+							&& preg_match('#<meta name="description" content="(.+?)"(\ \/|)>#', $content, $matches1)
+					) {
+
+						$p .= '<url>' . "\n" . '<loc>' . $this->ensure_amp(htmlentities( $site_root . $this->fix_dir_index($production_dir . $file) )) . '</loc>' . "\n" . '<lastmod>' . date('Y-m-d\TH:i:s+00:00') . '</lastmod>' . "\n" . '<changefreq>' . $changefreq . '</changefreq>' . "\n" . '<priority>' . $priority . '</priority>' . "\n" . '</url>' . "\n";
+					}
 				}
 			}
 		}
@@ -79,6 +90,7 @@ class SitemapGenerator extends Swamper {
 		$p = '';
 
 		$dir = $relpa . $production_dir;
+		$dir = preg_replace("/[\/]+/", "/", $dir);
 
 		if ($opendir = opendir($dir)) {
 
@@ -99,7 +111,15 @@ class SitemapGenerator extends Swamper {
 						&& $file != 'index.php'
 				) {
 
-					$p .= $this->ensure_amp(htmlentities(str_replace(array("/index.html", "/index.php"), array("/", "/"), $site_root . $production_dir . $file))) . "\n";
+					$content = file_get_contents($dir . $file);
+
+					if (
+							preg_match('#<title[^>]*>(.+?)</title>#', $content, $matches0)
+							&& preg_match('#<meta name="description" content="(.+?)"(\ \/|)>#', $content, $matches1)
+					) {
+			
+						$p .= $this->ensure_amp(htmlentities( $site_root . $this->fix_dir_index($production_dir . $file) )) . "\n";
+					}
 				}
 			}
 		}

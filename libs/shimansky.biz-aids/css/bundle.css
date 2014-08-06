@@ -847,13 +847,13 @@ pre.prettyprint {
  */
 #page {
 	display: none;
-	background: transparent url(../img/bg.svg) top left repeat;
-	background-size: 417px 417px;
+	/* background: transparent url(../img/bg.svg) top left repeat;
+	background-size: 417px 417px; */
 }
-.no-svg #page {
+/* .no-svg #page {
 	background: transparent url(../img/bg.png) top left repeat;
 	background-size: 417px 417px;
-}
+} */
 /*!
  * max and portrait
  */

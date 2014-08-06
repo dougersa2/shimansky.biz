@@ -16,11 +16,10 @@
 $relpa = ($relpa0 = preg_replace("/[\/]+/", "/", $_SERVER['DOCUMENT_ROOT'] . '/')) ? $relpa0 : '';
 
 $a_inc = array(
+	/* 'inc/regional.inc',
+	'inc/adminauth.inc', */
 	'lib/swamper.class.php',
-	'inc/regional.inc',
-	'inc/adminauth.inc',
-	'inc/vars2.inc',
-	'inc/pdo_mysql.inc'
+	'inc/vars2.inc'
 );
 
 foreach ($a_inc as $v) {
@@ -43,8 +42,10 @@ class RSSGenerator extends Swamper {
 
 	public function fix_dir_index($s) {
 
-		$s = str_replace(array("/index.html", "/index.php"), array("/", "/"), $s);
-		$s = preg_replace("/[\/]+$/", "/", $s);
+		/* $s = str_replace(array("/index.html", "/index.php"), array("/", "/"), $s); */
+		$s = preg_replace("/[\/]+/", "/", $s);
+		/* $s = preg_replace("/[\/]+$/", "/", $s); */
+		$s = preg_replace("/^\//", "", $s);
 
 		return $s;
 	}
@@ -54,6 +55,7 @@ class RSSGenerator extends Swamper {
 		$p = '';
 
 		$dir = $relpa . $production_dir;
+		$dir = preg_replace("/[\/]+/", "/", $dir);
 
 		if ($opendir = opendir($dir)) {
 
@@ -87,7 +89,7 @@ class RSSGenerator extends Swamper {
 
 						if (!empty($page_title) && !empty($description)) {
 
-							$p .= '<item><title>' . $page_title . '</title><description>' . $description . '</description><link>' . $this->ensure_amp(htmlentities( $this->fix_dir_index($site_root . $production_dir . $file) )) . '</link><guid isPermaLink="false">' . md5($site_root . $production_dir . $file) . '</guid></item>' . "\n";
+							$p .= '<item><title>' . $page_title . '</title><description>' . $description . '</description><link>' . $this->ensure_amp(htmlentities( $site_root . $this->fix_dir_index($production_dir . $file) )) . '</link><guid isPermaLink="false">' . md5( $site_root . $this->fix_dir_index($production_dir . $file) ) . '</guid></item>' . "\n";
 						}
 					}
 				}
@@ -102,6 +104,7 @@ class RSSGenerator extends Swamper {
 		$p = '';
 
 		$dir = $relpa . $production_dir;
+		$dir = preg_replace("/[\/]+/", "/", $dir);
 
 		if ($opendir = opendir($dir)) {
 
@@ -142,11 +145,6 @@ class RSSGenerator extends Swamper {
 		}
 
 		return $p;
-	}
-
-	public function db_table_exists($db_handler, $table) {
-
-		return $r = $db_handler->query("SELECT count(*) from `" . $table . "`") ? true : false;
 	}
 
 }
@@ -193,12 +191,12 @@ $RSSGenerator->write_file($relpa . $pages_xml, '<?xml version="1.0" encoding="UT
 	xmlns:media="http://search.yahoo.com/mrss/"
 	version="2.0" xml:lang="ru-RU">
 <channel>
-	<title>' . $pt_regional['root_page_title'] . ' - Статьи</title>
+	<title>Sitemap for ' . $vars2_site_root_printable . '</title>
 	<link>' . $vars2_site_root . '</link>
-	<description>' . $pt_regional['site_description'] . '</description>
+	<description>Sitemap for ' . $vars2_site_root_printable . '</description>
 	<image>
 		<url>' . $vars2_site_root . 'apple-touch-icon-114x114.png</url>
-		<title>' . $pt_regional['root_page_title'] . ' - Статьи</title>
+		<title>Sitemap for ' . $vars2_site_root_printable . '</title>
 		<link>' . $vars2_site_root . '</link>
 		<width>114</width>
 		<height>114</height>
@@ -207,13 +205,13 @@ $RSSGenerator->write_file($relpa . $pages_xml, '<?xml version="1.0" encoding="UT
 	<language>en</language>
 	<sy:updatePeriod>daily</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>' . $pt_regional['root_page_title'] . '</generator>
-<itunes:subtitle>' . $pt_regional['site_description'] . '</itunes:subtitle>
-<itunes:author>' . $pt_regional['root_page_title'] . '</itunes:author>
-<itunes:summary>' . $pt_regional['site_description'] . '</itunes:summary>
+	<generator>Sitemap for ' . $vars2_site_root_printable . '</generator>
+<itunes:subtitle>Sitemap for ' . $vars2_site_root_printable . '</itunes:subtitle>
+<itunes:author>Sitemap for ' . $vars2_site_root_printable . '</itunes:author>
+<itunes:summary>Sitemap for ' . $vars2_site_root_printable . '</itunes:summary>
 <itunes:owner>
-	<itunes:name>' . $pt_regional['root_page_title'] . ' - Статьи</itunes:name>
-	<itunes:email>' . $pt_regional['admin_email'] . '</itunes:email>
+	<itunes:name>Sitemap for ' . $vars2_site_root_printable . '</itunes:name>
+	<itunes:email>serguei@shimansky.biz</itunes:email>
 </itunes:owner>
 <itunes:image href="' . $vars2_site_root . 'iTunesArtwork.jpg" />
 <itunes:category text="Education" />
@@ -223,9 +221,9 @@ $RSSGenerator->write_file($relpa . $pages_xml, '<?xml version="1.0" encoding="UT
 	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Education</media:category>
 	<itunes:explicit>no</itunes:explicit>
 	' . $s . '
-	<media:credit role="author">' . $pt_regional['root_page_title'] . '</media:credit>
+	<media:credit role="author">Sitemap for ' . $vars2_site_root_printable . '</media:credit>
 	<media:rating>nonadult</media:rating>
-	<media:description type="plain">' . $pt_regional['site_description'] . '</media:description>
+	<media:description type="plain">Sitemap for ' . $vars2_site_root_printable . '</media:description>
 	</channel>
 	</rss>', "w+");
 

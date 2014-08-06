@@ -66,7 +66,7 @@
  <a href="#viewport" title="#viewport">viewport</a>
  </h1>
 
- <p>How to get the viewport size: jQuery's <code class="language-javascript">$(window).width()</code> is highly <a href="http://stackoverflow.com/questions/3044573/using-jquery-to-get-size-of-viewport">regarded</a> as cross-browser compatible. JavaScript's <code class="language-javascript">document.documentElement.clientWidth</code> is <a href="http://jsperf.com/viewport-width-pure-js-vs-jquery/3" title="speed test">faster</a> and is <span title="document.documentElement.clientWidth = $(window).width() in all major modern browsers and IE8, not sure about IE7 or 6">cross-browser compatible</span>. Look in the <a href="http://bit.ly/jqsource" title="Use Ctrl+F for docElemProp to find it.">jQuery source</a>: they use <code>document.documentElement.clientWidth</code>. The tables below compare these live against the less consistent inner/outer methods. <b>Update:</b> <code>correctedViewportW</code> is a custom function that further normalizes browser <a href="https://github.com/ryanve/response.js/issues/17">difference</a>, and is now the technique used in <a href="http://verge.airve.com/">verge</a> and <a href="http://responsejs.com/">Response</a>.</p>
+ <p>How to get the viewport size: jQuery's <code class="language-javascript">$(window).width()</code> is highly <a href="http://stackoverflow.com/questions/3044573/using-jquery-to-get-size-of-viewport">regarded</a> as cross-browser compatible. JavaScript's <code class="language-javascript">document.documentElement.clientWidth</code> is <a href="http://jsperf.com/viewport-width-pure-js-vs-jquery/3" title="speed test">faster</a> and is <span title="document.documentElement.clientWidth = $(window).width() in all major modern browsers and IE8, not sure about IE7 or 6">cross-browser compatible</span>. Look in the <a href="http://bit.ly/jqsource" title="Use Ctrl+F for docElemProp to find it.">jQuery source</a>: they use <code>document.documentElement.clientWidth</code>. The tables below compare these live against the less consistent inner/outer methods. <b>Update:</b> <code>correctedViewportW</code> is a custom function that further normalizes browser <a href="http://github.com/ryanve/response.js/issues/17">difference</a>, and is now the technique used in <a href="http://verge.airve.com/">verge</a> and <a href="http://responsejs.com/">Response</a>.</p>
  
  <noscript>
  To experience full functionality of this page, you need to enable JavaScript. All outputs will
@@ -76,20 +76,20 @@
  <table id="viewport-width">
  <tbody><tr><th scope="col"><a href="#viewport-width" title="#">width methods</a></th><th scope="col"><span title="Viewport dimensions are dynamic. Resize or rotate this page and these will change accordingly.">live output</span></th></tr>
  <tr><td><a class="recommended" href="http://api.jquery.com/width/" title="jQuery docs says that this &quot;returns width of browser viewport.&quot; (widely used, used by jQuery Mobile)"><code class="language-javascript">$(window).width()</code></a></td> <td id="o1">1339</td></tr>
- <tr><td><a class="recommended" href="https://developer.mozilla.org/en/DOM/element.clientWidth" title="Pure JavaScript equivalent to $(window).width()"><code class="language-javascript">document.documentElement.clientWidth</code></a></td><td id="o2">1339</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/window.innerWidth" title="Inconsistent."><code class="language-javascript">window.innerWidth</code></a></td><td id="o3">1360</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/window.outerWidth" title="Inconsistent."><code class="language-javascript">window.outerWidth</code></a></td><td id="o4">1376</td></tr>
- <tr><td><a class="match-media" href="https://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-width` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o27">1360</td></tr>
- <tr><td><a href="https://github.com/ryanve/response.js/issues/17" title="Corresponds to @media breakpoint (see the page source)">correctedViewportW()</a></td><td id="o31">1360</td></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/element.clientWidth" title="Pure JavaScript equivalent to $(window).width()"><code class="language-javascript">document.documentElement.clientWidth</code></a></td><td id="o2">1339</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.innerWidth" title="Inconsistent."><code class="language-javascript">window.innerWidth</code></a></td><td id="o3">1360</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.outerWidth" title="Inconsistent."><code class="language-javascript">window.outerWidth</code></a></td><td id="o4">1376</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-width` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o27">1360</td></tr>
+ <tr><td><a href="http://github.com/ryanve/response.js/issues/17" title="Corresponds to @media breakpoint (see the page source)">correctedViewportW()</a></td><td id="o31">1360</td></tr>
  </tbody></table>
  <table id="viewport-height">
  <tbody><tr><th scope="col"><a href="#viewport-height" title="#">height methods</a></th><th scope="col"><span title="Viewport dimensions are dynamic. Resize or rotate this page and these will change accordingly.">live output</span></th></tr>
  <tr><td><a class="recommended" href="http://api.jquery.com/height/" title="jQuery docs says that this &quot;returns height of browser viewport.&quot; (widely used, used by jQuery Mobile)"><code class="language-javascript">$(window).height()</code></a></td> <td id="o6">942</td></tr>
- <tr><td><a class="recommended" href="https://developer.mozilla.org/en/DOM/element.clientHeight" title="Pure JavaScript equivalent to $(window).height()"><code class="language-javascript">document.documentElement.clientHeight</code></a></td><td id="o7">942</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/window.innerHeight" title="Inconsistent."><code class="language-javascript">window.innerHeight</code></a></td><td id="o8">942</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/window.outerHeight" title="Inconsistent."><code class="language-javascript">window.outerHeight</code></a></td><td id="o9">1102</td></tr>
- <tr><td><a class="match-media" href="https://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-height` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o28">942</td></tr>
- <tr><td><a href="https://github.com/ryanve/response.js/issues/17" title="Corresponds to @media breakpoint (see the page source)">correctedViewportH()</a></td><td id="o32">942</td></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/element.clientHeight" title="Pure JavaScript equivalent to $(window).height()"><code class="language-javascript">document.documentElement.clientHeight</code></a></td><td id="o7">942</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.innerHeight" title="Inconsistent."><code class="language-javascript">window.innerHeight</code></a></td><td id="o8">942</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.outerHeight" title="Inconsistent."><code class="language-javascript">window.outerHeight</code></a></td><td id="o9">1102</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-height` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o28">942</td></tr>
+ <tr><td><a href="http://github.com/ryanve/response.js/issues/17" title="Corresponds to @media breakpoint (see the page source)">correctedViewportH()</a></td><td id="o32">942</td></tr>
  </tbody></table>
 
  <h1 id="device">
@@ -100,16 +100,16 @@
 
  <table id="device-width">
  <tbody><tr><th scope="col"><a href="#device-width" title="#">width methods</a></th><th scope="col"><span title="Device size is static—these do not change when the page is resized or rotated.">live output</span></th></tr>
- <tr><td><a class="recommended" href="https://developer.mozilla.org/en/DOM/window.screen.width" title="MDN: &quot;Returns the width of the screen in pixels.&quot;"><code class="language-javascript">window.screen.width</code></a></td><td id="o11">1920</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/window.screen.availWidth" title="MDN: &quot;Returns the amount of horizontal space in pixels available to the window.&quot;"><code class="language-javascript">window.screen.availWidth</code></a></td><td id="o12">1920</td></tr>
- <tr><td><a class="match-media" href="https://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-device-width` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o29">1920</td></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/window.screen.width" title="MDN: &quot;Returns the width of the screen in pixels.&quot;"><code class="language-javascript">window.screen.width</code></a></td><td id="o11">1920</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.screen.availWidth" title="MDN: &quot;Returns the amount of horizontal space in pixels available to the window.&quot;"><code class="language-javascript">window.screen.availWidth</code></a></td><td id="o12">1920</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-device-width` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o29">1920</td></tr>
  </tbody></table>
 
  <table id="device-height">
  <tbody><tr><th scope="col"><a href="#device-height" title="#">height methods</a></th><th scope="col"><span title="Device size is static—these do not change when the page is resized or rotated.">live output</span></th></tr>
- <tr><td><a class="recommended" href="https://developer.mozilla.org/en/DOM/window.screen.height" title="MDN: &quot;Returns the height of the screen in pixels.&quot;"><code class="language-javascript">window.screen.height</code></a></td><td id="o13">1080</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/window.screen.availHeight" title="MDN: &quot;Returns the amount of vertical space in pixels available to the window.&quot;"><code class="language-javascript">window.screen.availHeight</code></a></td><td id="o14">1046</td></tr>
- <tr><td><a class="match-media" href="https://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-device-height` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o30">1080</td></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/window.screen.height" title="MDN: &quot;Returns the height of the screen in pixels.&quot;"><code class="language-javascript">window.screen.height</code></a></td><td id="o13">1080</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.screen.availHeight" title="MDN: &quot;Returns the amount of vertical space in pixels available to the window.&quot;"><code class="language-javascript">window.screen.availHeight</code></a></td><td id="o14">1046</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-device-height` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o30">1080</td></tr>
  </tbody></table>
  
  <h1 id="document">
@@ -118,28 +118,28 @@
  
  <p>For further comparison, here are document size methods (not 
 usually needed for responsive design but useful in other regards such as
- scrolling apps). Note the difference between <code class="language-javascript">$(document).width()</code> and some of the others (especially when the window is wider than the max-width of the body). jQuery uses the <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math/max">Math.max</a> of 5 numbers to calculate this: the last 4 in these blocks and the docElem's <a href="#viewport" title="document.documentElement.clientWidth / clientHeight">clientWidth / clientHeight</a>. For decent cross-browser support I think the <code class="language-javascript">Math.max</code> of the last 3 in these blocks is sufficient rather than the 5 jQuery uses.</p>
+ scrolling apps). Note the difference between <code class="language-javascript">$(document).width()</code> and some of the others (especially when the window is wider than the max-width of the body). jQuery uses the <a href="http://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math/max">Math.max</a> of 5 numbers to calculate this: the last 4 in these blocks and the docElem's <a href="#viewport" title="document.documentElement.clientWidth / clientHeight">clientWidth / clientHeight</a>. For decent cross-browser support I think the <code class="language-javascript">Math.max</code> of the last 3 in these blocks is sufficient rather than the 5 jQuery uses.</p>
  
  <table id="document-width">
  <tbody><tr><th scope="col"><a href="#document-width" title="#">width methods</a></th><th scope="col">live output</th></tr>
  <tr><td><a class="recommended" href="http://api.jquery.com/width/" title="jQuery docs says that this &quot;returns width of HTML document&quot;"><code class="language-javascript">$(document).width()</code></a></td><td id="o5">1339</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/element.clientWidth" title="MDN's recommended alternative to the now obsolete document.width - but NOT always what you want"><code class="language-javascript">document.body.clientWidth</code></a></td><td id="o15">987</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.body.offsetWidth</code></a></td><td id="o22">987</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.scrollWidth" title="MDN"><code class="language-javascript">document.body.scrollWidth</code></a></td><td id="o18">987</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.clientWidth" title="MDN"><code class="language-javascript">document.documentElement.clientWidth</code></a></td><td id="o25">1339</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.documentElement.offsetWidth</code></a></td><td id="o21">1339</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.scrollWidth" title="MDN"><code class="language-javascript">document.documentElement.scrollWidth</code></a></td><td id="o17">1339</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientWidth" title="MDN's recommended alternative to the now obsolete document.width - but NOT always what you want"><code class="language-javascript">document.body.clientWidth</code></a></td><td id="o15">987</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.body.offsetWidth</code></a></td><td id="o22">987</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollWidth" title="MDN"><code class="language-javascript">document.body.scrollWidth</code></a></td><td id="o18">987</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientWidth" title="MDN"><code class="language-javascript">document.documentElement.clientWidth</code></a></td><td id="o25">1339</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.documentElement.offsetWidth</code></a></td><td id="o21">1339</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollWidth" title="MDN"><code class="language-javascript">document.documentElement.scrollWidth</code></a></td><td id="o17">1339</td></tr>
  </tbody></table>
 
  <table id="document-height">
  <tbody><tr><th scope="col"><a href="#document-height" title="#">height methods</a></th><th scope="col">live output</th></tr>
  <tr><td><a class="recommended" href="http://api.jquery.com/height/" title="jQuery docs says that this &quot;returns height of HTML document&quot;"><code class="language-javascript">$(document).height()</code></a></td> <td id="o10">2295</td></tr>
- <tr><td><a class="notwhatyouwant" href="https://developer.mozilla.org/en/DOM/element.clientHeight" title="MDN's recommended alternative to the now obsolete document.height - but NOT always what you want"><code class="language-javascript">document.body.clientHeight</code></a></td><td id="o16">2295</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.body.offsetHeight</code></a></td><td id="o24">2295</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.scrollHeight" title="MDN"><code class="language-javascript">document.body.scrollHeight</code></a></td><td id="o20">2295</td></tr>
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.clientHeight" title="MDN"><code class="language-javascript">document.documentElement.clientHeight</code></a></td><td id="o26">942</td></tr> 
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.documentElement.offsetHeight</code></a></td><td id="o23">2295</td></tr> 
- <tr><td><a class="maybewhatyouwant" href="https://developer.mozilla.org/en/DOM/element.scrollHeight" title="MDN"><code class="language-javascript">document.documentElement.scrollHeight</code></a></td><td id="o19">2295</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientHeight" title="MDN's recommended alternative to the now obsolete document.height - but NOT always what you want"><code class="language-javascript">document.body.clientHeight</code></a></td><td id="o16">2295</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.body.offsetHeight</code></a></td><td id="o24">2295</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollHeight" title="MDN"><code class="language-javascript">document.body.scrollHeight</code></a></td><td id="o20">2295</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientHeight" title="MDN"><code class="language-javascript">document.documentElement.clientHeight</code></a></td><td id="o26">942</td></tr> 
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.documentElement.offsetHeight</code></a></td><td id="o23">2295</td></tr> 
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollHeight" title="MDN"><code class="language-javascript">document.documentElement.scrollHeight</code></a></td><td id="o19">2295</td></tr>
  </tbody></table>
  
  </article>
