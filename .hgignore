@@ -13,7 +13,7 @@ syntax: glob
 __MACOSX/
 a/
 m/
-dl/
+dl/mp3/
 geograph/
 inc/regional_*
 pub/
