@@ -24,14 +24,17 @@
 	line-height: 1em;
 	margin-left: .2em;
 }
-.fa-play:before { content: '\e800'; } /* '' */
+.fa-chevron-right:before { content: '\e800'; } /* '' */
 .fa-navicon:before { content: '\e801'; } /* '' */
-.fa-pause:before { content: '\e802'; } /* '' */
+.fa-android:before { content: '\e802'; } /* '' */
+.fa-doc-text:before { content: '\e803'; } /* '' */
+.fa-spinner:before { content: '\e804'; } /* '' */
 /**
  * fix new names
  */
-.fa-play:before { content: '\e800'; } /* '' */
-.fa-navicon:before { content: '\e801'; } /* '' */
-.fa-bars:before { content: '\e801'; } /* '' */
-.fa-pause:before { content: '\e802'; } /* '' */
- 
+.fa-chevron-right:before { content: '\e800'; } /* '?' */
+.fa-navicon:before { content: '\e801'; } /* '?' */
+.fa-bars:before { content: '\e801'; } /* '?' */
+.fa-android:before { content: '\e802'; } /* '?' */
+.fa-file-text-o:before { content: '\e803'; } /* '?' */
+.fa-spinner:before { content: '\e804'; } /* '?' */

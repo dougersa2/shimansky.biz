@@ -30,21 +30,16 @@
 	line-height: 1em;
 	margin-left: .2em;
 }
-.fa-navicon:before {
-	content: '\e800';
-}
-.fa-play:before {
-	content: '\e801';
-}
-.fa-stop:before {
-	content: '\e802';
-}
-.fa-pause:before {
-	content: '\e803';
-}
-.fa-chevron-right:before {
-	content: '\e804';
-}
+.fa-play:before { content: '\e800'; } /* '?' */
+.fa-navicon:before { content: '\e801'; } /* '?' */
+.fa-pause:before { content: '\e802'; } /* '?' */
+/**
+ * fix new names
+ */
+.fa-play:before { content: '\e800'; } /* '?' */
+.fa-navicon:before { content: '\e801'; } /* '?' */
+.fa-bars:before { content: '\e801'; } /* '?' */
+.fa-pause:before { content: '\e802'; } /* '?' */
 /*!
  * Open Sans
  * rename font-family
