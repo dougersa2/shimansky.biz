@@ -624,9 +624,9 @@ pre.prettyprint {
 	background: transparent url(../../../cdn/cc-buttons/6b424072ffe0b47f7d9c9593e7a5480c84765357/img/by-nd-120x42.png) left top no-repeat;
 	background-size: 120px 42px;
 }
-/* .col .hyphenate {
+.col .hyphenate {
 	text-align: justify;
-} */
+}
 /*!
  * overrides to webks-responsive-table
  */

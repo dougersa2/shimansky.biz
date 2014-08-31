@@ -543,7 +543,7 @@ $SQLITE_CACHE = null;
 </div>
 						</div>
 						<div class="footer" role="contentinfo">
-							<p>&#169;&#160;<a href="http://englishextra.github.io/serguei/">englishextra.github.com</a>, 2014</p>
+							<p>&#169;&#160;<a href="http://englishextra.github.io/portfolio/">englishextra.github.com</a>, 2014</p>
 						</div>
 					</div>
 				</div>
