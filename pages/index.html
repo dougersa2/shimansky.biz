@@ -74,10 +74,10 @@
 		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
 				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/9ac385b2386805963c8122bb60be474b5d483989/1.0/js/early.min.js",function(){
-					window.onload=function(b,c){if(!b)for(a=c.getElementsByTagName("img"),b=0;b<a.length;b++)/icon/.test(a[b].getAttribute("class"))&&(d=a[b].getAttribute("src"),a[b].setAttribute("src",d.replace(/(.*)\.(.*?)$/,"$1.png")))}(/svg/.test(document.documentElement.className),document);
+					("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&(document.location.href="/pages/contents.html"),
+					window.onload=function(b,c){if(!b)for(a=c.getElementsByTagName("img"),b=0;b<a.length;b++)/icon/.test(a[b].getAttribute("class"))&&(d=a[b].getAttribute("src"),a[b].setAttribute("src",d.replace(/(.*)\.(.*?)$/,"$1.png")))}(/svg/.test(document.documentElement.className),document),
 					yepnope.injectJs("http://cdn.jsdelivr.net/imagesloaded/3.1.6/imagesloaded.pkgd.min.js",function(){
 						var imgLoad=imagesLoaded("#container");imgLoad.on("done", function() {
-							("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&(document.location.href="/pages/contents.html");
 							yepnope.injectJs("/libs/shimansky.biz-overview/js/bundle.min.js", function () {},{charset:"utf-8"},5E3);
 						});
 					},{charset:"utf-8"},5E3);
