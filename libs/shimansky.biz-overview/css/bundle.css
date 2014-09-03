@@ -1,7 +1,20 @@
-@font-face {font-family: 'Open Sans';src: url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot);src: url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.svg#open_sanslight) format('svg'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.woff) format('woff'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.ttf) format('truetype');font-weight: 300;font-style: normal;}
+/* @font-face {font-family: 'Open Sans';src: url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot);src: url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.svg#open_sanslight) format('svg'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.woff) format('woff'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.ttf) format('truetype');font-weight: 300;font-style: normal;}
+@font-face {font-family: 'Open Sans';src: url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src: url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format('svg'),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format('woff'),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
+ */
+@font-face{
+	font-family:'Segoe UI Light';
+	src:url(/fonts/segoe-ui-fontfacekit/segoeuil.eot);
+	src:local("Segoe UI Light"),
+	local("Segoe WP Light"),
+	url(/fonts/segoe-ui-fontfacekit/segoeuil.eot?#iefix) format('embedded-opentype'),
+	url(/fonts/segoe-ui-fontfacekit/segoeuil.svg#SegoeUILight) format('svg'),
+	url(/fonts/segoe-ui-fontfacekit/segoeuil.woff) format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+ v2.0 | 20110126
+ License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -59,9 +72,9 @@ html {
 }
 body {
 	font-size: 100%;
-	font-family: Open Sans, sans-serif;
+	font-family: Segoe UI Light, sans-serif;
 	line-height: 1em;
-	font-weight: 300;
+	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -103,7 +116,7 @@ embed {
 	padding-left: 0.1em;
 	font-size: 3em;
 	line-height: 1em;
-	font-weight: 300;
+	font-weight: normal;
 }
 .metro-layout .header .controls {
 	position: absolute;
@@ -219,43 +232,168 @@ embed {
 	display: none;
 }
 /**
- * color-hex.com/color-palette/700
- * colorlib.com/etc/metro-colors
+ * metroui.org.ua/global.html
+ * github.com/olton/Metro-UI-CSS/blob/master/css/metro-bootstrap.css
  */
-.bg_209_17_65 {background: rgba(209,17,65,1) !important;}
-.bg_0_177_89 {background: rgba(0,177,89,1) !important;}
-.bg_0_174_219 {background: rgba(0,174,219,1) !important;}
-.bg_243_119_53 {background: rgba(243,119,53,1) !important;}
-.bg_255_196_37 {background: rgba(255,196,37,1) !important;}
-.bg_153_180_51 {background: rgba(153,180,51,1) !important;}
-.bg_0_163_0 {background: rgba(0,163,0,1) !important;}
-.bg_255_0_151 {background: rgba(255,0,151,1) !important;}
-.bg_159_0_167 {background: rgba(159,0,167,1) !important;}
-.bg_96_60_186 {background: rgba(96,60,186,1) !important;}
-.bg_29_29_29 {background: rgba(29,29,29,1) !important;}
-.bg_0_171_169 {background: rgba(0,171,169,1) !important;}
-.bg_239_244_255 {background: rgba(239,244,255,1) !important;}
-.bg_45_137_239 {background: rgba(45,137,239,1) !important;}
-.bg_227_162_26 {background: rgba(227,162,26,1) !important;}
-.bg_218_83_44 {background: rgba(218,83,44,1) !important;}
-.bg_185_29_71 {background: rgba(185,29,71,1) !important;}
-.bg_238_17_17 {background: rgba(238,17,17,1) !important;}
-.bg_126_56_120 {background: rgba(126,56,120,1) !important;}
-.bg_43_87_151 {background: rgba(43,87,151,1) !important;}
-.bg_255_196_13 {background: rgba(255,196,13,1) !important;}
-.bg_05AED9 {background: #05AED9 !important;}
-.bg_97C024 {background: #97C024 !important;}
-.bg_00AEEF {background: #00AEEF !important;}
-.bg_FFFFFF {background: #FFFFFF !important;}
-.bg_DF4D41 {background: #DF4D41 !important;}
-.bg_FC9E14 {background: #FC9E14 !important;}
-.bg_3C3C3C {background: #3C3C3C !important;}
-.bg_009F3D {background: #009F3D !important;}
-.bg_C01C07 {background: #C01C07 !important;}
-.bg_2B5797 {background: #2B5797 !important;}
-.bg_F37735 {background: #F37735 !important;}
-.bg_00A9EC {background: #00A9EC !important;}
-.bg_486887 {background: #486887 !important;}
+.bg-black {
+	background: #000000 !important;
+}
+.bg-white {
+	background: #ffffff !important;
+}
+.bg-lime {
+	background: #a4c400 !important;
+}
+.bg-green {
+	background: #60a917 !important;
+}
+.bg-emerald {
+	background: #008a00 !important;
+}
+.bg-teal {
+	background: #00aba9 !important;
+}
+.bg-cyan {
+	background: #1ba1e2 !important;
+}
+.bg-cobalt {
+	background: #0050ef !important;
+}
+.bg-indigo {
+	background: #6a00ff !important;
+}
+.bg-violet {
+	background: #aa00ff !important;
+}
+.bg-pink {
+	background: #dc4fad !important;
+}
+.bg-magenta {
+	background: #d80073 !important;
+}
+.bg-crimson {
+	background: #a20025 !important;
+}
+.bg-red {
+	background: #e51400 !important;
+}
+.bg-orange {
+	background: #fa6800 !important;
+}
+.bg-amber {
+	background: #f0a30a !important;
+}
+.bg-yellow {
+	background: #e3c800 !important;
+}
+.bg-brown {
+	background: #825a2c !important;
+}
+.bg-olive {
+	background: #6d8764 !important;
+}
+.bg-steel {
+	background: #647687 !important;
+}
+.bg-mauve {
+	background: #76608a !important;
+}
+.bg-taupe {
+	background: #87794e !important;
+}
+.bg-gray {
+	background: #555555 !important;
+}
+.bg-dark {
+	background: #333333 !important;
+}
+.bg-darker {
+	background: #222222 !important;
+}
+.bg-transparent {
+	background: transparent !important;
+}
+.bg-darkBrown {
+	background: #63362f !important;
+}
+.bg-darkCrimson {
+	background: #640024 !important;
+}
+.bg-darkMagenta {
+	background: #81003c !important;
+}
+.bg-darkIndigo {
+	background: #4b0096 !important;
+}
+.bg-darkCyan {
+	background: #1b6eae !important;
+}
+.bg-darkCobalt {
+	background: #00356a !important;
+}
+.bg-darkTeal {
+	background: #004050 !important;
+}
+.bg-darkEmerald {
+	background: #003e00 !important;
+}
+.bg-darkGreen {
+	background: #128023 !important;
+}
+.bg-darkOrange {
+	background: #bf5a15 !important;
+}
+.bg-darkRed {
+	background: #9a1616 !important;
+}
+.bg-darkPink {
+	background: #9a165a !important;
+}
+.bg-darkViolet {
+	background: #57169a !important;
+}
+.bg-darkBlue {
+	background: #16499a !important;
+}
+.bg-lightBlue {
+	background: #4390df !important;
+}
+.bg-lightRed {
+	background: #ff2d19 !important;
+}
+.bg-lightGreen {
+	background: #7ad61d !important;
+}
+.bg-lighterBlue {
+	background: #00ccff !important;
+}
+.bg-lightTeal {
+	background: #45fffd !important;
+}
+.bg-lightOlive {
+	background: #78aa1c !important;
+}
+.bg-lightOrange {
+	background: #c29008 !important;
+}
+.bg-lightPink {
+	background: #f472d0 !important;
+}
+.bg-grayDark {
+	background: #333333 !important;
+}
+.bg-grayDarker {
+	background: #222222 !important;
+}
+.bg-grayLight {
+	background: #999999 !important;
+}
+.bg-grayLighter {
+	background: #eeeeee !important;
+}
+.bg-blue {
+	background: #00aff0 !important;
+}
 /**
  * content
  */ 
@@ -405,4 +543,30 @@ only screen and (max-width: 480px) {
 	.vertical .content .items {
 		padding-bottom: 0;
 	}
+}
+/**
+ * hide content
+ */
+.metro-layout {display: none;}
+.progress {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 128px;
+	height: 128px;
+	background: url(../img/Preloader_6.gif) top left no-repeat;
+	background-size: 128px 128px;
+	margin-left: -64px;
+	margin-top: -64px;
+	z-index: 6;
+}
+.footer {
+	position: relative;
+	left: 20px;
+	bottom: 1em;
+	margin-left: 0.6em;
+}
+.footer a {
+	text-decoration: none;
+	color: #FFF;
 }

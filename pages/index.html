@@ -8,7 +8,7 @@
 		<meta name="msapplication-square150x150logo" content="/mediumtile.png" />
 		<meta name="msapplication-wide310x150logo" content="/widetile.png" />
 		<meta name="msapplication-square310x310logo" content="/largetile.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="robots" content="index,follow" />
 		<meta name="author" content="Serguei Shimansky editor@shimansky.biz" />
 		<meta name="keywords" content="репетитор,тушино,егэ,гиа,английский,английского,английскому,глаголы,диалоги,идиомы,ключи,неправильные,онлайн,ответы,подкасты,репетиторы,рефераты,решебник,скачать,тесты,топики,уроки,mp3,mp4" />
@@ -39,6 +39,7 @@
 		<link rel="stylesheet" href="/libs/shimansky.biz-overview/css/bundle.min.css" />
 	</head>
 	<body>
+		<div class="progress"></div>
 		<div class="metro-layout horizontal">
 			<div class="header">
 				<h1>Обзор содержания</h1>
@@ -53,27 +54,29 @@
 			</div>
 			<div class="content clearfix">
 				<div class="items">
-					<a class="box bg_DF4D41" href="/pages/contents.html"> <span>Все статьи</span> <img class="icon" src="/libs/shimansky.biz-overview/img/sitelogo-transparent-512x512.svg" alt="" /> </a>
-					<a class="box bg_05AED9" href="http://sourceforge.net/projects/shimanskybiz-app/files/shimanskybiz_app-debug.xap/download"> <span>Приложение для WP</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Smart_Phone_512x512.png" alt="" /> </a>
-					<a class="box bg_97C024" href="http://sourceforge.net/projects/shimanskybiz-app/files/shimanskybiz_app-debug.apk/download"> <span>Приложение для Android</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Android_Smartphone_512x512.png" alt="" /> </a>
-					<a class="box bg_3C3C3C width2 height2" href="http://englishextra.github.io/serguei/"> <span>Репетитор английского в&#160;Тушино</span> <img class="cover" src="/libs/shimansky.biz-overview/img/shimansky_1056x608.jpg" alt="" /> </a>
-					<a class="box bg_FC9E14" href="http://feeds.feedburner.com/Shimanskybiz?format=xml"> <span>Новые статьи</span> <img class="icon" src="/libs/shimansky.biz-overview/img/RSS_Feed_512x512.png" alt="" /> </a>
-					<a class="box bg_00AEEF" href="https://twitter.com/englishextra"> <span>Фильмы MP4</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Videos_512x512.png" alt="" /> </a>
-					<a class="box bg_486887" href="http://vimeo.com/user20994901/videos"> <span>Кино-эпизоды</span> <img class="icon" src="/libs/shimansky.biz-overview/img/TV_512x512.svg" alt="" /> </a>
-					<a class="box bg_C01C07 height2" href="https://sourceforge.net/projects/shimanskybiz-app/files/?source=navbar"> <span>Документы</span> <img class="icon big" src="/libs/shimansky.biz-overview/img/Adobe_Acrobat_Reader_512x512.svg" alt="" /> </a>
-					<a class="box bg_009F3D" href="https://soundcloud.com/user633010415"> <span>Аудио-файлы</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Sound_512x512.svg" alt="" /> </a>
-					<a class="box bg_2B5797" href="http://vk.com/public62872178"> <span>vk.com</span> <img class="icon" src="/libs/shimansky.biz-overview/img/vk.com-transparent-512x512.svg" alt="" /> </a>
-					<a class="box bg_F37735" href="http://ok.ru/serguei.shimansky"> <span>ok.ru</span> <img class="icon" src="/libs/shimansky.biz-overview/img/ok.ru-transparent-512x512.svg" alt="" /> </a>
-					<a class="box bg_00A9EC height2" href="http://shimansky.biz/pages/comments.html"> <span>Отзывы</span> <img class="icon big" src="/libs/shimansky.biz-overview/img/Messaging_alt_512x512.png" alt="" /> </a>
-					<a class="box bg_3C3C3C" href="https://github.com/englishextra?tab=repositories"> <span>Репозитарии</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Github_512x512.svg" alt="" /> </a>
+					<a class="box bg-red" href="/pages/contents.html"> <span>Все статьи</span> <img class="icon" src="/libs/shimansky.biz-overview/img/sitelogo-transparent-512x512.svg" alt="" /> </a>
+					<a class="box bg-teal" href="http://sourceforge.net/projects/shimanskybiz-app/files/shimanskybiz_app-debug.xap/download"> <span>Приложение для WP</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Smart_Phone_512x512.svg" alt="" /> </a>
+					<a class="box bg-lime" href="http://sourceforge.net/projects/shimanskybiz-app/files/shimanskybiz_app-debug.apk/download"> <span>Приложение для Android</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Android_Smartphone_512x512.svg" alt="" /> </a>
+					<a class="box bg-gray width2 height2" href="http://englishextra.github.io/serguei/"> <span>Репетитор английского в&#160;Тушино</span> <img class="cover" src="/libs/shimansky.biz-overview/img/shimansky_1056x608.jpg" alt="" /> </a>
+					<a class="box bg-orange" href="http://feeds.feedburner.com/Shimanskybiz?format=xml"> <span>Новые статьи</span> <img class="icon" src="/libs/shimansky.biz-overview/img/RSS_Feed_512x512.svg" alt="" /> </a>
+					<a class="box bg-darkTeal" href="https://twitter.com/englishextra"> <span>Фильмы MP4</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Videos_512x512.svg" alt="" /> </a>
+					<a class="box bg-darkCyan" href="http://vimeo.com/user20994901/videos"> <span>Кино-эпизоды</span> <img class="icon" src="/libs/shimansky.biz-overview/img/TV_512x512.svg" alt="" /> </a>
+					<a class="box bg-crimson height2" href="https://sourceforge.net/projects/shimanskybiz-app/files/?source=navbar"> <span>Документы</span> <img class="icon big" src="/libs/shimansky.biz-overview/img/Adobe_Acrobat_Reader_512x512.svg" alt="" /> </a>
+					<a class="box bg-steel" href="https://soundcloud.com/user633010415"> <span>Аудио-файлы</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Sound_512x512.svg" alt="" /> </a>
+					<a class="box bg-darkCobalt" href="http://vk.com/public62872178"> <span>vk.com</span> <img class="icon" src="/libs/shimansky.biz-overview/img/vk.com-transparent-512x512.svg" alt="" /> </a>
+					<a class="box bg-amber" href="http://ok.ru/serguei.shimansky"> <span>ok.ru</span> <img class="icon" src="/libs/shimansky.biz-overview/img/ok.ru-transparent-512x512.svg" alt="" /> </a>
+					<a class="box bg-lightBlue height2" href="http://shimansky.biz/pages/comments.html"> <span>Отзывы</span> <img class="icon big" src="/libs/shimansky.biz-overview/img/Messaging_alt_512x512.svg" alt="" /> </a>
+					<a class="box bg-gray" href="https://github.com/englishextra?tab=repositories"> <span>Репозитарии</span> <img class="icon" src="/libs/shimansky.biz-overview/img/Github_512x512.svg" alt="" /> </a>
 				</div>
+				<div class="footer"><a href="https://github.com/englishextra/metro-ui-colors">Metro UI Colors</a></div>
 			</div>
 		</div>
 		<!--#include virtual="/virtual/yepnope.min.js.html" -->
 		<script>
 				yepnope.injectJs("http://cdn.rawgit.com/englishextra/early.js/9ac385b2386805963c8122bb60be474b5d483989/1.0/js/early.min.js",function(){
+					("undefined"!==typeof earlyIsMobileBrowser&&earlyIsMobileBrowser)&&(document.location.href="/pages/contents.html");
 					yepnope.injectJs("/libs/shimansky.biz-overview/js/bundle.min.js", function () {},{charset:"utf-8"},5E3);
-					window.onload=function(b,c){if(!b)for(a=c.getElementsByTagName("img"),b=0;b<a.length;b++)/svgimg/.test(a[b].getAttribute("class"))&&(d=a[b].getAttribute("src"),a[b].setAttribute("src",d.replace(/(.*)\.(.*?)$/,"$1.png")))}(/icon/.test(document.documentElement.className),document);
+					window.onload=function(b,c){if(!b)for(a=c.getElementsByTagName("img"),b=0;b<a.length;b++)/icon/.test(a[b].getAttribute("class"))&&(d=a[b].getAttribute("src"),a[b].setAttribute("src",d.replace(/(.*)\.(.*?)$/,"$1.png")))}(/svg/.test(document.documentElement.className),document);
 					!/localhost/.test(self.location.host)&&(function(b,a,c,d){if(c&&d){var e=encodeURIComponent(a.referrer||"");b=encodeURIComponent(b.location.href||"");a=encodeURIComponent(("undefined"!==typeof earlyDocumentTitle?earlyDocumentTitle:(a.title||"")).replace("\x27","&#39;").replace("\x28","&#40;").replace("\x29","&#41;"));c.setAttribute("style","position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+d+"?dmn="+b+"&rfrr="+e+"&ttl="+a+"&encoding=utf-8) top left no-repeat;")}})(window,document,document.getElementById("externalcounters")||"",/localhost/.test(self.location.host)?"http://localhost/externalcounters/": "http://shimansky.biz/externalcounters/");
 					(function(d){var g=/localhost/.test(self.location.host)?"http://localhost/externalcounters/":"http://shimansky.biz/externalcounters/",c=d.getElementsByTagName("a")||"",a=self.location.protocol+"//"+self.location.host+"/"||"",h=self.location.host+"/"||"",k=encodeURIComponent(d.location.href||""),l=encodeURIComponent((d.title||"").replace("\x27","&#39;").replace("\x28","&#40;").replace("\x29","&#41;"));if(c&&a&&h)for(a=0;a<c.length;a+=1)if(b=c[a],(e=b.getAttribute("href")||"")&&(e.match(/^\/scripts\//)||/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)|(localhost)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/.test(e))&& !b.getAttribute("rel"))c[a].onclick=function(){var a=this.getAttribute("href"),c=d.getElementsByTagName("body")[0].firstChild,f=d.createElement("div");f.setAttribute("style","position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+g+"?dmn="+encodeURIComponent(a)+"&rfrr="+k+"&ttl="+l+"&encoding=utf-8) top left no-repeat;");c.parentNode.insertBefore(f,c)}})(document);
 					addEvent(window,"blur",function(){(function (d,w){var a=/localhost/.test(self.location.host)?"http://localhost/externalcounters/":"http://shimansky.biz/externalcounters/",b=encodeURIComponent(d.referrer||""),c=encodeURIComponent(w.location.href||""),e=encodeURIComponent((d.title||"").replace("\x27","&#39;").replace("\x28","&#40;").replace("\x29","&#41;")+" - \u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u043d\u0435 \u0430\u043a\u0442\u0438\u0432\u0435\u043d"),f=d.createElement("div"),g=d.getElementsByTagName("body")[0].firstChild;f.setAttribute("style", "position:absolute;left:-9999px;width:1px;height:1px;border:0;background:transparent url("+a+"?dmn="+c+"\x26rfrr="+b+"\x26ttl="+e+"\x26encoding=utf-8) top left no-repeat;");g.parentNode.insertBefore(f,g);}(document,window));},!1);
